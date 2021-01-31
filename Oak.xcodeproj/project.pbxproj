@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
+		FA42C67825C63C9C000D597E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* ContentView.swift */; };
+		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
+		FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */; };
+		FA42C67F25C63C9D000D597E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67E25C63C9D000D597E /* Persistence.swift */; };
+		FA42C68225C63C9D000D597E /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */; };
+		FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68C25C63C9D000D597E /* OakTests.swift */; };
+		FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C69725C63C9D000D597E /* OakUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA42C68925C63C9D000D597E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA42C67125C63C9C000D597E;
+			remoteInfo = Oak;
+		};
+		FA42C69425C63C9D000D597E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA42C67125C63C9C000D597E;
+			remoteInfo = Oak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
+		FA42C67725C63C9C000D597E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA42C67925C63C9D000D597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA42C67E25C63C9D000D597E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FA42C68125C63C9D000D597E /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
+		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA42C68825C63C9D000D597E /* OakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA42C68C25C63C9D000D597E /* OakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakTests.swift; sourceTree = "<group>"; };
+		FA42C68E25C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA42C69325C63C9D000D597E /* OakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA42C69725C63C9D000D597E /* OakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakUITests.swift; sourceTree = "<group>"; };
+		FA42C69925C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA42C66F25C63C9C000D597E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C68525C63C9D000D597E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C69025C63C9D000D597E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA42C66925C63C9C000D597E = {
+			isa = PBXGroup;
+			children = (
+				FA42C67425C63C9C000D597E /* Oak */,
+				FA42C68B25C63C9D000D597E /* OakTests */,
+				FA42C69625C63C9D000D597E /* OakUITests */,
+				FA42C67325C63C9C000D597E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA42C67325C63C9C000D597E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C67225C63C9C000D597E /* Oak.app */,
+				FA42C68825C63C9D000D597E /* OakTests.xctest */,
+				FA42C69325C63C9D000D597E /* OakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA42C67425C63C9C000D597E /* Oak */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C67525C63C9C000D597E /* OakApp.swift */,
+				FA42C67725C63C9C000D597E /* ContentView.swift */,
+				FA42C67925C63C9D000D597E /* Assets.xcassets */,
+				FA42C67E25C63C9D000D597E /* Persistence.swift */,
+				FA42C68325C63C9D000D597E /* Info.plist */,
+				FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */,
+				FA42C67B25C63C9D000D597E /* Preview Content */,
+			);
+			path = Oak;
+			sourceTree = "<group>";
+		};
+		FA42C67B25C63C9D000D597E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA42C68B25C63C9D000D597E /* OakTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C68C25C63C9D000D597E /* OakTests.swift */,
+				FA42C68E25C63C9D000D597E /* Info.plist */,
+			);
+			path = OakTests;
+			sourceTree = "<group>";
+		};
+		FA42C69625C63C9D000D597E /* OakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C69725C63C9D000D597E /* OakUITests.swift */,
+				FA42C69925C63C9D000D597E /* Info.plist */,
+			);
+			path = OakUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA42C67125C63C9C000D597E /* Oak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA42C69C25C63C9D000D597E /* Build configuration list for PBXNativeTarget "Oak" */;
+			buildPhases = (
+				FA42C66E25C63C9C000D597E /* Sources */,
+				FA42C66F25C63C9C000D597E /* Frameworks */,
+				FA42C67025C63C9C000D597E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Oak;
+			productName = Oak;
+			productReference = FA42C67225C63C9C000D597E /* Oak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA42C68725C63C9D000D597E /* OakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA42C69F25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakTests" */;
+			buildPhases = (
+				FA42C68425C63C9D000D597E /* Sources */,
+				FA42C68525C63C9D000D597E /* Frameworks */,
+				FA42C68625C63C9D000D597E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA42C68A25C63C9D000D597E /* PBXTargetDependency */,
+			);
+			name = OakTests;
+			productName = OakTests;
+			productReference = FA42C68825C63C9D000D597E /* OakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA42C69225C63C9D000D597E /* OakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA42C6A225C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakUITests" */;
+			buildPhases = (
+				FA42C68F25C63C9D000D597E /* Sources */,
+				FA42C69025C63C9D000D597E /* Frameworks */,
+				FA42C69125C63C9D000D597E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA42C69525C63C9D000D597E /* PBXTargetDependency */,
+			);
+			name = OakUITests;
+			productName = OakUITests;
+			productReference = FA42C69325C63C9D000D597E /* OakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA42C66A25C63C9C000D597E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					FA42C67125C63C9C000D597E = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					FA42C68725C63C9D000D597E = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = FA42C67125C63C9C000D597E;
+					};
+					FA42C69225C63C9D000D597E = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = FA42C67125C63C9C000D597E;
+					};
+				};
+			};
+			buildConfigurationList = FA42C66D25C63C9C000D597E /* Build configuration list for PBXProject "Oak" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA42C66925C63C9C000D597E;
+			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA42C67125C63C9C000D597E /* Oak */,
+				FA42C68725C63C9D000D597E /* OakTests */,
+				FA42C69225C63C9D000D597E /* OakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA42C67025C63C9C000D597E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */,
+				FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C68625C63C9D000D597E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C69125C63C9D000D597E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA42C66E25C63C9C000D597E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA42C67F25C63C9D000D597E /* Persistence.swift in Sources */,
+				FA42C67825C63C9C000D597E /* ContentView.swift in Sources */,
+				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
+				FA42C68225C63C9D000D597E /* Oak.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C68425C63C9D000D597E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA42C68F25C63C9D000D597E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA42C68A25C63C9D000D597E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA42C67125C63C9C000D597E /* Oak */;
+			targetProxy = FA42C68925C63C9D000D597E /* PBXContainerItemProxy */;
+		};
+		FA42C69525C63C9D000D597E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA42C67125C63C9C000D597E /* Oak */;
+			targetProxy = FA42C69425C63C9D000D597E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA42C69A25C63C9D000D597E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA42C69B25C63C9D000D597E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA42C69D25C63C9D000D597E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Oak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA42C69E25C63C9D000D597E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Oak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA42C6A025C63C9D000D597E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oak.app/Oak";
+			};
+			name = Debug;
+		};
+		FA42C6A125C63C9D000D597E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oak.app/Oak";
+			};
+			name = Release;
+		};
+		FA42C6A325C63C9D000D597E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Oak;
+			};
+			name = Debug;
+		};
+		FA42C6A425C63C9D000D597E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Oak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA42C66D25C63C9C000D597E /* Build configuration list for PBXProject "Oak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA42C69A25C63C9D000D597E /* Debug */,
+				FA42C69B25C63C9D000D597E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA42C69C25C63C9D000D597E /* Build configuration list for PBXNativeTarget "Oak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA42C69D25C63C9D000D597E /* Debug */,
+				FA42C69E25C63C9D000D597E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA42C69F25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA42C6A025C63C9D000D597E /* Debug */,
+				FA42C6A125C63C9D000D597E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA42C6A225C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA42C6A325C63C9D000D597E /* Debug */,
+				FA42C6A425C63C9D000D597E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA42C68125C63C9D000D597E /* Oak.xcdatamodel */,
+			);
+			currentVersion = FA42C68125C63C9D000D597E /* Oak.xcdatamodel */;
+			path = Oak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA42C66A25C63C9C000D597E /* Project object */;
+}
