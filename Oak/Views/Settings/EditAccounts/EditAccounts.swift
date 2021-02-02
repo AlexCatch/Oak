@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct EditAccounts: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject private var viewModel: EditAccountsViewModel
+    @StateObject private var viewModel: EditAccountsViewModel = Resolver.resolve()
     
     @State private var editMode = EditMode.inactive
-    
-    init(vm: EditAccountsViewModel) {
-        self._viewModel = StateObject(wrappedValue: vm)
-    }
     
     var body: some View {
         NavigationView {
@@ -35,6 +32,9 @@ struct EditAccounts: View {
             }, label: {
                 Text("Dismiss")
             }), trailing: EditButton().disabled(viewModel.accountRowModels.isEmpty))
+            .onAppear {
+                viewModel.fetchAccounts()
+            }
             .environment(\.editMode, $editMode)
         }
     }

@@ -16,6 +16,8 @@
 		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
 		FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CBE25CA0733009C215F /* Utils+Injection.swift */; };
+		FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CC425CA091C009C215F /* UpdatePasswordView.swift */; };
+		FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
 		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FA404CBE25CA0733009C215F /* Utils+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Injection.swift"; sourceTree = "<group>"; };
+		FA404CC425CA091C009C215F /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
+		FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
 		FA42C67725C63C9C000D597E /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 			path = ScanCode;
 			sourceTree = "<group>";
 		};
+		FA404CC325CA090E009C215F /* UpdatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				FA404CC425CA091C009C215F /* UpdatePasswordView.swift */,
+				FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */,
+			);
+			path = UpdatePassword;
+			sourceTree = "<group>";
+		};
 		FA42C66925C63C9C000D597E = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +260,7 @@
 		FA42C6C525C65894000D597E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				FA404CC325CA090E009C215F /* UpdatePassword */,
 				FA87C04225C8BA21009C7FF7 /* EditAccounts */,
 				FA42C6C625C658A3000D597E /* SettingsView.swift */,
 				FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */,
@@ -525,7 +539,9 @@
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
+				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
 				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
+				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
 				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,

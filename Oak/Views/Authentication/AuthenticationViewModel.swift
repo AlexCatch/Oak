@@ -15,14 +15,28 @@ class AuthenticationViewModel: ObservableObject {
     @Injected private var haptics: Haptics
     @Injected private var keychainService: KeychainService
     
+    var rootViewBinding: Binding<RootView>?
+    
     @Published var password: String = ""
     
     var passwordValid: Bool {
         return !password.isEmpty
     }
     
-    func attemptBiometrics(with rootViewBinding: Binding<RootView>) {
-        guard settings.bool(key: .biometricsEnabled) else {
+    init() {
+        /*
+         Listen for when application goes into the foreground and attempt biometrics,
+         this will handle requiring auth when becoming active
+         */
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    @objc private func applicationWillEnterForeground() {
+        attemptBiometrics(for: .active)
+    }
+    
+    func attemptBiometrics(for scenePhase: ScenePhase) {
+        guard settings.bool(key: .biometricsEnabled), scenePhase == .active else {
             // biometrics aren't enabled at the app level
             return
         }
@@ -40,10 +54,13 @@ class AuthenticationViewModel: ObservableObject {
                 }
                 
                 self.haptics.generate(type: .success)
-                rootViewBinding.wrappedValue = .Accounts
+                if let binding = self.rootViewBinding {
+                    binding.wrappedValue = .Accounts
+                }
             }
         }
     }
+    
     func authenticatePassword(with rootViewBinding: Binding<RootView>) {
         let storedPassword = keychainService.get(key: .Password)
 

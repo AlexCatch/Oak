@@ -41,7 +41,7 @@ struct AccountsView: View {
                 case .codeScanner:
                     ScanQRCodeView(onScan: viewModel.addAccount)
                 case .settings:
-                    SettingsView(vm: SettingsViewModel())
+                    SettingsView()
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in

@@ -6,14 +6,11 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject private var viewModel: SettingsViewModel
-    
-    init(vm: SettingsViewModel) {
-        self._viewModel = StateObject(wrappedValue: vm)
-    }
+    @StateObject private var viewModel: SettingsViewModel = Resolver.resolve()
     
     var body: some View {
         NavigationView {
@@ -27,10 +24,10 @@ struct SettingsView: View {
                 }
                 Section(header: Text("Manage")) {
                     Button("Edit Accounts") {
-                        viewModel.activeSheet = .editAccounts
+                        viewModel.navigate(sheet: .editAccounts)
                     }
                     Button("Change Password") {
-                        viewModel.activeSheet = .editAccounts
+                        viewModel.navigate(sheet: .updatePassword)
                     }
                 }
             }
@@ -44,7 +41,9 @@ struct SettingsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .editAccounts:
-                    EditAccounts(vm: EditAccountsViewModel(accountService: RealAccountService(dbRepository: RealAccountsDBRepository())))
+                    EditAccounts()
+                case .updatePassword:
+                    UpdatePasswordView()
                 }
             }
         }
@@ -53,6 +52,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(vm: SettingsViewModel())
+        SettingsView()
     }
 }

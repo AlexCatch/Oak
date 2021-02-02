@@ -29,6 +29,23 @@ class MainViewModel: ObservableObject {
         } else {
             activeView = settings.bool(key: .requireAuthOnStart) ? .Auth : .Accounts
         }
+        
+        // Add app lifecycle events to the main view
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackgroundNotification), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc private func applicationDidEnterBackgroundNotification() {
+        print("application will resign")
+        // If we require auth on startup - go back to auth
+        guard settings.bool(key: .requireAuthOnStart) else {
+            return
+        }
+        
+        activeView = .Auth
     }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 import Resolver
 
 struct AuthenticationView: View {
+    @Environment(\.scenePhase) var scenePhase
     @StateObject private var viewModel: AuthenticationViewModel = Resolver.resolve()
     @Binding var activeSheet: RootView
     
@@ -26,7 +27,8 @@ struct AuthenticationView: View {
                 viewModel.authenticatePassword(with: $activeSheet)
             }))
         }.onAppear {
-            viewModel.attemptBiometrics(with: $activeSheet)
+            viewModel.rootViewBinding = $activeSheet
+            viewModel.attemptBiometrics(for: scenePhase)
         }
     }
 }

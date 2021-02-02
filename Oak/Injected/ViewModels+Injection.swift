@@ -15,5 +15,8 @@ extension Resolver {
         RegisterSetupViewModel()
         RegisterMainViewModel()
         RegisterAuthenticationViewModel()
+        RegisterUpdatePasswordViewModel()
+        RegisterEditAccountsViewModel()
+        RegisterSettingsViewModel()
     }
 }
