@@ -46,5 +46,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We use your camera to scan account setup QR codes</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 </dict>
 </plist>

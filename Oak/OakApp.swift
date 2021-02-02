@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct OakApp: App {
-    let persistenceController = PersistenceController.shared
-
+    init() {
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color("AccentColor"))
+    }
+    
     var body: some Scene {
+        let vm = AccountsViewModel(
+            otpService:RealOTPService(),
+            accountService: RealAccountService(dbRepository: RealAccountsDBRepository())
+        )
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView(viewModel: vm)
         }
     }
 }

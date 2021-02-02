@@ -3,18 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
 		FA42C67825C63C9C000D597E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* ContentView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
 		FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */; };
-		FA42C67F25C63C9D000D597E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67E25C63C9D000D597E /* Persistence.swift */; };
-		FA42C68225C63C9D000D597E /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */; };
 		FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68C25C63C9D000D597E /* OakTests.swift */; };
 		FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C69725C63C9D000D597E /* OakUITests.swift */; };
+		FA42C6B225C64919000D597E /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B125C64919000D597E /* AccountRow.swift */; };
+		FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B625C64A79000D597E /* CircularProgressView.swift */; };
+		FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6C625C658A3000D597E /* SettingsView.swift */; };
+		FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6CE25C65B8B000D597E /* ToggableRow.swift */; };
+		FA42C72425C6EC74000D597E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C72325C6EC74000D597E /* Account.swift */; };
+		FA42C79725C7219A000D597E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C79625C7219A000D597E /* Settings.swift */; };
+		FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA42C7A025C78076000D597E /* KeychainSwift */; };
+		FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */; };
+		FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */; };
+		FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00425C87EFD009C7FF7 /* SwiftOTP */; };
+		FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00A25C88446009C7FF7 /* CodeScanner */; };
+		FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */; };
+		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
+		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
+		FA87C03925C89656009C7FF7 /* AccountsDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */; };
+		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
+		FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */; };
+		FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */; };
+		FAB8CAE125C8C88C001DE486 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE025C8C88C001DE486 /* Realm */; };
+		FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE225C8C88C001DE486 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
 		FA42C67725C63C9C000D597E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA42C67925C63C9D000D597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FA42C67E25C63C9D000D597E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		FA42C68125C63C9D000D597E /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C68825C63C9D000D597E /* OakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C68C25C63C9D000D597E /* OakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakTests.swift; sourceTree = "<group>"; };
@@ -49,6 +67,22 @@
 		FA42C69325C63C9D000D597E /* OakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C69725C63C9D000D597E /* OakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakUITests.swift; sourceTree = "<group>"; };
 		FA42C69925C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA42C6B125C64919000D597E /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		FA42C6B625C64A79000D597E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		FA42C6C625C658A3000D597E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FA42C6CE25C65B8B000D597E /* ToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggableRow.swift; sourceTree = "<group>"; };
+		FA42C6E025C665BC000D597E /* Oak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oak.entitlements; sourceTree = "<group>"; };
+		FA42C72325C6EC74000D597E /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		FA42C79625C7219A000D597E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowViewModel.swift; sourceTree = "<group>"; };
+		FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeView.swift; sourceTree = "<group>"; };
+		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
+		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsDBRepository.swift; sourceTree = "<group>"; };
+		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccounts.swift; sourceTree = "<group>"; };
+		FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */,
+				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
+				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
+				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
+				FAB8CAE125C8C88C001DE486 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +138,16 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				FA87C03725C89643009C7FF7 /* Repositories */,
+				FA87C02E25C890B5009C7FF7 /* Extensions */,
+				FA87C02225C88896009C7FF7 /* Services */,
+				FA42C72225C6EC51000D597E /* Models */,
+				FA42C6E025C665BC000D597E /* Oak.entitlements */,
+				FA42C6A825C64904000D597E /* Views */,
 				FA42C67525C63C9C000D597E /* OakApp.swift */,
 				FA42C67725C63C9C000D597E /* ContentView.swift */,
 				FA42C67925C63C9D000D597E /* Assets.xcassets */,
-				FA42C67E25C63C9D000D597E /* Persistence.swift */,
 				FA42C68325C63C9D000D597E /* Info.plist */,
-				FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */,
 				FA42C67B25C63C9D000D597E /* Preview Content */,
 			);
 			path = Oak;
@@ -136,6 +179,81 @@
 			path = OakUITests;
 			sourceTree = "<group>";
 		};
+		FA42C6A825C64904000D597E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C00F25C88715009C7FF7 /* Shared */,
+				FA42C6C525C65894000D597E /* Settings */,
+				FA42C6B625C64A79000D597E /* CircularProgressView.swift */,
+				FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA42C6C525C65894000D597E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C04225C8BA21009C7FF7 /* EditAccounts */,
+				FA42C6C625C658A3000D597E /* SettingsView.swift */,
+				FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FA42C72225C6EC51000D597E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C72325C6EC74000D597E /* Account.swift */,
+				FA42C79625C7219A000D597E /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA87C00F25C88715009C7FF7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C6CE25C65B8B000D597E /* ToggableRow.swift */,
+				FA42C6B125C64919000D597E /* AccountRow.swift */,
+				FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */,
+				FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FA87C02225C88896009C7FF7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
+				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA87C02E25C890B5009C7FF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA87C03725C89643009C7FF7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FA87C04225C8BA21009C7FF7 /* EditAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */,
+				FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */,
+			);
+			path = EditAccounts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +270,13 @@
 			dependencies = (
 			);
 			name = Oak;
+			packageProductDependencies = (
+				FA42C7A025C78076000D597E /* KeychainSwift */,
+				FA87C00425C87EFD009C7FF7 /* SwiftOTP */,
+				FA87C00A25C88446009C7FF7 /* CodeScanner */,
+				FAB8CAE025C8C88C001DE486 /* Realm */,
+				FAB8CAE225C8C88C001DE486 /* RealmSwift */,
+			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* Oak.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +348,12 @@
 				Base,
 			);
 			mainGroup = FA42C66925C63C9C000D597E;
+			packageReferences = (
+				FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,10 +396,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA42C67F25C63C9D000D597E /* Persistence.swift in Sources */,
+				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
+				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* ContentView.swift in Sources */,
+				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
+				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
+				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
+				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
+				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
+				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
+				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
+				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
+				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
+				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
-				FA42C68225C63C9D000D597E /* Oak.xcdatamodeld in Sources */,
+				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
+				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
+				FA87C03925C89656009C7FF7 /* AccountsDBRepository.swift in Sources */,
+				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oak/Oak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
@@ -437,6 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oak/Oak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
@@ -459,6 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -589,18 +738,68 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		FA42C68025C63C9D000D597E /* Oak.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FA42C68125C63C9D000D597E /* Oak.xcdatamodel */,
-			);
-			currentVersion = FA42C68125C63C9D000D597E /* Oak.xcdatamodel */;
-			path = Oak.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
 		};
-/* End XCVersionGroup section */
+		FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+		FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA42C7A025C78076000D597E /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		FA87C00425C87EFD009C7FF7 /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+		FA87C00A25C88446009C7FF7 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		FAB8CAE025C8C88C001DE486 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		FAB8CAE225C8C88C001DE486 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA42C66A25C63C9C000D597E /* Project object */;
 }
