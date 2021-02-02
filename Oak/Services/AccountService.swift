@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import Resolver
 
 protocol AccountService {
     func save(parsedURI: ParsedURI) throws -> Account
@@ -44,5 +45,11 @@ class RealAccountService: AccountService {
     
     func delete(accounts: [Account]) throws {
         try dbRepository.delete(accounts: accounts)
+    }
+}
+
+extension Resolver {
+    public static func RegisterAccountService() {
+        register { RealAccountService(dbRepository: resolve()) as AccountService }
     }
 }

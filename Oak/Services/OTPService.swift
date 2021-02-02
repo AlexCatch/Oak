@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Resolver
 
 protocol OTPService {
     func parseSetupURI(uri: String) throws -> ParsedURI
@@ -32,9 +33,8 @@ struct ParsedURI {
     let secret: String
     let algorithm: Algorithm
     let type: CodeType
-    let digits: String
     
-    // Specific to type
+    var digits: String = "6"
     var period: String?
     var counter: String?
 }
@@ -49,15 +49,30 @@ class RealOTPService: OTPService {
         guard
             let issuer = queryComponents["issuer"],
             let secret = queryComponents["secret"],
-            let algorithm = queryComponents["algorithm"],
-            let algorithmEnum = Algorithm(rawValue: algorithm),
+            let algorithmEnum = Algorithm(rawValue: queryComponents["algorithm"] ?? "SHA1"),
             let type = url.host,
-            let typeEnum = CodeType(rawValue: type),
-            let digits = queryComponents["digits"]
+            let typeEnum = CodeType(rawValue: type)
         else {
             throw OTPServiceError.invalidURI
         }
         
-        return ParsedURI(issuer: issuer, username: url.pathComponents.last, secret: secret, algorithm: algorithmEnum, type: typeEnum, digits: digits, period: queryComponents["period"], counter: queryComponents["counter"])
+        var parsedURI = ParsedURI(issuer: issuer, username: parseUsername(url: url), secret: secret, algorithm: algorithmEnum, type: typeEnum, period: queryComponents["period"], counter: queryComponents["counter"])
+        
+        // If we're overriding digits
+        if let digits = queryComponents["digits"] {
+            parsedURI.digits = digits
+        }
+        
+        return parsedURI
+    }
+    
+    private func parseUsername(url: URL) -> String? {
+        return url.pathComponents.last?.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+extension Resolver {
+    public static func RegisterOTPService() {
+        register { RealOTPService() as OTPService }
     }
 }

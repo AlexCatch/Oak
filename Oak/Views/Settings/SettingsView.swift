@@ -12,7 +12,6 @@ struct SettingsView: View {
     @StateObject private var viewModel: SettingsViewModel
     
     init(vm: SettingsViewModel) {
-        
         self._viewModel = StateObject(wrappedValue: vm)
     }
     

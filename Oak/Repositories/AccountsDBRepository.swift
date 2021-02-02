@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import Resolver
 
 protocol AccountsDBRepository {
     func save(account: Account) throws
@@ -22,6 +23,7 @@ class RealAccountsDBRepository: AccountsDBRepository {
     }
     
     func save(account: Account) throws {
+        
         try realm.write {
             realm.add(account)
         }
@@ -35,5 +37,11 @@ class RealAccountsDBRepository: AccountsDBRepository {
         try realm.write {
             realm.delete(accounts)
         }
+    }
+}
+
+extension Resolver {
+    public static func RegisterAccountDBRepository() {
+        register {  RealAccountsDBRepository() as AccountsDBRepository }
     }
 }

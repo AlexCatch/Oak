@@ -7,36 +7,26 @@
 
 import Foundation
 import SwiftUI
+import Resolver
 
 struct AuthenticationView: View {
-    @State private var password: String = ""
-    
-    @Binding var isAuthenticated: Bool
+    @StateObject private var viewModel: AuthenticationViewModel = Resolver.resolve()
+    @Binding var activeSheet: RootView
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Enter your password to unlock oak")) {
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Authenticaton")
             .navigationBarItems(trailing: Button("Unlock", action: {
-                // ask vm if password is legit
-                Haptics.Generate(type: .success)
-                withAnimation {
-                    isAuthenticated = true
-                }
+                viewModel.authenticatePassword(with: $activeSheet)
             }))
         }.onAppear {
-            Biometrics().authenticate {
-                Haptics.Generate(type: .success)
-                isAuthenticated = true
-            } onFailure: {
-        
-            }
-
+            viewModel.attemptBiometrics(with: $activeSheet)
         }
     }
 }

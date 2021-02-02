@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
+		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
+		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
+		FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412025C9C823004752F3 /* Repositories+Injection.swift */; };
+		FA03412725C9C8D0004752F3 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412625C9C8D0004752F3 /* Injection.swift */; };
+		FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */; };
+		FA03413725C9D5A8004752F3 /* AlertBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413625C9D5A8004752F3 /* AlertBinding.swift */; };
+		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
 		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
@@ -38,6 +46,10 @@
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
 		FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */; };
+		FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8CEF25C9F48600688223 /* MainViewModel.swift */; };
+		FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE48D25C9E9FD005BC18E /* SetupView.swift */; };
+		FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49225C9ECC6005BC18E /* SetupViewModel.swift */; };
+		FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49725C9ED9A005BC18E /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
+		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
+		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
+		FA03413625C9D5A8004752F3 /* AlertBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBinding.swift; sourceTree = "<group>"; };
+		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
@@ -91,6 +110,10 @@
 		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
+		FACB8CEF25C9F48600688223 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FADAE48D25C9E9FD005BC18E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		FADAE49225C9ECC6005BC18E /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		FADAE49725C9ED9A005BC18E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
@@ -123,6 +147,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA03412525C9C8B3004752F3 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				FA03411B25C9C7BE004752F3 /* Services+Injection.swift */,
+				FA03412025C9C823004752F3 /* Repositories+Injection.swift */,
+				FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */,
+				FA03412625C9C8D0004752F3 /* Injection.swift */,
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		FA03413B25C9D8E6004752F3 /* ScanCode */ = {
+			isa = PBXGroup;
+			children = (
+				FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */,
+				FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */,
+			);
+			path = ScanCode;
+			sourceTree = "<group>";
+		};
 		FA42C66925C63C9C000D597E = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +190,7 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				FA03412525C9C8B3004752F3 /* Injected */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C03725C89643009C7FF7 /* Repositories */,
@@ -187,6 +232,8 @@
 		FA42C6A825C64904000D597E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FADAE48C25C9E9ED005BC18E /* Setup */,
+				FA03413B25C9D8E6004752F3 /* ScanCode */,
 				FAB8CB1325C8FBBB001DE486 /* Authentication */,
 				FAB8CB0725C8F950001DE486 /* Main */,
 				FAB8CB0625C8F856001DE486 /* Accounts */,
@@ -210,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				FA42C72325C6EC74000D597E /* Account.swift */,
-				FA42C79625C7219A000D597E /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,7 +268,6 @@
 				FA42C6CE25C65B8B000D597E /* ToggableRow.swift */,
 				FA42C6B125C64919000D597E /* AccountRow.swift */,
 				FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */,
-				FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -232,6 +277,7 @@
 			children = (
 				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
 				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
+				FADAE49725C9ED9A005BC18E /* KeychainService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -285,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB8CB0825C8F959001DE486 /* MainView.swift */,
+				FACB8CEF25C9F48600688223 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -293,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */,
+				FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -300,10 +348,21 @@
 		FAB8CB2425C8FE96001DE486 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
+				FA03413625C9D5A8004752F3 /* AlertBinding.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		FADAE48C25C9E9ED005BC18E /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				FADAE48D25C9E9FD005BC18E /* SetupView.swift */,
+				FADAE49225C9ECC6005BC18E /* SetupViewModel.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +387,7 @@
 				FA87C00A25C88446009C7FF7 /* CodeScanner */,
 				FAB8CAE025C8C88C001DE486 /* Realm */,
 				FAB8CAE225C8C88C001DE486 /* RealmSwift */,
+				FA03411625C9C640004752F3 /* Resolver */,
 			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* Oak.app */;
@@ -405,6 +465,7 @@
 				FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
 				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
@@ -456,10 +517,19 @@
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
+				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
+				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
+				FA03413725C9D5A8004752F3 /* AlertBinding.swift in Sources */,
+				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
+				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
+				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
+				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
+				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
+				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
@@ -469,7 +539,9 @@
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
 				FA87C03925C89656009C7FF7 /* AccountsDBRepository.swift in Sources */,
+				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
+				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +867,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 		FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -830,6 +910,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA03411625C9C640004752F3 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
 		FA42C7A025C78076000D597E /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */;

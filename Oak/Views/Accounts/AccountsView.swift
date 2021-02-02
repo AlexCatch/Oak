@@ -8,13 +8,10 @@
 import SwiftUI
 import CoreData
 import CodeScanner
+import Resolver
 
 struct AccountsView: View {
-    @StateObject private var viewModel: AccountsViewModel
-    
-    init(viewModel: AccountsViewModel) {
-        self._viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @StateObject private var viewModel: AccountsViewModel = Resolver.resolve()
 
     var body: some View {
         NavigationView {
@@ -42,7 +39,7 @@ struct AccountsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .codeScanner:
-                    ScanQRCodeView(onScan: viewModel.addFromQRCode)
+                    ScanQRCodeView(onScan: viewModel.addAccount)
                 case .settings:
                     SettingsView(vm: SettingsViewModel())
                 }
@@ -56,14 +53,15 @@ struct AccountsView: View {
                     ])
                 }
             }
+            .onAppear {
+                viewModel.fetchAccounts()
+            }
         }
     }
 }
 
 struct AccountsView_Previews: PreviewProvider {
     static var previews: some View {
-        let accountService = RealAccountService(dbRepository: RealAccountsDBRepository())
-        let vm = AccountsViewModel(otpService: RealOTPService(), accountService: accountService)
-        AccountsView(viewModel: vm)
+        AccountsView()
     }
 }

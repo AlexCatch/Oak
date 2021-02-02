@@ -7,18 +7,23 @@
 
 import Foundation
 import SwiftUI
+import Resolver
 
 struct MainView: View {
-    @State private var isAuthenticated = false
+    @StateObject private var mainViewModel: MainViewModel = Resolver.resolve()
     
     var body: some View {
-        if isAuthenticated {
-            AccountsView(viewModel: AccountsViewModel(
-                otpService:RealOTPService(),
-                accountService: RealAccountService(dbRepository: RealAccountsDBRepository())
-            )).transition(.slide)
-        } else {
-            AuthenticationView(isAuthenticated: $isAuthenticated)
+        currentView()
+    }
+    
+    func currentView() -> AnyView {
+        switch mainViewModel.activeView {
+        case .Setup:
+            return AnyView(SetupView(activeSheet: $mainViewModel.activeView))
+        case .Auth:
+            return AnyView(AuthenticationView(activeSheet: $mainViewModel.activeView))
+        case .Accounts:
+            return AnyView(AccountsView())
         }
     }
 }
