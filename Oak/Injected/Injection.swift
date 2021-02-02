@@ -13,6 +13,7 @@ extension Resolver: ResolverRegistering {
         RegisterAllRepositories()
         RegisterAllAppServices()
         RegisterAllViewModels()
+        RegisterAllUtils()
     }
 }
 

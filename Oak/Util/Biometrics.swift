@@ -7,6 +7,7 @@
 
 import Foundation
 import LocalAuthentication
+import Resolver
 
 class Biometrics {
     let context = LAContext()
@@ -14,8 +15,8 @@ class Biometrics {
     func enabled(callback: (_ success: Bool) -> Void) {
         var error: NSError?
         let biometricsPolicy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
+        
         if (context.canEvaluatePolicy(biometricsPolicy, error: &error)) {
-
             if error != nil {
                 callback(false)
                 return
@@ -26,8 +27,12 @@ class Biometrics {
     
     func authenticate(onComplete: @escaping (_ success: Bool) -> Void) {
         var error: NSError?
-
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            if error != nil {
+                onComplete(false)
+                return
+            }
+            
             let reason = context.biometryType == .faceID ? "Use Face ID to unlock Oak" : "Use Touch ID to unlock Oak"
 
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
@@ -38,5 +43,11 @@ class Biometrics {
         } else {
             onComplete(true)
         }
+    }
+}
+
+extension Resolver {
+    static func RegisterBiometricsUtil() {
+        register { Biometrics() }.scope(.shared)
     }
 }

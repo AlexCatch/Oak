@@ -10,7 +10,9 @@ import SwiftUI
 import Resolver
 
 class AuthenticationViewModel: ObservableObject {
-    let biometrics = Biometrics()
+    @Injected private var settings: Settings
+    @Injected private var biometrics: Biometrics
+    @Injected private var haptics: Haptics
     @Injected private var keychainService: KeychainService
     
     @Published var password: String = ""
@@ -20,7 +22,7 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     func attemptBiometrics(with rootViewBinding: Binding<RootView>) {
-        guard Settings.bool(key: .biometricsEnabled) else {
+        guard settings.bool(key: .biometricsEnabled) else {
             // biometrics aren't enabled at the app level
             return
         }
@@ -37,19 +39,20 @@ class AuthenticationViewModel: ObservableObject {
                     return
                 }
                 
-                Haptics.Generate(type: .success)
+                self.haptics.generate(type: .success)
                 rootViewBinding.wrappedValue = .Accounts
             }
         }
     }
     func authenticatePassword(with rootViewBinding: Binding<RootView>) {
         let storedPassword = keychainService.get(key: .Password)
-        
+
         guard storedPassword == password else {
-            Haptics.Generate(type: .error)
+            haptics.generate(type: .error)
             return
         }
-        Haptics.Generate(type: .success)
+        
+        haptics.generate(type: .success)
         // success auth - go to accounts
         rootViewBinding.wrappedValue = .Accounts
     }

@@ -16,9 +16,10 @@ enum RootView {
 }
 
 class MainViewModel: ObservableObject {
+    @Injected private var settings: Settings
     private let keychainService: KeychainService
     
-    @Published var activeView: RootView
+    @Published var activeView: RootView = .Auth
     
     init(keychainService: KeychainService) {
         self.keychainService = keychainService
@@ -26,7 +27,7 @@ class MainViewModel: ObservableObject {
         if keychainService.get(key: .Password) == nil {
             activeView = .Setup
         } else {
-            activeView = Settings.bool(key: .requireAuthOnStart) ? .Auth : .Accounts
+            activeView = settings.bool(key: .requireAuthOnStart) ? .Auth : .Accounts
         }
     }
 }

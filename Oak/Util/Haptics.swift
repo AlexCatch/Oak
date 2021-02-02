@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import Resolver
 
 class Haptics {
-    static func Generate(type: UINotificationFeedbackGenerator.FeedbackType) {
-        let generator = UINotificationFeedbackGenerator()
+    let generator = UINotificationFeedbackGenerator()
+    
+    func generate(type: UINotificationFeedbackGenerator.FeedbackType) {
         generator.notificationOccurred(type)
+    }
+}
+
+extension Resolver {
+    static func RegisterHapticsUtil() {
+        register { Haptics() }.scope(.shared)
     }
 }

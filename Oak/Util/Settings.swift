@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resolver
 
 enum SettingsKey: String {
     case requireAuthOnStart = "requireAuthOnStart"
@@ -13,11 +14,17 @@ enum SettingsKey: String {
 }
 
 struct Settings {
-    static func bool(key: SettingsKey) -> Bool {
+    func bool(key: SettingsKey) -> Bool {
         return UserDefaults.standard.bool(forKey: key.rawValue)
     }
     
-    static func set(key: SettingsKey, value: Any) {
+    func set(key: SettingsKey, value: Any) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
+    }
+}
+
+extension Resolver {
+    static func RegisterSettingsUtil() {
+        register { Settings() }.scope(.shared)
     }
 }

@@ -7,18 +7,19 @@
 
 import SwiftUI
 import Combine
+import Resolver
 
 struct ToggableRow: View {
-    
     var title: String
     var key: SettingsKey
     
-    @State private var isOn: Bool
+    @Injected private var settings: Settings
+    @State private var isOn: Bool = false
     
     init(title: String, key: SettingsKey) {
         self.title = title
         self.key = key
-        _isOn = State(initialValue: Settings.bool(key: key))
+        _isOn = State(initialValue: settings.bool(key: key))
     }
     
     var body: some View {
@@ -27,7 +28,7 @@ struct ToggableRow: View {
         }
         .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
         .onReceive(Just(isOn)) { value in
-            Settings.set(key: key, value: value)
+            settings.set(key: key, value: value)
         }
     }
 }

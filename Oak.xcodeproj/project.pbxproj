@@ -13,9 +13,9 @@
 		FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412025C9C823004752F3 /* Repositories+Injection.swift */; };
 		FA03412725C9C8D0004752F3 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412625C9C8D0004752F3 /* Injection.swift */; };
 		FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */; };
-		FA03413725C9D5A8004752F3 /* AlertBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413625C9D5A8004752F3 /* AlertBinding.swift */; };
 		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
+		FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CBE25CA0733009C215F /* Utils+Injection.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
 		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
@@ -75,9 +75,9 @@
 		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
 		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
-		FA03413625C9D5A8004752F3 /* AlertBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBinding.swift; sourceTree = "<group>"; };
 		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FA404CBE25CA0733009C215F /* Utils+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Injection.swift"; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
 		FA42C67725C63C9C000D597E /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 				FA03412025C9C823004752F3 /* Repositories+Injection.swift */,
 				FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */,
 				FA03412625C9C8D0004752F3 /* Injection.swift */,
+				FA404CBE25CA0733009C215F /* Utils+Injection.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -351,7 +352,6 @@
 				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
-				FA03413625C9D5A8004752F3 /* AlertBinding.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -521,7 +521,6 @@
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
-				FA03413725C9D5A8004752F3 /* AlertBinding.swift in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
@@ -530,6 +529,7 @@
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
 				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,
+				FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
