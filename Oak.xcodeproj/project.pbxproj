@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
-		FA42C67825C63C9C000D597E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* ContentView.swift */; };
+		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
 		FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */; };
 		FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68C25C63C9D000D597E /* OakTests.swift */; };
@@ -57,7 +57,7 @@
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* Oak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C67525C63C9C000D597E /* OakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakApp.swift; sourceTree = "<group>"; };
-		FA42C67725C63C9C000D597E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA42C67725C63C9C000D597E /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
 		FA42C67925C63C9D000D597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,17 +138,13 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C03725C89643009C7FF7 /* Repositories */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
 				FA87C02225C88896009C7FF7 /* Services */,
 				FA42C72225C6EC51000D597E /* Models */,
-				FA42C6E025C665BC000D597E /* Oak.entitlements */,
 				FA42C6A825C64904000D597E /* Views */,
 				FA42C67525C63C9C000D597E /* OakApp.swift */,
-				FA42C67725C63C9C000D597E /* ContentView.swift */,
-				FA42C67925C63C9D000D597E /* Assets.xcassets */,
-				FA42C68325C63C9D000D597E /* Info.plist */,
-				FA42C67B25C63C9D000D597E /* Preview Content */,
 			);
 			path = Oak;
 			sourceTree = "<group>";
@@ -182,10 +178,9 @@
 		FA42C6A825C64904000D597E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAB8CB0625C8F856001DE486 /* Accounts */,
 				FA87C00F25C88715009C7FF7 /* Shared */,
 				FA42C6C525C65894000D597E /* Settings */,
-				FA42C6B625C64A79000D597E /* CircularProgressView.swift */,
-				FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +207,7 @@
 		FA87C00F25C88715009C7FF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FA42C6B625C64A79000D597E /* CircularProgressView.swift */,
 				FA42C6CE25C65B8B000D597E /* ToggableRow.swift */,
 				FA42C6B125C64919000D597E /* AccountRow.swift */,
 				FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */,
@@ -252,6 +248,26 @@
 				FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */,
 			);
 			path = EditAccounts;
+			sourceTree = "<group>";
+		};
+		FAB8CAFC25C8F823001DE486 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C67B25C63C9D000D597E /* Preview Content */,
+				FA42C68325C63C9D000D597E /* Info.plist */,
+				FA42C67925C63C9D000D597E /* Assets.xcassets */,
+				FA42C6E025C665BC000D597E /* Oak.entitlements */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		FAB8CB0625C8F856001DE486 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */,
+				FA42C67725C63C9C000D597E /* AccountsView.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +414,7 @@
 			files = (
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
-				FA42C67825C63C9C000D597E /* ContentView.swift in Sources */,
+				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
@@ -570,9 +586,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Oak/Oak.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Oak/Info.plist;
@@ -594,9 +610,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Oak/Oak.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Oak/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Oak/Info.plist;

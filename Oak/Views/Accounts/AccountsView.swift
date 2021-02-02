@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AccountsView.swift
 //  Oak
 //
 //  Created by Alex Catchpole on 31/01/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import CodeScanner
 
-struct ContentView: View {
+struct AccountsView: View {
     @StateObject private var viewModel: AccountsViewModel
     
     init(viewModel: AccountsViewModel) {
@@ -32,7 +32,6 @@ struct ContentView: View {
                     Image(systemName: "gear")
                 })
                 Button(action: {
-                    
                     viewModel.activeActionSheet = .add
                 }, label: {
                     Image(systemName: "plus")
@@ -61,10 +60,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AccountsView_Previews: PreviewProvider {
     static var previews: some View {
         let accountService = RealAccountService(dbRepository: RealAccountsDBRepository())
         let vm = AccountsViewModel(otpService: RealOTPService(), accountService: accountService)
-        ContentView(viewModel: vm)
+        AccountsView(viewModel: vm)
     }
 }

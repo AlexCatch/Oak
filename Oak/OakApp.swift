@@ -19,7 +19,7 @@ struct OakApp: App {
             accountService: RealAccountService(dbRepository: RealAccountsDBRepository())
         )
         WindowGroup {
-            ContentView(viewModel: vm)
+            AccountsView(viewModel: vm)
         }
     }
 }
