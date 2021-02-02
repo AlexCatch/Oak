@@ -14,12 +14,8 @@ struct OakApp: App {
     }
     
     var body: some Scene {
-        let vm = AccountsViewModel(
-            otpService:RealOTPService(),
-            accountService: RealAccountService(dbRepository: RealAccountsDBRepository())
-        )
         WindowGroup {
-            AccountsView(viewModel: vm)
+            MainView()
         }
     }
 }

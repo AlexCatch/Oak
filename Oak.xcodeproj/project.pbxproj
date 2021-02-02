@@ -34,6 +34,10 @@
 		FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */; };
 		FAB8CAE125C8C88C001DE486 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE025C8C88C001DE486 /* Realm */; };
 		FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE225C8C88C001DE486 /* RealmSwift */; };
+		FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB0825C8F959001DE486 /* MainView.swift */; };
+		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
+		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
+		FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccounts.swift; sourceTree = "<group>"; };
 		FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountsViewModel.swift; sourceTree = "<group>"; };
+		FAB8CB0825C8F959001DE486 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,7 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C03725C89643009C7FF7 /* Repositories */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
@@ -178,6 +187,8 @@
 		FA42C6A825C64904000D597E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAB8CB1325C8FBBB001DE486 /* Authentication */,
+				FAB8CB0725C8F950001DE486 /* Main */,
 				FAB8CB0625C8F856001DE486 /* Accounts */,
 				FA87C00F25C88715009C7FF7 /* Shared */,
 				FA42C6C525C65894000D597E /* Settings */,
@@ -268,6 +279,31 @@
 				FA42C67725C63C9C000D597E /* AccountsView.swift */,
 			);
 			path = Accounts;
+			sourceTree = "<group>";
+		};
+		FAB8CB0725C8F950001DE486 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8CB0825C8F959001DE486 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FAB8CB1325C8FBBB001DE486 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FAB8CB2425C8FE96001DE486 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
+				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,11 +448,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
+				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
@@ -424,7 +462,9 @@
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
+				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
+				FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */,
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
@@ -591,7 +631,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Oak/Info.plist;
+				INFOPLIST_FILE = Oak/Misc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,7 +655,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Oak/Info.plist;
+				INFOPLIST_FILE = Oak/Misc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

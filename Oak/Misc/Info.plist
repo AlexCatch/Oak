@@ -47,7 +47,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>We use your camera to scan account setup QR codes</string>
+	<string>Oak uses your camera to scan account setup QR codes</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Oak uses Face ID to unlock your accounts</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 </dict>
