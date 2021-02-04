@@ -13,5 +13,6 @@ extension Resolver {
         RegisterSettingsUtil()
         RegisterHapticsUtil()
         RegisterBiometricsUtil()
+        RegisterWindowUtil()
     }
 }

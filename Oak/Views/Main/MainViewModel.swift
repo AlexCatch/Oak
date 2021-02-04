@@ -17,6 +17,8 @@ enum RootView {
 
 class MainViewModel: ObservableObject {
     @Injected private var settings: Settings
+    @Injected private var window: Window
+    
     private let keychainService: KeychainService
     
     @Published var activeView: RootView = .Auth
@@ -45,6 +47,8 @@ class MainViewModel: ObservableObject {
             return
         }
         
+        // Before we switch our view - we need to dismiss all open sheets
+        window.dismissAllSheets(animated: false)
         activeView = .Auth
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
+				092A677B25CC605A00E8118E /* Window.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
+				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
