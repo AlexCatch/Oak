@@ -10,8 +10,9 @@ import SwiftUI
 import Resolver
 
 struct UpdatePasswordView: View {
-    @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel: UpdatePasswordViewModel = Resolver.resolve()
+    
+    let dismiss: () -> Void
     
     var body: some View {
         NavigationView {
@@ -37,13 +38,11 @@ struct UpdatePasswordView: View {
             }
             .navigationTitle("Change Password")
             .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }, label: {
                 Text("Dismiss")
             }), trailing:Button("Confirm", action: {
-                if viewModel.saveChanges() {
-                    presentationMode.wrappedValue.dismiss()
-                }
+                viewModel.saveChanges(dismiss: dismiss)
             }).disabled(!viewModel.inputsAreValid))
         }
     }

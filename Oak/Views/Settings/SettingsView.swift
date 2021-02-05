@@ -42,9 +42,9 @@ struct SettingsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .editAccounts:
-                    EditAccounts()
+                    EditAccounts(dismiss: viewModel.closeSheet)
                 case .updatePassword:
-                    UpdatePasswordView()
+                    UpdatePasswordView(dismiss: viewModel.closeSheet)
                 }
             }
         }

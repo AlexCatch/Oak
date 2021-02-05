@@ -9,10 +9,11 @@ import SwiftUI
 import Resolver
 
 struct EditAccounts: View {
-    @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel: EditAccountsViewModel = Resolver.resolve()
     
     @State private var editMode = EditMode.inactive
+    
+    let dismiss: () -> Void
     
     var body: some View {
         NavigationView {
@@ -28,7 +29,7 @@ struct EditAccounts: View {
             }
             .navigationTitle("Edit Accounts")
             .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }, label: {
                 Text("Dismiss")
             }), trailing: EditButton().disabled(viewModel.accountRowModels.isEmpty))

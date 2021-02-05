@@ -23,6 +23,10 @@ class SettingsViewModel: ObservableObject {
     func navigate(sheet: Sheet) {
         activeSheet = sheet
     }
+    
+    func closeSheet() {
+        activeSheet = nil
+    }
 }
 
 extension Resolver {
