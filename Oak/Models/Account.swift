@@ -12,6 +12,7 @@ class Account: Object, Identifiable {
     @objc dynamic var id: String = UUID().uuidString
     @objc dynamic var issuer: String = ""
     @objc dynamic var username: String?
+    @objc dynamic var usesBase32 = true
     @objc dynamic var secret: String = ""
     @objc dynamic var algorithmRaw: String = ""
     @objc dynamic var typeRaw: String = ""
@@ -47,7 +48,7 @@ class Account: Object, Identifiable {
 }
 
 extension Account {
-    static func Create(issuer: String, username: String?, secret: String, algorithm: Algorithm, type: CodeType, digits: Int, period: Int? = nil, counter: Int? = nil) -> Account {
+    static func Create(issuer: String, username: String?, usesBase32: Bool = true, secret: String, algorithm: Algorithm, type: CodeType, digits: Int, period: Int? = nil, counter: Int? = nil) -> Account {
         let account = Account()
         account.issuer = issuer
         account.username = username

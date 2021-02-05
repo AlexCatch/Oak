@@ -111,8 +111,9 @@ fileprivate struct PeriodInputRow: View {
 }
 
 struct NewAccountView: View {
-    @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel: NewAccountViewModel = Resolver.resolve()
+    
+    let dismiss: () -> Void
     
     var body: some View {
         NavigationView {
@@ -124,6 +125,8 @@ struct NewAccountView: View {
                 }
                 Section() {
                     TextInputRow(title: "Secret", placeholder: "Secret", input: $viewModel.secret)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     SwitchInputRow(title: "Base32 Encoded", isOn: $viewModel.base32Encoded)
                     CodeSelectInputRow(title: "Time-based OTP (TOTP)", type: .totp, selectedType: $viewModel.type)
                     CodeSelectInputRow(title: "Counter-based OTP (HOTP)", type: .hotp, selectedType: $viewModel.type)
@@ -140,14 +143,14 @@ struct NewAccountView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("New Account")
             .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }, label: {
                 Text("Dismiss")
             }), trailing: Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                viewModel.save(dismiss: dismiss)
             }, label: {
                 Text("Confirm")
-            }))
+            }).disabled(!viewModel.inputsValid))
         }
     }
 }

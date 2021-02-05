@@ -63,15 +63,12 @@ class AccountsViewModel: ObservableObject {
         }
     }
     
-    func addAccount(from uri: ParsedURI) {
-        activeSheet = .none
-        if let account = try? accountService.save(parsedURI: uri) {
-            accountRowModels.append(AccountRowViewModel(account: account))
-        }
-    }
-    
     func navigate(to sheet: Sheet) {
         activeSheet = sheet
+    }
+    
+    func hideSheet() {
+        activeSheet = nil
     }
 }
 

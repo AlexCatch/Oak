@@ -9,8 +9,9 @@ import SwiftUI
 import Resolver
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel: SettingsViewModel = Resolver.resolve()
+    
+    let dismiss: () -> Void
     
     var body: some View {
         NavigationView {
@@ -34,7 +35,7 @@ struct SettingsView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Settings")
             .navigationBarItems(trailing: Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }, label: {
                 Text("Done")
             }))
@@ -52,6 +53,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView {}
     }
 }

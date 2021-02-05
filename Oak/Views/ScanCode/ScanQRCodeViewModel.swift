@@ -12,6 +12,7 @@ import CodeScanner
 
 class ScanQRCodeViewModel: ObservableObject {
     @Injected private var otpService: OTPService
+    @Injected private var accountsService: AccountService
     
     @Published var scanError: String?
     
@@ -23,16 +24,13 @@ class ScanQRCodeViewModel: ObservableObject {
             self.scanError = nil
         })
     }
-    var onURIParsed: ((_ uri: ParsedURI) -> Void)?
     
-    func onScan(results: Result<String, CodeScannerView.ScanError>) {
-        guard let callback = onURIParsed else {
-            return
-        }
-        
+    func onScan(results: Result<String, CodeScannerView.ScanError>, dismiss: () -> Void) {
         do {
             let uri = try results.get()
-            callback(try otpService.parseSetupURI(uri: uri))
+            let parsedUri = try otpService.parseSetupURI(uri: uri)
+            try accountsService.save(parsedURI: parsedUri)
+            dismiss()
         } catch {
             scanError = "Failed to parse QR code - double check you're scanning a valid code"
         }

@@ -11,6 +11,7 @@
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewAccountView.swift */; };
 		097CFFD025CCD3E600C2B1C6 /* NewAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */; };
+		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -80,6 +81,7 @@
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewModel.swift; sourceTree = "<group>"; };
+		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */,
 				092A678025CC781400E8118E /* Double+Extensions.swift */,
+				09AAE5B425CD8C18002054AA /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
+				09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */,
 				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
 				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
 				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,

@@ -38,11 +38,11 @@ struct AccountsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .codeScanner:
-                    ScanQRCodeView(onScan: viewModel.addAccount)
+                    ScanQRCodeView(dismiss: viewModel.hideSheet)
                 case .settings:
-                    SettingsView()
+                    SettingsView(dismiss: viewModel.hideSheet)
                 case .newAccount:
-                    NewAccountView()
+                    NewAccountView(dismiss: viewModel.hideSheet)
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in
