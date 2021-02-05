@@ -9,28 +9,34 @@ import SwiftUI
 
 struct CircularProgressView: View {
     var lineWidth: CGFloat
+    var progress: CGFloat
+    var remain: Double
     
-    @State private var completionAmount: CGFloat = 0
+    @State private var number: CGFloat = 1
     
     var body: some View {
         ZStack {
             // 3.
             Circle()
-                .stroke(Color.accentColor, lineWidth: lineWidth)
+                .stroke(remain == 30 ? Color.accentColor : Color.gray, lineWidth: lineWidth)
                 .opacity(1)
             // 4.
             Circle()
-                .trim(from: 0, to: completionAmount)
-                .stroke(Color.white, lineWidth: lineWidth)
-                .animation(.linear(duration: 30), value: completionAmount)
+                .trim(from: number, to: 1)
+                .stroke(remain == 30 ? Color.gray : Color.accentColor, lineWidth: lineWidth)
                 .rotationEffect(.degrees(-90))
-                 
+        }.onAppear {
+            number = progress
+            withAnimation(.linear(duration: remain)) {
+                number = 1
+            }
         }
+
     }
 }
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularProgressView(lineWidth: 2)
+        CircularProgressView(lineWidth: 2, progress: 0, remain: 30)
     }
 }

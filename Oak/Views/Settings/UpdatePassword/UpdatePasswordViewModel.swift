@@ -37,7 +37,7 @@ class UpdatePasswordViewModel: ObservableObject {
     }
     
     func saveChanges() -> Bool {
-        let currentPassword = keychainService.get(key: .Password)
+        let currentPassword = keychainService.get(key: .password)
         guard currentPassword == enteredCurrentPassword else {
             // current password doesn't match the entered
             self.updatePasswordError = "Your current password is incorrect."
@@ -45,7 +45,7 @@ class UpdatePasswordViewModel: ObservableObject {
             return false
         }
         
-        keychainService.set(key: .Password, value: newPassword)
+        keychainService.set(key: .password, value: newPassword)
         return true
     }
 }

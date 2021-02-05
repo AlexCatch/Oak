@@ -10,7 +10,7 @@ import KeychainSwift
 import Resolver
 
 enum KeychainKeys: String {
-    case Password = "sh.catch.oak.Password"
+    case password = "sh.catch.oak.Password"
 }
 
 protocol KeychainService {

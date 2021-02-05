@@ -10,9 +10,9 @@ import SwiftUI
 import Resolver
 
 enum RootView {
-    case Setup
-    case Auth
-    case Accounts
+    case setup
+    case auth
+    case accounts
 }
 
 class MainViewModel: ObservableObject {
@@ -21,15 +21,15 @@ class MainViewModel: ObservableObject {
     
     private let keychainService: KeychainService
     
-    @Published var activeView: RootView = .Auth
+    @Published var activeView: RootView = .auth
     
     init(keychainService: KeychainService) {
         self.keychainService = keychainService
         
-        if keychainService.get(key: .Password) == nil {
-            activeView = .Setup
+        if keychainService.get(key: .password) == nil {
+            activeView = .setup
         } else {
-            activeView = settings.bool(key: .requireAuthOnStart) ? .Auth : .Accounts
+            activeView = settings.bool(key: .requireAuthOnStart) ? .auth : .accounts
         }
         
         // Add app lifecycle events to the main view
@@ -49,7 +49,7 @@ class MainViewModel: ObservableObject {
         
         // Before we switch our view - we need to dismiss all open sheets
         window.dismissAllSheets(animated: false)
-        activeView = .Auth
+        activeView = .auth
     }
 }
 

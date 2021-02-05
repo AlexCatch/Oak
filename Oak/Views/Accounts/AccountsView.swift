@@ -23,8 +23,7 @@ struct AccountsView: View {
             }
             .navigationBarItems(trailing: HStack {
                 Button(action: {
-                    
-                    viewModel.activeSheet = .settings
+                    viewModel.navigate(to: .settings)
                 }, label: {
                     Image(systemName: "gear")
                 })
@@ -42,13 +41,16 @@ struct AccountsView: View {
                     ScanQRCodeView(onScan: viewModel.addAccount)
                 case .settings:
                     SettingsView()
+                case .newAccount:
+                    NewAccountView()
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in
                 switch item {
                 case .add:
                     return ActionSheet(title: Text("New Account"), buttons: [
-                        .default(Text("Scan QR Code")) { viewModel.activeSheet = .codeScanner },
+                        .default(Text("Scan QR Code")) { viewModel.navigate(to: .codeScanner) },
+                        .default(Text("Enter Information")) { viewModel.navigate(to: .newAccount) },
                         .cancel()
                     ])
                 }

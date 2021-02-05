@@ -10,16 +10,11 @@ import CodeScanner
 import RealmSwift
 import Resolver
 
-struct AccountDisplayable: Identifiable {
-    var id: String
-    var name: String
-    var username: String?
-}
-
 class AccountsViewModel: ObservableObject {
     enum Sheet: Identifiable {
         case codeScanner
         case settings
+        case newAccount
         
         var id: Int {
             hashValue
@@ -73,6 +68,10 @@ class AccountsViewModel: ObservableObject {
         if let account = try? accountService.save(parsedURI: uri) {
             accountRowModels.append(AccountRowViewModel(account: account))
         }
+    }
+    
+    func navigate(to sheet: Sheet) {
+        activeSheet = sheet
     }
 }
 

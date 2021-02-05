@@ -36,7 +36,11 @@ struct UpdatePasswordView: View {
                 )
             }
             .navigationTitle("Change Password")
-            .navigationBarItems(trailing:Button("Confirm", action: {
+            .navigationBarItems(leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Dismiss")
+            }), trailing:Button("Confirm", action: {
                 if viewModel.saveChanges() {
                     presentationMode.wrappedValue.dismiss()
                 }

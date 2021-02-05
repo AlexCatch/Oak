@@ -7,13 +7,16 @@
 
 import Foundation
 import Resolver
+import SwiftOTP
 
 protocol OTPService {
     func parseSetupURI(uri: String) throws -> ParsedURI
+    func generateTOTPCode(account: Account) throws -> String
 }
 
 enum OTPServiceError: Error {
     case invalidURI
+    case invalidSecret
 }
 
 enum CodeType: String {
@@ -25,6 +28,17 @@ enum Algorithm: String {
     case sha1 = "SHA1"
     case sha256 = "SHA265"
     case sha512 = "SHA512"
+    
+    func toSwiftOTPAlgorithm() -> OTPAlgorithm {
+        switch self {
+        case .sha1:
+            return .sha1
+        case .sha256:
+            return .sha256
+        case .sha512:
+            return .sha512
+        }
+    }
 }
 
 struct ParsedURI {
@@ -64,6 +78,18 @@ class RealOTPService: OTPService {
         }
         
         return parsedURI
+    }
+    
+    func generateTOTPCode(account: Account) throws -> String {
+        guard let secret = base32DecodeToData(account.secret) else {
+            throw OTPServiceError.invalidSecret
+        }
+        
+        guard let totp = TOTP(secret: secret, digits: account.digits, timeInterval: account.period.value ?? 30, algorithm: account.algorithm.toSwiftOTPAlgorithm()) else {
+            throw OTPServiceError.invalidSecret
+        }
+        
+        return totp.generate(time: Date()) ?? ""
     }
     
     private func parseUsername(url: URL) -> String? {

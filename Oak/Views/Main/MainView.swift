@@ -18,11 +18,11 @@ struct MainView: View {
     
     func currentView() -> AnyView {
         switch mainViewModel.activeView {
-        case .Setup:
+        case .setup:
             return AnyView(SetupView(activeSheet: $mainViewModel.activeView))
-        case .Auth:
+        case .auth:
             return AnyView(AuthenticationView(activeSheet: $mainViewModel.activeView))
-        case .Accounts:
+        case .accounts:
             return AnyView(AccountsView())
         }
     }

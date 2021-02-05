@@ -33,8 +33,8 @@ class SetupViewModel: ObservableObject {
     }
     
     func setup(with rootViewBinding: Binding<RootView>) {
-        keychainService.set(key: .Password, value: password)
-        rootViewBinding.wrappedValue = .Accounts
+        keychainService.set(key: .password, value: password)
+        rootViewBinding.wrappedValue = .accounts
     }
 }
 

@@ -10,6 +10,9 @@ import SwiftUI
 struct AccountRow: View {
     @StateObject var viewModel: AccountRowViewModel
     
+    @State private var from: CGFloat = 0
+    @State private var code = "43244"
+    
     init(viewModel: AccountRowViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -22,8 +25,9 @@ struct AccountRow: View {
             }
             Spacer()
             HStack {
-                Text("420986")
-                CircularProgressView(lineWidth: 1).frame(width: 25, height: 25, alignment: .leading)
+                Text(viewModel.code)
+                CircularProgressView(lineWidth: 1, progress: viewModel.progress, remain: viewModel.timeRemaining)
+                    .frame(width: 25, height: 25, alignment: .leading).id(viewModel.code)
             }
         }.padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
     }

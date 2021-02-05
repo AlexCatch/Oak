@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
+		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
+		092A678725CCB29200E8118E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewAccountView.swift */; };
+		097CFFD025CCD3E600C2B1C6 /* NewAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -74,6 +77,9 @@
 
 /* Begin PBXFileReference section */
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		092A678625CCB29200E8118E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
+		097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewModel.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
@@ -153,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092A678525CCB01C00E8118E /* NewAccount */ = {
+			isa = PBXGroup;
+			children = (
+				092A678625CCB29200E8118E /* NewAccountView.swift */,
+				097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */,
+			);
+			path = NewAccount;
+			sourceTree = "<group>";
+		};
 		FA03412525C9C8B3004752F3 /* Injected */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +263,7 @@
 		FA42C6A825C64904000D597E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				092A678525CCB01C00E8118E /* NewAccount */,
 				FADAE48C25C9E9ED005BC18E /* Setup */,
 				FA03413B25C9D8E6004752F3 /* ScanCode */,
 				FAB8CB1325C8FBBB001DE486 /* Authentication */,
@@ -303,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */,
+				092A678025CC781400E8118E /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,8 +543,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092A678125CC781400E8118E /* Double+Extensions.swift in Sources */,
 				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
+				097CFFD025CCD3E600C2B1C6 /* NewAccountViewModel.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
@@ -539,6 +558,7 @@
 				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
+				092A678725CCB29200E8118E /* NewAccountView.swift in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,

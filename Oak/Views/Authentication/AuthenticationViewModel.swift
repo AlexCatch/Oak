@@ -55,14 +55,14 @@ class AuthenticationViewModel: ObservableObject {
                 
                 self.haptics.generate(type: .success)
                 if let binding = self.rootViewBinding {
-                    binding.wrappedValue = .Accounts
+                    binding.wrappedValue = .accounts
                 }
             }
         }
     }
     
     func authenticatePassword(with rootViewBinding: Binding<RootView>) {
-        let storedPassword = keychainService.get(key: .Password)
+        let storedPassword = keychainService.get(key: .password)
 
         guard storedPassword == password else {
             haptics.generate(type: .error)
@@ -71,7 +71,7 @@ class AuthenticationViewModel: ObservableObject {
         
         haptics.generate(type: .success)
         // success auth - go to accounts
-        rootViewBinding.wrappedValue = .Accounts
+        rootViewBinding.wrappedValue = .accounts
     }
 }
 
