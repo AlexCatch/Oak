@@ -22,9 +22,13 @@ struct TOTPCodeView: View {
         HStack {
             Text(viewModel.code)
             CircularProgressView(lineWidth: 2, progress: viewModel.progress, remain: viewModel.timeRemaining)
-                .frame(width: 25, height: 25, alignment: .leading).id(viewModel.code)
+                .frame(width: 25, height: 25, alignment: .leading).id(UUID().uuidString)
+        }
+        .onAppear {
+            viewModel.generateCode()
         }
         .onDisappear {
+            print("TOTP did dissipear")
             viewModel.stop()
         }
     }

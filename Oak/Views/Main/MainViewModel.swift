@@ -41,7 +41,6 @@ class MainViewModel: ObservableObject {
     }
     
     @objc private func applicationDidEnterBackgroundNotification() {
-        print("application will resign")
         // If we require auth on startup - go back to auth
         guard settings.bool(key: .requireAuthOnStart) else {
             return

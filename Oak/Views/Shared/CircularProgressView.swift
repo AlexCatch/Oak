@@ -18,15 +18,14 @@ struct CircularProgressView: View {
         ZStack {
             // 3.
             Circle()
-                .stroke(remain == 30 ? Color.accentColor : Color.gray, lineWidth: lineWidth)
+                .stroke(Color.accentColor, lineWidth: lineWidth)
                 .opacity(1)
             // 4.
             Circle()
                 .trim(from: number, to: 1)
-                .stroke(remain == 30 ? Color.gray : Color.accentColor, lineWidth: lineWidth)
+                .stroke(Color.gray, lineWidth: lineWidth)
                 .rotationEffect(.degrees(-90))
         }.onAppear {
-            print("starting at: \(progress), over \(remain) seconds")
             number = progress
             withAnimation(.linear(duration: remain)) {
                 number = 1
