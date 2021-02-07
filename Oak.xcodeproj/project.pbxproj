@@ -12,6 +12,9 @@
 		092A678725CCB29200E8118E /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewAccountView.swift */; };
 		097CFFD025CCD3E600C2B1C6 /* NewAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
+		09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */; };
+		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
+		09CFA36D25CF461C003BE427 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeView.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -82,6 +85,9 @@
 		092A678625CCB29200E8118E /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewModel.swift; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeView.swift; sourceTree = "<group>"; };
+		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
+		09CFA36C25CF461C003BE427 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
@@ -168,6 +174,34 @@
 				097CFFCF25CCD3E600C2B1C6 /* NewAccountViewModel.swift */,
 			);
 			path = NewAccount;
+			sourceTree = "<group>";
+		};
+		09CFA33E25CF4504003BE427 /* AccountRow */ = {
+			isa = PBXGroup;
+			children = (
+				09CFA35E25CF45D6003BE427 /* HOTPCodeView */,
+				09CFA35D25CF45C0003BE427 /* TOTPCodeView */,
+				FA42C6B125C64919000D597E /* AccountRow.swift */,
+				FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */,
+				09CFA36C25CF461C003BE427 /* CodeView.swift */,
+			);
+			path = AccountRow;
+			sourceTree = "<group>";
+		};
+		09CFA35D25CF45C0003BE427 /* TOTPCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */,
+				09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */,
+			);
+			path = TOTPCodeView;
+			sourceTree = "<group>";
+		};
+		09CFA35E25CF45D6003BE427 /* HOTPCodeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HOTPCodeView;
 			sourceTree = "<group>";
 		};
 		FA03412525C9C8B3004752F3 /* Injected */ = {
@@ -299,10 +333,9 @@
 		FA87C00F25C88715009C7FF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				09CFA33E25CF4504003BE427 /* AccountRow */,
 				FA42C6B625C64A79000D597E /* CircularProgressView.swift */,
 				FA42C6CE25C65B8B000D597E /* ToggableRow.swift */,
-				FA42C6B125C64919000D597E /* AccountRow.swift */,
-				FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -556,6 +589,7 @@
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
+				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
@@ -577,6 +611,8 @@
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
+				09CFA36D25CF461C003BE427 /* CodeView.swift in Sources */,
+				09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */,
 				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
 				FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */,
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,

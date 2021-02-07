@@ -54,11 +54,8 @@ class AccountsViewModel: ObservableObject {
         }
 
         realmToken = accounts?.observe { [weak self] (changes: RealmCollectionChange<Results<Account>>) in
-            guard let self = self else {
-                return
-            }
-            if let accounts = self.accounts {
-                self.accountRowModels = accounts.map { AccountRowViewModel(account: $0) }
+            if let accounts = self?.accounts {
+                self?.accountRowModels = accounts.map { AccountRowViewModel(account: $0) }
             }
         }
     }

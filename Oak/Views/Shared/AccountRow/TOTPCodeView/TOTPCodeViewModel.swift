@@ -1,65 +1,49 @@
 //
-//  AccountRowViewModel.swift
+//  TOTPCodeViewModel.swift
 //  Oak
 //
-//  Created by Alex Catchpole on 01/02/2021.
+//  Created by Alex Catchpole on 06/02/2021.
 //
 
 import Foundation
 import SwiftUI
 import Resolver
 
-struct AccountDisplayable: Identifiable {
-    var id: String
-    var name: String
-    var username: String?
-}
-
-class AccountRowViewModel: Identifiable, ObservableObject {
-    var id: String {
-        get {
-            return account.id
-        }
-    }
-    
+class TOTPCodeViewModel: ObservableObject {
     @Injected private var otpService: OTPService
     
     @Published var code: String = ""
-    @Published var issuer: String = ""
-    @Published var username: String?
     @Published var progress: CGFloat = 0
     @Published var timeRemaining: Double = 0
     
-    let accountDisplayable: AccountDisplayable
     let account: Account
     
-    private var setupTimer: Timer?
+    private var codeTimer: Timer?
     
     init(account: Account) {
-        self.accountDisplayable = AccountDisplayable(id: account.id, name: account.issuer, username: account.username)
-        self.account = account.freeze()
-        self._issuer = Published(initialValue: account.issuer)
-        self._username = Published(initialValue: account.username)
-        setup()
-        
+        self.account = account
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForegroundNotification), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     deinit {
+        stop()
+    }
+    
+    func stop() {
         NotificationCenter.default.removeObserver(self)
+        codeTimer?.invalidate()
     }
     
     @objc private func applicationWillEnterForegroundNotification() {
         // When we enter the foreground - times might be out of sync, setup our cell
-        setup()
+        generateCode()
     }
     
     /// Setup kicks off the code generation and progress circle timer
-    func setup() {
-        print("Calculting code")
-        setupTimer?.invalidate()
+    func generateCode() {
+        codeTimer?.invalidate()
         
-        guard let code = try? otpService.generateTOTPCode(account: account) else {
+        guard let code = try? otpService.generateCode(account: account) else {
             self.code = "Error"
             return
         }
@@ -77,13 +61,12 @@ class AccountRowViewModel: Identifiable, ObservableObject {
         let amountThrough = (100 / Float(timer) * Float(timeRemaining) / 100).truncate(places: 2)
         progress = CGFloat((1 - amountThrough)).truncate(places: 2)
         
-        print(timeRemaining)
-        print(progress)
-
-        setupTimer = Timer.init(fire: to, interval: 0, repeats: false) { timer in
-            self.setup()
+        codeTimer = Timer.init(fire: to, interval: 0, repeats: false) { [weak self] timer in
+            self?.generateCode()
         }
         
-        RunLoop.current.add(setupTimer!, forMode: .default)
+        if let timer = codeTimer {
+            RunLoop.current.add(timer, forMode: .default)
+        }
     }
 }

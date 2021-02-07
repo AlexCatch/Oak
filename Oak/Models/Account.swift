@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftOTP
 
 class Account: Object, Identifiable {
     @objc dynamic var id: String = UUID().uuidString
@@ -21,6 +22,10 @@ class Account: Object, Identifiable {
 
     let period = RealmOptional<Int>()
     let counter = RealmOptional<Int>()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     var algorithm: Algorithm {
         set {
@@ -42,8 +47,12 @@ class Account: Object, Identifiable {
         }
     }
     
-    override static func primaryKey() -> String? {
-        return "id"
+    func decodeSecret() -> Data? {
+        if usesBase32 {
+            return base32DecodeToData(secret) ?? secret.data(using: .utf8)
+        }
+        
+        return secret.data(using: .utf8)
     }
 }
 

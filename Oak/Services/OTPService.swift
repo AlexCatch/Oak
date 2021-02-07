@@ -11,7 +11,7 @@ import SwiftOTP
 
 protocol OTPService {
     func parseSetupURI(uri: String) throws -> ParsedURI
-    func generateTOTPCode(account: Account) throws -> String
+    func generateCode(account: Account) throws -> String
 }
 
 enum OTPServiceError: Error {
@@ -80,8 +80,18 @@ class RealOTPService: OTPService {
         return parsedURI
     }
     
-    func generateTOTPCode(account: Account) throws -> String {
-        guard let secret = base32DecodeToData(account.secret) else {
+    func generateCode(account: Account) throws -> String {
+        return account.type == .totp ?
+            try generateTOTP(account: account) :
+            try generateHOTP(account: account)
+    }
+    
+    private func generateHOTP(account: Account) throws -> String {
+        return "hotp"
+    }
+    
+    private func generateTOTP(account: Account) throws -> String {
+        guard let secret = account.decodeSecret() else {
             throw OTPServiceError.invalidSecret
         }
         
