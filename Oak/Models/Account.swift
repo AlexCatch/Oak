@@ -66,7 +66,7 @@ extension Account {
         account.type = type
         account.digits = digits
         account.period.value = period
-        account.counter.value = period
+        account.counter.value = counter
         return account
     }
 }

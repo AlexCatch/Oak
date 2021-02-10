@@ -17,7 +17,7 @@ struct AccountsView: View {
         NavigationView {
             VStack {
                 List(viewModel.accountRowModels) { account in
-                    AccountRow(viewModel: account)
+                    AccountRow(viewModel: account, editAccountCallback: viewModel.editAccount)
                 }
                 .listStyle(InsetGroupedListStyle())
             }
@@ -42,7 +42,7 @@ struct AccountsView: View {
                 case .settings:
                     SettingsView(dismiss: viewModel.hideSheet)
                 case .newAccount:
-                    NewAccountView(dismiss: viewModel.hideSheet)
+                    NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.editingAccount)
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in

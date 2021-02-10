@@ -67,7 +67,7 @@ fileprivate struct AlgorithmSelectInputRow: View {
         HStack {
             Text("Algorithm")
             Spacer()
-            Picker(selection: $selectedAlgorithm, label: Text(selectedAlgorithm.rawValue).foregroundColor(.white).frame(maxWidth: .infinity, alignment: .trailing)) {
+            Picker(selection: $selectedAlgorithm, label: Text(selectedAlgorithm.rawValue).foregroundColor(.primary).frame(maxWidth: .infinity, alignment: .trailing)) {
                 Text("SHA1").tag(Algorithm.sha1)
                 Text("SHA256").tag(Algorithm.sha256)
                 Text("SHA512").tag(Algorithm.sha512)
@@ -83,12 +83,10 @@ fileprivate struct DigitsAlgorithmSelectInputRow: View {
         HStack {
             Text("Digits")
             Spacer()
-            Picker(selection: $digits, label: Text(digits.description).foregroundColor(.white).frame(maxWidth: .infinity, alignment: .trailing)) {
+            Picker(selection: $digits, label: Text(digits.description).foregroundColor(.primary).frame(maxWidth: .infinity, alignment: .trailing)) {
                 Text("6").tag(6)
                 Text("7").tag(7)
                 Text("8").tag(8)
-                Text("9").tag(9)
-                Text("10").tag(10)
             }.pickerStyle(MenuPickerStyle())
         }
     }
@@ -110,10 +108,11 @@ fileprivate struct PeriodInputRow: View {
     }
 }
 
-struct NewAccountView: View {
-    @StateObject private var viewModel: NewAccountViewModel = Resolver.resolve()
+struct NewEditAccountView: View {
+    @StateObject private var viewModel: NewEditAccountViewModel = Resolver.resolve()
     
     let dismiss: () -> Void
+    let account: Account?
     
     var body: some View {
         NavigationView {
@@ -141,7 +140,7 @@ struct NewAccountView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("New Account")
+            .navigationTitle(viewModel.navigationTitle)
             .navigationBarItems(leading: Button(action: {
                 dismiss()
             }, label: {
@@ -151,6 +150,9 @@ struct NewAccountView: View {
             }, label: {
                 Text("Confirm")
             }).disabled(!viewModel.inputsValid))
+            .onAppear {
+                viewModel.setAccount(account: account)
+            }
         }
     }
 }

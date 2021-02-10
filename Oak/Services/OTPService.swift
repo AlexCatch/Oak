@@ -17,6 +17,7 @@ protocol OTPService {
 enum OTPServiceError: Error {
     case invalidURI
     case invalidSecret
+    case invalidType
 }
 
 enum CodeType: String {
@@ -29,7 +30,7 @@ enum Algorithm: String {
     case sha256 = "SHA265"
     case sha512 = "SHA512"
     
-    func toSwiftOTPAlgorithm() -> OTPAlgorithm {
+    var swiftOTPAlgorithm: OTPAlgorithm {
         switch self {
         case .sha1:
             return .sha1
@@ -87,7 +88,19 @@ class RealOTPService: OTPService {
     }
     
     private func generateHOTP(account: Account) throws -> String {
-        return "hotp"
+        guard let secret = account.decodeSecret() else {
+            throw OTPServiceError.invalidSecret
+        }
+        
+        guard let hotp = HOTP(secret: secret, digits: account.digits, algorithm: account.algorithm.swiftOTPAlgorithm) else {
+            throw OTPServiceError.invalidSecret
+        }
+        
+        guard let counter = account.counter.value else {
+            throw OTPServiceError.invalidType
+        }
+        
+        return hotp.generate(counter: UInt64(counter)) ?? ""
     }
     
     private func generateTOTP(account: Account) throws -> String {
@@ -95,7 +108,7 @@ class RealOTPService: OTPService {
             throw OTPServiceError.invalidSecret
         }
         
-        guard let totp = TOTP(secret: secret, digits: account.digits, timeInterval: account.period.value ?? 30, algorithm: account.algorithm.toSwiftOTPAlgorithm()) else {
+        guard let totp = TOTP(secret: secret, digits: account.digits, timeInterval: account.period.value ?? 30, algorithm: account.algorithm.swiftOTPAlgorithm) else {
             throw OTPServiceError.invalidSecret
         }
         

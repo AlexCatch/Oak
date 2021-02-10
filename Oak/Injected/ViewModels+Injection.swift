@@ -19,5 +19,7 @@ extension Resolver {
         RegisterEditAccountsViewModel()
         RegisterSettingsViewModel()
         RegisterNewAccountViewModel()
+        RegisterTOTPCodeViewModel()
+        RegisterHOTPCodeViewModel()
     }
 }

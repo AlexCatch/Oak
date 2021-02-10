@@ -9,19 +9,18 @@ import Foundation
 import SwiftUI
 import Resolver
 
-class TOTPCodeViewModel: ObservableObject {
+class TOTPCodeViewModel: ObservableObject, CodeViewModel {
     @Injected private var otpService: OTPService
     
     @Published var code: String = ""
     @Published var progress: CGFloat = 0
     @Published var timeRemaining: Double = 0
     
-    let account: Account
+    var account: Account?
     
     private var codeTimer: Timer?
     
-    init(account: Account) {
-        self.account = account
+    init() {
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForegroundNotification), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
@@ -43,12 +42,12 @@ class TOTPCodeViewModel: ObservableObject {
     func generateCode() {
         codeTimer?.invalidate()
         
-        guard let code = try? otpService.generateCode(account: account) else {
+        guard let account = account, let code = try? otpService.generateCode(account: account) else {
             self.code = "Error"
             return
         }
         
-        self.code = code
+        self.code = formatCode(code: code)
 
         let timer = TimeInterval(30)
         let epoch = Date().timeIntervalSince1970
@@ -68,5 +67,11 @@ class TOTPCodeViewModel: ObservableObject {
         if let timer = codeTimer {
             RunLoop.current.add(timer, forMode: .default)
         }
+    }
+}
+
+extension Resolver {
+    static func RegisterTOTPCodeViewModel() {
+        register { TOTPCodeViewModel() }
     }
 }

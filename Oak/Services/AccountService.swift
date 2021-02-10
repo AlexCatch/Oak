@@ -23,15 +23,16 @@ struct CreateAccountData {
 protocol AccountService {
     func save(parsedURI: ParsedURI) throws -> Account
     func save(data: CreateAccountData) throws -> Account
-    func fetch() -> Results<Account>
+    func fetch() throws -> Results<Account>
     func delete(accounts: [Account]) throws
+    func updateCounter(account: Account) throws -> Account?
 }
 
 class RealAccountService: AccountService {
     @Injected private var dbRepository: AccountsDBRepository
     
-    func fetch() -> Results<Account> {
-        return dbRepository.fetch()
+    func fetch() throws -> Results<Account> {
+        return try dbRepository.fetch()
     }
     
     @discardableResult
@@ -54,8 +55,23 @@ class RealAccountService: AccountService {
     
     @discardableResult
     func save(data: CreateAccountData) throws -> Account {
-        let account = Account.Create(issuer: data.issuer, username: data.name, usesBase32: data.base32Encoded, secret: data.secret, algorithm: data.algorithm, type: data.type, digits: data.digits, period: data.period)
+        let account = Account.Create(issuer: data.issuer, username: data.name, usesBase32: data.base32Encoded, secret: data.secret, algorithm: data.algorithm, type: data.type, digits: data.digits, period: data.period, counter: data.type == .hotp ? 0 : nil)
         try dbRepository.save(account: account)
+        return account
+    }
+    
+    func updateCounter(account: Account) throws -> Account? {
+        guard account.type == .hotp else {
+            return nil
+        }
+        
+        // account will be frozen, refetch for ID and increment
+        if let refetchedAccount = try? dbRepository.fetch(for: account.id) {
+            try dbRepository.performUpdate {
+                refetchedAccount.counter.value? += 1
+            }
+            return refetchedAccount.freeze()
+        }
         return account
     }
     

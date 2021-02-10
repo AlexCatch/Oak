@@ -11,32 +11,41 @@ import Resolver
 
 protocol AccountsDBRepository {
     func save(account: Account) throws
-    func fetch() -> Results<Account>
+    func fetch() throws -> Results<Account>
+    func fetch(for primaryKey: String) throws -> Account?
     func delete(accounts: [Account]) throws
+    func performUpdate(callback: () -> Void) throws
 }
 
 class RealAccountsDBRepository: AccountsDBRepository {
-    private let realm: Realm
-    
-    init() {
-        self.realm = try! Realm()
-    }
     
     func save(account: Account) throws {
-        
+        let realm = try Realm()
         try realm.write {
             realm.add(account)
         }
     }
     
-    func fetch() -> Results<Account> {
+    func fetch() throws -> Results<Account> {
+        let realm = try Realm()
         return realm.objects(Account.self).sorted(byKeyPath: "timestamp", ascending: false)
     }
     
+    func fetch(for primaryKey: String) throws -> Account? {
+        let realm = try Realm()
+        return realm.object(ofType: Account.self, forPrimaryKey: primaryKey)
+    }
+    
     func delete(accounts: [Account]) throws {
+        let realm = try Realm()
         try realm.write {
             realm.delete(accounts)
         }
+    }
+    
+    func performUpdate(callback: () -> Void) throws {
+        let realm = try! Realm()
+        try! realm.write(callback)
     }
 }
 

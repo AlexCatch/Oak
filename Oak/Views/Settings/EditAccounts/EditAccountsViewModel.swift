@@ -25,7 +25,7 @@ class EditAccountsViewModel: ObservableObject {
     
     func fetchAccounts() {
         // When our view model is initalised we'll setup our realm observer
-        accounts = accountService.fetch()
+        accounts = try? accountService.fetch()
         initializeRealmObserver()
     }
     

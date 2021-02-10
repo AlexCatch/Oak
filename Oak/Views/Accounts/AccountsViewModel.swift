@@ -20,7 +20,7 @@ class AccountsViewModel: ObservableObject {
             hashValue
         }
     }
-    
+
     enum ActionSheet: Identifiable {
         case add
         
@@ -38,12 +38,15 @@ class AccountsViewModel: ObservableObject {
     private var realmToken: NotificationToken?
     private var accounts: Results<Account>?
     
+    // Account we're currently editing - used from list context menu
+    var editingAccount: Account?
+    
     deinit {
         realmToken?.invalidate()
     }
     
     func fetchAccounts() {
-        accounts = accountService.fetch()
+        accounts = try? accountService.fetch()
         initializeRealmObserver()
     }
     
@@ -62,6 +65,11 @@ class AccountsViewModel: ObservableObject {
     
     func navigate(to sheet: Sheet) {
         activeSheet = sheet
+    }
+    
+    func editAccount(account: Account) {
+        self.editingAccount = account
+        navigate(to: .newAccount)
     }
     
     func hideSheet() {

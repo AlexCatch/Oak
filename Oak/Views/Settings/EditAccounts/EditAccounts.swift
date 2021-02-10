@@ -20,7 +20,7 @@ struct EditAccounts: View {
             VStack {
                 List {
                     ForEach(viewModel.accountRowModels) { vm in
-                        AccountRow(viewModel: vm)
+                        AccountRow(viewModel: vm, displayCode: false)
                     }
                     .onDelete(perform: viewModel.deleteAccount)
                     .deleteDisabled(editMode == .inactive)
