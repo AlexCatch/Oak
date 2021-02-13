@@ -49,7 +49,7 @@ class AccountRowViewModel: Identifiable, ObservableObject {
     
     func codeView() -> AnyView {
         if account.type == .hotp {
-            return AnyView(HOTPCodeView(hasCopied: hasCopied, account: account).id(UUID().uuidString))
+            return AnyView(HOTPCodeView(hasCopied: hasCopied, account: account))
         }
         return AnyView(TOTPCodeView(hasCopied: hasCopied, account: account))
     }

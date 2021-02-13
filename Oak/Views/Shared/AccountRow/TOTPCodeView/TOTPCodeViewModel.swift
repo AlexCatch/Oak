@@ -49,7 +49,7 @@ class TOTPCodeViewModel: ObservableObject, CodeViewModel {
         
         self.code = formatCode(code: code)
 
-        let timer = TimeInterval(30)
+        let timer = TimeInterval(account.period)
         let epoch = Date().timeIntervalSince1970
 
         let from = TimeInterval(UInt64(epoch / timer)) * timer

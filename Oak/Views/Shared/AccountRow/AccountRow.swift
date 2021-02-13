@@ -34,7 +34,7 @@ struct AccountRow: View {
                 }
                 Spacer()
                 if displayCode {
-                    viewModel.codeView()
+                    viewModel.codeView().id(UUID().uuidString)
                 }
             }.padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
         } .contextMenu {
