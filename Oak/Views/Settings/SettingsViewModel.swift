@@ -10,7 +10,6 @@ import Resolver
 
 class SettingsViewModel: ObservableObject {
     enum Sheet: Identifiable {
-        case editAccounts
         case updatePassword
         
         var id: Int {

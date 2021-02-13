@@ -16,7 +16,6 @@ extension Resolver {
         RegisterMainViewModel()
         RegisterAuthenticationViewModel()
         RegisterUpdatePasswordViewModel()
-        RegisterEditAccountsViewModel()
         RegisterSettingsViewModel()
         RegisterNewAccountViewModel()
         RegisterTOTPCodeViewModel()

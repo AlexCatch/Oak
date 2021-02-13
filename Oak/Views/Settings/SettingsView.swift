@@ -24,9 +24,6 @@ struct SettingsView: View {
                     ToggableRow(title: "iCloud", key: .requireAuthOnStart)
                 }
                 Section(header: Text("Manage")) {
-                    Button("Edit Accounts") {
-                        viewModel.navigate(sheet: .editAccounts)
-                    }
                     Button("Change Password") {
                         viewModel.navigate(sheet: .updatePassword)
                     }
@@ -41,8 +38,6 @@ struct SettingsView: View {
             }))
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
-                case .editAccounts:
-                    EditAccounts(dismiss: viewModel.closeSheet)
                 case .updatePassword:
                     UpdatePasswordView(dismiss: viewModel.closeSheet)
                 }

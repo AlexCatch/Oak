@@ -50,8 +50,6 @@
 		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
 		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
-		FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */; };
-		FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */; };
 		FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB0825C8F959001DE486 /* MainView.swift */; };
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
@@ -126,8 +124,6 @@
 		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
 		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
-		FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccounts.swift; sourceTree = "<group>"; };
-		FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountsViewModel.swift; sourceTree = "<group>"; };
 		FAB8CB0825C8F959001DE486 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -325,7 +321,6 @@
 			isa = PBXGroup;
 			children = (
 				FA404CC325CA090E009C215F /* UpdatePassword */,
-				FA87C04225C8BA21009C7FF7 /* EditAccounts */,
 				FA42C6C625C658A3000D597E /* SettingsView.swift */,
 				FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */,
 			);
@@ -368,15 +363,6 @@
 				09AAE5B425CD8C18002054AA /* String+Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FA87C04225C8BA21009C7FF7 /* EditAccounts */ = {
-			isa = PBXGroup;
-			children = (
-				FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */,
-				FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */,
-			);
-			path = EditAccounts;
 			sourceTree = "<group>";
 		};
 		FAB8CAFC25C8F823001DE486 /* Misc */ = {
@@ -595,7 +581,6 @@
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
-				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
 				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
@@ -611,7 +596,6 @@
 				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,
 				FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
-				FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */,
 				09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */,
