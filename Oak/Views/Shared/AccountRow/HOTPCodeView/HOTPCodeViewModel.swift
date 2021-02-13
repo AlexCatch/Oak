@@ -23,7 +23,7 @@ class HOTPCodeViewModel: ObservableObject, CodeViewModel {
         if let account = account, increment, let updatedAccount = try? accountService.updateCounter(account: account) {
             self.account = updatedAccount
         }
-        print(self.account)
+        
         guard let account = account, let code = try? otpService.generateCode(account: account) else {
             self.code = "Error"
             return

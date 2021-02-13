@@ -13,12 +13,13 @@ struct ScanQRCodeView: View {
     @StateObject private var viewModel: ScanQRCodeViewModel = Resolver.resolve()
     
     let dismiss: () -> Void
+    let didAddAccount: ((_ account: Account) -> Void)
     
     var body: some View {
         NavigationView {
             CodeScannerView(
                 codeTypes: [.qr],
-                scanMode: .continuous,
+                scanMode: .oncePerCode,
                 completion: { viewModel.onScan(results: $0, dismiss: dismiss) }
             )
             .navigationBarItems(leading: Button("Dismiss") { dismiss() })
@@ -30,6 +31,9 @@ struct ScanQRCodeView: View {
                     message: Text(viewModel.scanError ?? ""),
                     dismissButton: .default(Text("Okay"))
                 )
+            }
+            .onAppear {
+                viewModel.didAddAccountCallback = didAddAccount
             }
         }
     }

@@ -6,50 +6,35 @@
 //
 
 import SwiftUI
-import RealmSwift
 import Resolver
 
 class EditAccountsViewModel: ObservableObject {
     @Injected private var accountService: AccountService
     
     private var accountsForDeletion: IndexSet?
-    private var accounts: Results<Account>?
-    private var realmToken: NotificationToken?
+    private var accounts: [Account]?
     
     @Published var accountRowModels: [AccountRowViewModel] = []
     @Published var showingConfirmDeletionAlert = false
     
-    deinit {
-        realmToken?.invalidate()
-    }
-    
     func fetchAccounts() {
-        // When our view model is initalised we'll setup our realm observer
         accounts = try? accountService.fetch()
-        initializeRealmObserver()
-    }
-    
-    /// Watch for changes to our accounts
-    func initializeRealmObserver() {
-        if let token = realmToken {
-            token.invalidate()
-        }
-        
-        realmToken = accounts?.observe { [weak self] (changes: RealmCollectionChange<Results<Account>>) in
-            guard let self = self else {
-                return
-            }
-            if let accounts = self.accounts {
-                self.accountRowModels = accounts.map { AccountRowViewModel(account: $0) }
-            }
-        }
     }
     
     func deleteAccount(index: IndexSet) {
-        if let accounts = accounts {
-            let items = index.map({ accounts[$0] })
-            try? accountService.delete(accounts: items)
+        guard let allAccounts = accounts else {
+            return
         }
+        
+        let selectedAccounts = index.map({ allAccounts[$0] })
+        
+        do {
+            try accountService.delete(accounts: selectedAccounts)
+        } catch {
+            return
+        }
+        
+        accounts?.remove(atOffsets: index)
     }
 }
 

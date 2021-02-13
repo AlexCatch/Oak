@@ -10,6 +10,8 @@
 		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
+		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
+		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
@@ -20,7 +22,6 @@
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
-		FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412025C9C823004752F3 /* Repositories+Injection.swift */; };
 		FA03412725C9C8D0004752F3 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412625C9C8D0004752F3 /* Injection.swift */; };
 		FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */; };
 		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
@@ -48,12 +49,9 @@
 		FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */; };
 		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
 		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
-		FA87C03925C89656009C7FF7 /* AccountsDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */; };
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
 		FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */; };
 		FA87C04C25C8BA5E009C7FF7 /* EditAccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */; };
-		FAB8CAE125C8C88C001DE486 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE025C8C88C001DE486 /* Realm */; };
-		FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8CAE225C8C88C001DE486 /* RealmSwift */; };
 		FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB0825C8F959001DE486 /* MainView.swift */; };
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
@@ -85,6 +83,8 @@
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
+		092F944525D5C46700FB537A /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		09BA752525D0555600891033 /* HOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeView.swift; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
-		FA03412025C9C823004752F3 /* Repositories+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
 		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
 		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 		FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeView.swift; sourceTree = "<group>"; };
 		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
 		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
-		FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsDBRepository.swift; sourceTree = "<group>"; };
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FA87C04325C8BA35009C7FF7 /* EditAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccounts.swift; sourceTree = "<group>"; };
 		FA87C04B25C8BA5E009C7FF7 /* EditAccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountsViewModel.swift; sourceTree = "<group>"; };
@@ -146,11 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
-				FAB8CAE325C8C88C001DE486 /* RealmSwift in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
 				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
-				FAB8CAE125C8C88C001DE486 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +174,15 @@
 				097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */,
 			);
 			path = NewEditAccount;
+			sourceTree = "<group>";
+		};
+		095A2BB725D5BABB0030C585 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */,
+				092F944525D5C46700FB537A /* PersistentStore.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		09CFA33E25CF4504003BE427 /* AccountRow */ = {
@@ -214,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				FA03411B25C9C7BE004752F3 /* Services+Injection.swift */,
-				FA03412025C9C823004752F3 /* Repositories+Injection.swift */,
 				FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */,
 				FA03412625C9C8D0004752F3 /* Injection.swift */,
 				FA404CBE25CA0733009C215F /* Utils+Injection.swift */,
@@ -263,10 +267,10 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				095A2BB725D5BABB0030C585 /* Persistence */,
 				FA03412525C9C8B3004752F3 /* Injected */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
-				FA87C03725C89643009C7FF7 /* Repositories */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
 				FA87C02225C88896009C7FF7 /* Services */,
 				FA42C72225C6EC51000D597E /* Models */,
@@ -366,14 +370,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FA87C03725C89643009C7FF7 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				FA87C03825C89656009C7FF7 /* AccountsDBRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		FA87C04225C8BA21009C7FF7 /* EditAccounts */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,8 +457,6 @@
 				FA42C7A025C78076000D597E /* KeychainSwift */,
 				FA87C00425C87EFD009C7FF7 /* SwiftOTP */,
 				FA87C00A25C88446009C7FF7 /* CodeScanner */,
-				FAB8CAE025C8C88C001DE486 /* Realm */,
-				FAB8CAE225C8C88C001DE486 /* RealmSwift */,
 				FA03411625C9C640004752F3 /* Resolver */,
 			);
 			productName = Oak;
@@ -540,7 +534,6 @@
 				FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
 				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
-				FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
@@ -588,6 +581,7 @@
 				092A678125CC781400E8118E /* Double+Extensions.swift in Sources */,
 				09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */,
 				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
+				092F944625D5C46700FB537A /* PersistentStore.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
@@ -600,10 +594,10 @@
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
-				FA03412125C9C823004752F3 /* Repositories+Injection.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				FA87C04425C8BA35009C7FF7 /* EditAccounts.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
+				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
@@ -626,7 +620,6 @@
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
-				FA87C03925C89656009C7FF7 /* AccountsDBRepository.swift in Sources */,
 				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,
@@ -987,14 +980,6 @@
 				minimumVersion = 1.0.7;
 			};
 		};
-		FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1018,17 +1003,20 @@
 			package = FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
 		};
-		FAB8CAE025C8C88C001DE486 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		FAB8CAE225C8C88C001DE486 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAB8CADF25C8C88C001DE486 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */,
+			);
+			currentVersion = 095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */;
+			path = Oak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA42C66A25C63C9C000D597E /* Project object */;
 }

@@ -10,9 +10,9 @@ import Resolver
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
-        RegisterAllRepositories()
         RegisterAllAppServices()
         RegisterAllViewModels()
+        RegisterPersistentContainer()
         RegisterAllUtils()
     }
 }

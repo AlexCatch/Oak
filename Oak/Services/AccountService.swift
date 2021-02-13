@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RealmSwift
 import Resolver
+import CoreData
 
 struct CreateAccountData {
     var name = ""
@@ -18,65 +18,90 @@ struct CreateAccountData {
     var algorithm: Algorithm = .sha1
     var digits: Int = 6
     var period: Int?
+    var counter: Int?
 }
 
 protocol AccountService {
     func save(parsedURI: ParsedURI) throws -> Account
     func save(data: CreateAccountData) throws -> Account
-    func fetch() throws -> Results<Account>
+    func save(account: Account) throws
+    func fetch() throws -> [Account]
     func delete(accounts: [Account]) throws
     func updateCounter(account: Account) throws -> Account?
 }
 
 class RealAccountService: AccountService {
-    @Injected private var dbRepository: AccountsDBRepository
+    @Injected private var persistentStore: PersistentStore
     
-    func fetch() throws -> Results<Account> {
-        return try dbRepository.fetch()
+    func fetch() throws -> [Account] {
+        let fetchRequest: NSFetchRequest<Account> = Account.fetchRequest()
+        return try persistentStore.viewContext.fetch(fetchRequest)
     }
     
     @discardableResult
     func save(parsedURI: ParsedURI) throws -> Account {
+        let account = Account(context: persistentStore.viewContext)
+        account.issuer = parsedURI.issuer
+        account.name = parsedURI.username
+        account.secret = parsedURI.secret
+        account.algorithm = parsedURI.algorithm
+        account.type = parsedURI.type
         
-        let account = Account.Create(issuer: parsedURI.issuer, username: parsedURI.username, secret: parsedURI.secret, algorithm: parsedURI.algorithm, type: parsedURI.type, digits: Int(parsedURI.digits) ?? 6)
-        
-        if let period = parsedURI.period, let periodNum = Int(period) {
-            account.period.value = periodNum
+        if let digits = Int16(parsedURI.digits) {
+            account.digits = digits
         }
         
-        if let counter = parsedURI.counter, let counterNum = Int(counter) {
-            account.counter.value = counterNum
+        if let period = parsedURI.period, let periodNum = Int16(period) {
+            account.period = periodNum
+        }
+
+        if let counter = parsedURI.counter, let counterNum = Int16(counter) {
+            account.counter = counterNum
         }
         
-        try dbRepository.save(account: account)
+        try persistentStore.save()
         
         return account
     }
     
-    @discardableResult
     func save(data: CreateAccountData) throws -> Account {
-        let account = Account.Create(issuer: data.issuer, username: data.name, usesBase32: data.base32Encoded, secret: data.secret, algorithm: data.algorithm, type: data.type, digits: data.digits, period: data.period, counter: data.type == .hotp ? 0 : nil)
-        try dbRepository.save(account: account)
+        let account = Account(context: persistentStore.viewContext)
+        account.issuer = data.issuer
+        account.name = data.name
+        account.secret = data.secret
+        account.algorithm = data.algorithm
+        account.type = data.type
+        account.digits = Int16(data.digits)
+        
+        
+        if let period = data.period {
+            account.period = Int16(period)
+        }
+        
+        if let counter = data.counter {
+            account.counter = Int16(counter)
+        }
+        
+        try persistentStore.save()
+        
         return account
+    }
+    
+    func save(account: Account) throws {
+        try persistentStore.viewContext.save()
     }
     
     func updateCounter(account: Account) throws -> Account? {
-        guard account.type == .hotp else {
-            return nil
-        }
-        
-        // account will be frozen, refetch for ID and increment
-        if let refetchedAccount = try? dbRepository.fetch(for: account.id) {
-            try dbRepository.performUpdate {
-                refetchedAccount.counter.value? += 1
-            }
-            return refetchedAccount.freeze()
-        }
+        account.counter = account.counter + 1
+        try persistentStore.save()
         return account
     }
     
     func delete(accounts: [Account]) throws {
-        try dbRepository.delete(accounts: accounts)
+        for account in accounts {
+            persistentStore.viewContext.delete(account)
+        }
+        try persistentStore.save()
     }
 }
 

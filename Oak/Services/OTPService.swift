@@ -91,27 +91,23 @@ class RealOTPService: OTPService {
         guard let secret = account.decodeSecret() else {
             throw OTPServiceError.invalidSecret
         }
-        
-        guard let hotp = HOTP(secret: secret, digits: account.digits, algorithm: account.algorithm.swiftOTPAlgorithm) else {
+
+        guard let hotp = HOTP(secret: secret, digits: Int(account.digits), algorithm: account.algorithm.swiftOTPAlgorithm) else {
             throw OTPServiceError.invalidSecret
         }
-        
-        guard let counter = account.counter.value else {
-            throw OTPServiceError.invalidType
-        }
-        
-        return hotp.generate(counter: UInt64(counter)) ?? ""
+
+        return hotp.generate(counter: UInt64(account.counter)) ?? ""
     }
     
     private func generateTOTP(account: Account) throws -> String {
         guard let secret = account.decodeSecret() else {
             throw OTPServiceError.invalidSecret
         }
-        
-        guard let totp = TOTP(secret: secret, digits: account.digits, timeInterval: account.period.value ?? 30, algorithm: account.algorithm.swiftOTPAlgorithm) else {
+
+        guard let totp = TOTP(secret: secret, digits: Int(account.digits), timeInterval: Int(account.period), algorithm: account.algorithm.swiftOTPAlgorithm) else {
             throw OTPServiceError.invalidSecret
         }
-        
+
         return totp.generate(time: Date()) ?? ""
     }
     

@@ -16,8 +16,8 @@ struct AccountsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.accountRowModels) { account in
-                    AccountRow(viewModel: account, editAccountCallback: viewModel.editAccount)
+                List(viewModel.accountRowModels.indices, id: \.self) { index in
+                    AccountRow(viewModel: viewModel.accountRowModels[index], editAccountCallback: viewModel.editAccount, index: index)
                 }
                 .listStyle(InsetGroupedListStyle())
             }
@@ -38,11 +38,11 @@ struct AccountsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .codeScanner:
-                    ScanQRCodeView(dismiss: viewModel.hideSheet)
+                    ScanQRCodeView(dismiss: viewModel.hideSheet, didAddAccount: viewModel.didAddUpdateAccount)
                 case .settings:
                     SettingsView(dismiss: viewModel.hideSheet)
                 case .newAccount:
-                    NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.editingAccount)
+                    NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.selectedAccount, didCreateUpdateAccount: viewModel.didAddUpdateAccount, didDeleteAccount: viewModel.didDeleteAccount)
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in

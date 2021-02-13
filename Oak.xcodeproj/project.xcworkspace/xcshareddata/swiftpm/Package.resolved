@@ -29,24 +29,6 @@
         }
       },
       {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
-        "state": {
-          "branch": null,
-          "revision": "4274b9c8ba717d7a81c953c34b715d5f587fa92f",
-          "version": "10.5.1"
-        }
-      },
-      {
-        "package": "RealmDatabase",
-        "repositoryURL": "https://github.com/realm/realm-core",
-        "state": {
-          "branch": null,
-          "revision": "8af0f8d609491986b49f2c986e771d9dc445664d",
-          "version": "10.3.3"
-        }
-      },
-      {
         "package": "Resolver",
         "repositoryURL": "https://github.com/hmlongco/Resolver.git",
         "state": {

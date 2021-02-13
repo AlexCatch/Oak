@@ -22,8 +22,14 @@ class NewEditAccountViewModel: ObservableObject {
     @Published var algorithm: Algorithm = .sha1
     @Published var digits: Int = 6
     @Published var period: Int = 30
+    @Published var counter: Int = 1
     
     @Published var saveError: String?
+    @Published var deletionRequested = false
+    
+    var didCreateUpdateAccount: ((_ account: Account) -> Void)?
+    var didDeleteAccount: (() -> Void)?
+    var dismiss: (() -> Void)?
     
     var isEditing: Bool {
         return account != nil
@@ -47,30 +53,82 @@ class NewEditAccountViewModel: ObservableObject {
         
         self.account = account
         
-        if let username = account.username {
-            self.name = username
+        if let name = account.name {
+            self.name = name
         }
         
-        issuer = account.issuer
-        secret = account.secret
+        if let issuer = account.issuer {
+            self.issuer = issuer
+        }
+        
+        if let secret = account.secret {
+            self.secret = secret
+        }
+        
+        if let type = account.type {
+            self.type = type
+        }
+        
         base32Encoded = account.usesBase32
-        type = account.type
+    
         algorithm = account.algorithm
-        digits = account.digits
-        
-        if let period = account.period.value {
-            self.period = period
-        }
+        digits = Int(account.digits)
+        period = Int(account.period)
+        counter = Int(account.counter)
     }
     
-    func save(dismiss: () -> Void) {
+    func save() {
+        guard let callback = didCreateUpdateAccount, let dismiss = self.dismiss else {
+            return
+        }
+        
         do {
-            let data = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: type == .totp ? period : nil)
-            try accountsService.save(data: data)
+            if let account = self.account {
+                try updateAccount()
+                callback(account)
+            } else {
+                let account = try newAccount()
+                callback(account)
+            }
             dismiss()
         } catch {
             saveError = "Failed to create account."
         }
+    }
+    
+    func requestDelete() {
+        deletionRequested = true
+    }
+    
+    func confirmDeletion() {
+        guard let account = account else {
+            return
+        }
+        // We need to remove from our list before deleting or weird things happen
+        didDeleteAccount?()
+        try? accountsService.delete(accounts: [account])
+        dismiss?()
+    }
+    
+    private func newAccount() throws -> Account {
+        let data = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: type == .totp ? period : nil, counter: type == .hotp ? counter : nil)
+        return try accountsService.save(data: data)
+    }
+    
+    private func updateAccount() throws {
+        guard let existingAccount = account else {
+            return
+        }
+        existingAccount.name = name
+        existingAccount.issuer = issuer
+        existingAccount.secret = secret
+        existingAccount.usesBase32 = base32Encoded
+        existingAccount.type = type
+        existingAccount.algorithm = algorithm
+        existingAccount.digits = Int16(digits)
+        existingAccount.period = type == .totp ? Int16(period) : 30
+        existingAccount.counter = type == .hotp ? Int16(counter) : 1
+        try accountsService.save(account: existingAccount)
     }
 }
 

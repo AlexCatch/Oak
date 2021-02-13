@@ -92,16 +92,21 @@ fileprivate struct DigitsAlgorithmSelectInputRow: View {
     }
 }
 
-fileprivate struct PeriodInputRow: View {
-    @Binding var period: Int
+
+fileprivate struct StepperInputRow: View {
+    @Binding var value: Int
+    
+    let title: String
+    let min: Int
+    let max: Int
     
     var body: some View {
         HStack {
-            Stepper(value: $period, in: 30...300, label: {
+            Stepper(value: $value, in: min...max, label: {
                 HStack {
-                    Text("Period")
+                    Text(title)
                     Spacer()
-                    Text(period == 30 ? "Default" : period.description)
+                    Text(value == min ? "Default" : value.description)
                 }
             })
         }
@@ -113,6 +118,9 @@ struct NewEditAccountView: View {
     
     let dismiss: () -> Void
     let account: Account?
+    
+    let didCreateUpdateAccount: (_ account: Account) -> Void
+    let didDeleteAccount: (() -> Void)?
     
     var body: some View {
         NavigationView {
@@ -135,22 +143,44 @@ struct NewEditAccountView: View {
                     DigitsAlgorithmSelectInputRow(digits: $viewModel.digits)
                     
                     if viewModel.type == .totp {
-                        PeriodInputRow(period: $viewModel.period).animation(.easeIn)
+                        StepperInputRow(value: $viewModel.period, title: "Period", min: 30, max: 300)
+                    } else {
+                        StepperInputRow(value: $viewModel.counter, title: "Counter", min: 1, max: Int(Int16.max))
                     }
+                }
+                Section() {
+                    Button(action: {
+                        viewModel.requestDelete()
+                    }, label: {
+                        Text("Delete")
+                            .bold()
+                            .foregroundColor(.red)
+                    })
                 }
             }
             .listStyle(InsetGroupedListStyle())
+            .alert(isPresented: $viewModel.deletionRequested) {
+                Alert(
+                    title: Text("Delete"),
+                    message: Text("Are you sure you want to delete this account? This cannot be undone so please make sure you've backed up your secret elsewhere"),
+                    primaryButton: .destructive(Text("Delete"), action: viewModel.confirmDeletion),
+                    secondaryButton: .cancel()
+                )
+            }
             .navigationTitle(viewModel.navigationTitle)
             .navigationBarItems(leading: Button(action: {
-                dismiss()
+                viewModel.dismiss?()
             }, label: {
                 Text("Dismiss")
             }), trailing: Button(action: {
-                viewModel.save(dismiss: dismiss)
+                viewModel.save()
             }, label: {
                 Text("Confirm")
             }).disabled(!viewModel.inputsValid))
             .onAppear {
+                viewModel.dismiss = dismiss
+                viewModel.didCreateUpdateAccount = didCreateUpdateAccount
+                viewModel.didDeleteAccount = didDeleteAccount
                 viewModel.setAccount(account: account)
             }
         }

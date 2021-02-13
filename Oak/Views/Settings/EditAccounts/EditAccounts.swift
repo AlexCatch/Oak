@@ -19,8 +19,8 @@ struct EditAccounts: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewModel.accountRowModels) { vm in
-                        AccountRow(viewModel: vm, displayCode: false)
+                    ForEach(viewModel.accountRowModels.indices) { index in
+                        AccountRow(viewModel: viewModel.accountRowModels[index], displayCode: false, index: index)
                     }
                     .onDelete(perform: viewModel.deleteAccount)
                     .deleteDisabled(editMode == .inactive)
