@@ -22,4 +22,6 @@ blocks:
           commands:
             - bundle exec fastlane unit
             - 'bash <(curl -s https://codecov.io/bash) -J ''Oak'''
+      secrets:
+        - name: Codecov
     dependencies: []
