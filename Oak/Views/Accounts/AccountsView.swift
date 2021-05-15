@@ -16,8 +16,8 @@ struct AccountsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.accountRowModels.indices, id: \.self) { index in
-                    AccountRow(viewModel: viewModel.accountRowModels[index], editAccountCallback: viewModel.editAccount, index: index)
+                List(viewModel.accountRowModels, id: \.id) { vm in
+                    AccountRow(viewModel: vm, editAccountCallback: viewModel.editAccount)
                 }
                 .listStyle(InsetGroupedListStyle())
             }
@@ -26,7 +26,7 @@ struct AccountsView: View {
                     viewModel.navigate(to: .settings)
                 }, label: {
                     Image(systemName: "gear")
-                })
+                }) 
                 Button(action: {
                     viewModel.activeActionSheet = .add
                 }, label: {
@@ -38,11 +38,11 @@ struct AccountsView: View {
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .codeScanner:
-                    ScanQRCodeView(dismiss: viewModel.hideSheet, didAddAccount: viewModel.didAddUpdateAccount)
+                    ScanQRCodeView(dismiss: viewModel.hideSheet)
                 case .settings:
                     SettingsView(dismiss: viewModel.hideSheet)
                 case .newAccount:
-                    NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.selectedAccount, didCreateUpdateAccount: viewModel.didAddUpdateAccount, didDeleteAccount: viewModel.didDeleteAccount)
+                    NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.selectedAccount)
                 }
             }
             .actionSheet(item: $viewModel.activeActionSheet) { item in
@@ -55,10 +55,7 @@ struct AccountsView: View {
                     ])
                 }
             }
-            .onAppear {
-                viewModel.fetchAccounts()
-            }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

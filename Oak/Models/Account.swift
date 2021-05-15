@@ -48,3 +48,10 @@ extension Account {
         return secret.data(using: .utf8)
     }
 }
+
+extension NSManagedObject {
+    static func resultsController<T>(context: NSManagedObjectContext, request: NSFetchRequest<T>, sortDescriptors: [NSSortDescriptor] = []) -> NSFetchedResultsController<T> {
+        request.sortDescriptors = sortDescriptors
+        return NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+    }
+}

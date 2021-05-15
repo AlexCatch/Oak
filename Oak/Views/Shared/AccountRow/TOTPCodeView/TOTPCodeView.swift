@@ -34,7 +34,6 @@ struct TOTPCodeView: View {
             viewModel.generateCode()
         }
         .onDisappear {
-            print("TOTP did dissipear")
             viewModel.stop()
         }
     }

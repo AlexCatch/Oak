@@ -7,20 +7,18 @@
 
 import SwiftUI
 
-typealias EditAccountCallback = (_ index: Int) -> Void
+typealias EditAccountCallback = (_ account: Account) -> Void
 
 struct AccountRow: View {
     @StateObject var viewModel: AccountRowViewModel
     
     let displayCode: Bool
     let editAccountCallback: EditAccountCallback?
-    let index: Int
     
-    init(viewModel: AccountRowViewModel, displayCode: Bool = true, editAccountCallback: EditAccountCallback? = nil, index: Int) {
+    init(viewModel: AccountRowViewModel, displayCode: Bool = true, editAccountCallback: EditAccountCallback? = nil) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.displayCode = displayCode
         self.editAccountCallback = editAccountCallback
-        self.index = index
     }
     
     var body: some View {
@@ -40,7 +38,7 @@ struct AccountRow: View {
         } .contextMenu {
             if let callback = editAccountCallback {
                 Button {
-                    callback(index)
+                    callback(viewModel.account)
                 } label: {
                     Label("Edit Account", systemImage: "pencil")
                 }

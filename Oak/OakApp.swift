@@ -6,16 +6,27 @@
 //
 
 import SwiftUI
+import Resolver
 
 @main
 struct OakApp: App {
+    
+    @Injected private var persistentStore: PersistentStore
+    @Injected private var iCloudSettings: ICloudSettings;
+    
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    
     init() {
-        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color("AccentColor"))
+        // If we've failed to delete our store after requesting, let's attempt to delete
+        if iCloudSettings.bool(key: .failedToDeleteZone) {
+            persistentStore.deleteUserAccounts()
+            iCloudSettings.set(key: .failedToDeleteZone, value: false)
+        }
     }
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environment(\.managedObjectContext, persistentStore.viewContext)
         }
     }
 }

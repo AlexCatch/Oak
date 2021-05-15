@@ -21,7 +21,7 @@ struct SettingsView: View {
                     ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
                 }
                 Section(header: Text("Sync"), footer: Text("If this option is enabled, your accounts will automatically be backed up and synced across all devices using the same account")) {
-                    ToggableRow(title: "iCloud", key: .requireAuthOnStart)
+                    ICloudToggableRow(title: "iCloud", key: .iCloudEnabled)
                 }
                 Section(header: Text("Manage")) {
                     Button("Change Password") {

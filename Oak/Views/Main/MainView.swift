@@ -13,7 +13,7 @@ struct MainView: View {
     @StateObject private var mainViewModel: MainViewModel = Resolver.resolve()
     
     var body: some View {
-        currentView()
+        currentView().navigationViewStyle(StackNavigationViewStyle())
     }
     
     func currentView() -> AnyView {

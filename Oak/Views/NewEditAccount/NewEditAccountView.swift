@@ -119,9 +119,6 @@ struct NewEditAccountView: View {
     let dismiss: () -> Void
     let account: Account?
     
-    let didCreateUpdateAccount: (_ account: Account) -> Void
-    let didDeleteAccount: (() -> Void)?
-    
     var body: some View {
         NavigationView {
             List {
@@ -148,14 +145,16 @@ struct NewEditAccountView: View {
                         StepperInputRow(value: $viewModel.counter, title: "Counter", min: 1, max: Int(Int16.max))
                     }
                 }
-                Section() {
-                    Button(action: {
-                        viewModel.requestDelete()
-                    }, label: {
-                        Text("Delete")
-                            .bold()
-                            .foregroundColor(.red)
-                    })
+                if viewModel.account != nil {
+                    Section() {
+                        Button(action: {
+                            viewModel.requestDelete()
+                        }, label: {
+                            Text("Delete")
+                                .bold()
+                                .foregroundColor(.red)
+                        })
+                    }
                 }
             }
             .listStyle(InsetGroupedListStyle())
@@ -179,8 +178,6 @@ struct NewEditAccountView: View {
             }).disabled(!viewModel.inputsValid))
             .onAppear {
                 viewModel.dismiss = dismiss
-                viewModel.didCreateUpdateAccount = didCreateUpdateAccount
-                viewModel.didDeleteAccount = didDeleteAccount
                 viewModel.setAccount(account: account)
             }
         }

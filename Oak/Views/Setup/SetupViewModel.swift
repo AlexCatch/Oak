@@ -11,6 +11,7 @@ import Resolver
 
 class SetupViewModel: ObservableObject {
     @Injected private var keychainService: KeychainService
+    @Injected private var settings: Settings
     
     @Published var password: String = ""
     @Published var passwordConfirmation = ""
@@ -34,6 +35,7 @@ class SetupViewModel: ObservableObject {
     
     func setup(with rootViewBinding: Binding<RootView>) {
         keychainService.set(key: .password, value: password)
+        settings.set(key: .isSetup, value: true)
         rootViewBinding.wrappedValue = .accounts
     }
 }

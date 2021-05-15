@@ -11,6 +11,8 @@
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
 		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
+		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
+		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
 		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
@@ -19,6 +21,9 @@
 		09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */; };
 		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
 		09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeViewModel.swift */; };
+		09CFCEC82650247B001954C5 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */; };
+		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
+		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -82,6 +87,8 @@
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
 		092F944525D5C46700FB537A /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -90,6 +97,9 @@
 		09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeView.swift; sourceTree = "<group>"; };
 		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
+		09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		09CFCEC926504079001954C5 /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
+		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
@@ -170,6 +181,14 @@
 				097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */,
 			);
 			path = NewEditAccount;
+			sourceTree = "<group>";
+		};
+		0953B95925D87BBC008DD9BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0953B95A25D87BBC008DD9BE /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		095A2BB725D5BABB0030C585 /* Persistence */ = {
@@ -211,6 +230,14 @@
 			path = HOTPCodeView;
 			sourceTree = "<group>";
 		};
+		09CFCEC62650246F001954C5 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		FA03412525C9C8B3004752F3 /* Injected */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +274,7 @@
 				FA42C68B25C63C9D000D597E /* OakTests */,
 				FA42C69625C63C9D000D597E /* OakUITests */,
 				FA42C67325C63C9C000D597E /* Products */,
+				0953B95925D87BBC008DD9BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,6 +291,7 @@
 		FA42C67425C63C9C000D597E /* Oak */ = {
 			isa = PBXGroup;
 			children = (
+				09CFCEC62650246F001954C5 /* Modifiers */,
 				095A2BB725D5BABB0030C585 /* Persistence */,
 				FA03412525C9C8B3004752F3 /* Injected */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
@@ -272,6 +301,7 @@
 				FA42C72225C6EC51000D597E /* Models */,
 				FA42C6A825C64904000D597E /* Views */,
 				FA42C67525C63C9C000D597E /* OakApp.swift */,
+				094EF7B926500EA90027F9F4 /* AppDelegate.swift */,
 			);
 			path = Oak;
 			sourceTree = "<group>";
@@ -341,6 +371,7 @@
 				09CFA33E25CF4504003BE427 /* AccountRow */,
 				FA42C6B625C64A79000D597E /* CircularProgressView.swift */,
 				FA42C6CE25C65B8B000D597E /* ToggableRow.swift */,
+				09CFCECB26504197001954C5 /* ICloudToggableRow.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -410,6 +441,7 @@
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
 				092A677B25CC605A00E8118E /* Window.swift */,
+				09CFCEC926504079001954C5 /* ICloudSettings.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -564,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */,
 				092A678125CC781400E8118E /* Double+Extensions.swift in Sources */,
 				09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */,
 				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
@@ -573,11 +606,13 @@
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
+				09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
+				09CFCEC82650247B001954C5 /* ViewDidLoadModifier.swift in Sources */,
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
@@ -604,6 +639,7 @@
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
+				09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */,
 				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,

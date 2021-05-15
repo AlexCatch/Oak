@@ -27,8 +27,6 @@ class NewEditAccountViewModel: ObservableObject {
     @Published var saveError: String?
     @Published var deletionRequested = false
     
-    var didCreateUpdateAccount: ((_ account: Account) -> Void)?
-    var didDeleteAccount: (() -> Void)?
     var dismiss: (() -> Void)?
     
     var isEditing: Bool {
@@ -78,17 +76,15 @@ class NewEditAccountViewModel: ObservableObject {
     }
     
     func save() {
-        guard let callback = didCreateUpdateAccount, let dismiss = self.dismiss else {
+        guard let dismiss = self.dismiss else {
             return
         }
         
         do {
-            if let account = self.account {
+            if self.account != nil {
                 try updateAccount()
-                callback(account)
             } else {
-                let account = try newAccount()
-                callback(account)
+                try newAccount()
             }
             dismiss()
         } catch {
@@ -104,15 +100,13 @@ class NewEditAccountViewModel: ObservableObject {
         guard let account = account else {
             return
         }
-        // We need to remove from our list before deleting or weird things happen
-        didDeleteAccount?()
         try? accountsService.delete(accounts: [account])
         dismiss?()
     }
     
-    private func newAccount() throws -> Account {
+    private func newAccount() throws {
         let data = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: type == .totp ? period : nil, counter: type == .hotp ? counter : nil)
-        return try accountsService.save(data: data)
+        try accountsService.save(data: data)
     }
     
     private func updateAccount() throws {

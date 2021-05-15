@@ -9,11 +9,14 @@ import SwiftUI
 import Resolver
 
 enum SettingsKey: String {
+    case failedToDeleteZone = "failedToDeleteZone"
+    case iCloudEnabled = "iCloudEnabled"
     case requireAuthOnStart = "requireAuthOnStart"
     case biometricsEnabled = "biometricsEnabled"
+    case isSetup = "isSetup"
 }
 
-struct Settings {
+class Settings {
     func bool(key: SettingsKey) -> Bool {
         return UserDefaults.standard.bool(forKey: key.rawValue)
     }

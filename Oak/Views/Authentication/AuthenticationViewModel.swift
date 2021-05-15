@@ -31,12 +31,16 @@ class AuthenticationViewModel: ObservableObject {
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc private func applicationWillEnterForeground() {
         attemptBiometrics(for: .active)
     }
     
     func attemptBiometrics(for scenePhase: ScenePhase) {
-        guard settings.bool(key: .biometricsEnabled), scenePhase == .active else {
+        guard settings.bool(key: .biometricsEnabled), scenePhase == .active || scenePhase == .inactive else {
             // biometrics aren't enabled at the app level
             return
         }

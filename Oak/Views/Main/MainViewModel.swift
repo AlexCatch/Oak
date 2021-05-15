@@ -26,7 +26,7 @@ class MainViewModel: ObservableObject {
     init(keychainService: KeychainService) {
         self.keychainService = keychainService
         
-        if keychainService.get(key: .password) == nil {
+        if !settings.bool(key: .isSetup) {
             activeView = .setup
         } else {
             activeView = settings.bool(key: .requireAuthOnStart) ? .auth : .accounts

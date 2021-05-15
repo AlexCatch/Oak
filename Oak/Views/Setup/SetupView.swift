@@ -25,6 +25,9 @@ struct SetupView: View {
                     ToggableRow(title: "Require on Start", key: .requireAuthOnStart)
                     ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
                 }
+                Section(footer: Text("If this option is enabled, your accounts will automatically be backed up and synced across all devices using the same iCloud account")) {
+                    ICloudToggableRow(title: "iCloud", key: .iCloudEnabled)
+                }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Setup")

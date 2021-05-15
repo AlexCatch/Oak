@@ -12,14 +12,19 @@ import Resolver
 struct ToggableRow: View {
     var title: String
     var key: SettingsKey
+    var onChangeCallback: ((_ status: Bool) -> Void)?
     
-    @Injected private var settings: Settings
+    private var settings: Settings
     @State private var isOn: Bool = false
     
-    init(title: String, key: SettingsKey) {
+    init(title: String, key: SettingsKey, settings: Settings = Resolver.resolve(), onChange: ((_ status: Bool) -> Void)? = nil) {
         self.title = title
         self.key = key
+        self.settings = settings
         _isOn = State(initialValue: settings.bool(key: key))
+        
+        self.onChangeCallback = onChange
+
     }
     
     var body: some View {
@@ -27,9 +32,10 @@ struct ToggableRow: View {
             Text(title)
         }
         .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
-        .onReceive(Just(isOn)) { value in
+        .onChange(of: isOn, perform: { value in
             settings.set(key: key, value: value)
-        }
+            self.onChangeCallback?(value)
+        })
     }
 }
 

@@ -22,30 +22,50 @@ struct CreateAccountData {
 }
 
 protocol AccountService {
-    func save(parsedURI: ParsedURI) throws -> Account
-    func save(data: CreateAccountData) throws -> Account
+    var delegate: AccountServiceDelegate? { get set }
+    func save(parsedURI: ParsedURI) throws
+    func save(data: CreateAccountData) throws
     func save(account: Account) throws
-    func fetch() throws -> [Account]
     func delete(accounts: [Account]) throws
-    func updateCounter(account: Account) throws -> Account?
+    func updateCounter(account: Account) throws -> Account
 }
 
-class RealAccountService: AccountService {
-    @Injected private var persistentStore: PersistentStore
-    
-    func fetch() throws -> [Account] {
-        let fetchRequest: NSFetchRequest<Account> = Account.fetchRequest()
-        return try persistentStore.viewContext.fetch(fetchRequest)
+protocol AccountServiceDelegate: AnyObject {
+    func accountsChanged(accounts: [Account])
+}
+
+class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountService {
+    weak var delegate: AccountServiceDelegate? {
+        didSet {
+            // When our delegate is set - send our initial accounts
+            if let accounts = accountsDataController?.fetchedObjects {
+                delegate?.accountsChanged(accounts: accounts)
+            }
+        }
     }
     
-    @discardableResult
-    func save(parsedURI: ParsedURI) throws -> Account {
+    private var persistentStore: PersistentStore
+    private var accountsDataController: NSFetchedResultsController<Account>?
+    
+    override init() {
+        persistentStore = Resolver.resolve()
+        super.init()
+        
+        accountsDataController = Account.resultsController(context: persistentStore.viewContext, request: Account.fetchRequest(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)])
+        accountsDataController?.delegate = self
+        
+        // do an initial fetch
+        try? accountsDataController?.performFetch()
+    }
+
+    func save(parsedURI: ParsedURI) throws {
         let account = Account(context: persistentStore.viewContext)
         account.issuer = parsedURI.issuer
         account.name = parsedURI.username
         account.secret = parsedURI.secret
         account.algorithm = parsedURI.algorithm
         account.type = parsedURI.type
+        account.createdAt = Date()
         
         if let digits = Int16(parsedURI.digits) {
             account.digits = digits
@@ -60,11 +80,9 @@ class RealAccountService: AccountService {
         }
         
         try persistentStore.save()
-        
-        return account
     }
     
-    func save(data: CreateAccountData) throws -> Account {
+    func save(data: CreateAccountData) throws {
         let account = Account(context: persistentStore.viewContext)
         account.issuer = data.issuer
         account.name = data.name
@@ -72,6 +90,7 @@ class RealAccountService: AccountService {
         account.algorithm = data.algorithm
         account.type = data.type
         account.digits = Int16(data.digits)
+        account.createdAt = Date()
         
         
         if let period = data.period {
@@ -83,15 +102,13 @@ class RealAccountService: AccountService {
         }
         
         try persistentStore.save()
-        
-        return account
     }
     
     func save(account: Account) throws {
         try persistentStore.viewContext.save()
     }
     
-    func updateCounter(account: Account) throws -> Account? {
+    func updateCounter(account: Account) throws -> Account {
         account.counter = account.counter + 1
         try persistentStore.save()
         return account
@@ -102,6 +119,12 @@ class RealAccountService: AccountService {
             persistentStore.viewContext.delete(account)
         }
         try persistentStore.save()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        if let fetchedAccounts = controller.fetchedObjects as? [Account] {
+            delegate?.accountsChanged(accounts: fetchedAccounts)
+        }
     }
 }
 

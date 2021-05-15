@@ -8,8 +8,9 @@
 import SwiftUI
 import CodeScanner
 import Resolver
+import CoreData
 
-class AccountsViewModel: ObservableObject {
+class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     enum Sheet: Identifiable {
         case codeScanner
         case settings
@@ -29,6 +30,7 @@ class AccountsViewModel: ObservableObject {
     }
     
     @Injected private var accountService: AccountService
+    @Injected private var persistentStore: PersistentStore
 
     @Published var accountRowModels: [AccountRowViewModel] = []
     @Published var activeSheet: Sheet?
@@ -49,44 +51,29 @@ class AccountsViewModel: ObservableObject {
         return accountRowModels[selectedIndex].account
     }
     
-    func fetchAccounts() {
-        if let accounts = try? accountService.fetch() {
-            self.accountRowModels = accounts.map { AccountRowViewModel(account: $0) }
-        }
+    override init() {
+        super.init()
+        accountService.delegate = self
     }
     
     func navigate(to sheet: Sheet) {
         activeSheet = sheet
     }
     
-    func didAddUpdateAccount(account: Account) {
-        // Check to see if we're editing a selected account
-        if let index = selectedAccountIndex {
-            accountRowModels[index].account = account
-            self.selectedAccountIndex = nil
-            return
+    func editAccount(account: Account) {
+        if let index = accountRowModels.firstIndex(where: { $0.account.id == account.id }) {
+            self.selectedAccountIndex = index
         }
-        
-        let vm = AccountRowViewModel(account: account)
-        accountRowModels.append(vm)
-    }
-    
-    func didDeleteAccount() {
-        // We've deleted the selected index account
-        guard let index = selectedAccountIndex else {
-            return
-        }
-        accountRowModels.remove(at: index)
-        selectedAccountIndex = nil
-    }
-    
-    func editAccount(at index: Int) {
-        self.selectedAccountIndex = index
         navigate(to: .newAccount)
     }
     
     func hideSheet() {
         activeSheet = nil
+    }
+    
+    func accountsChanged(accounts: [Account]) {
+        accountRowModels = accounts.map {  AccountRowViewModel(account: $0) }
+        
     }
 }
 
