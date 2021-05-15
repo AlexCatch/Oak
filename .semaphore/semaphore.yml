@@ -1,13 +1,39 @@
 version: v1.0
-name: Initial Pipeline
+name: Semaphore iOS Swift example with Fastlane
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu1804
+    type: a1-standard-4
+    os_image: macos-xcode12
 blocks:
-  - name: 'Block #1'
+  - name: Fastlane Tests
     task:
+      env_vars:
+        - name: LANG
+          value: en_US.UTF-8
+      prologue:
+        commands:
+          - checkout
+          - cache restore
+          - bundle install --path vendor/bundle
+          - cache store
       jobs:
-        - name: 'Job #1'
+        - name: bundle exec fastlane test
           commands:
-            - checkout
+            - bundle exec xcversion select 12.0.1
+            - bundle exec fastlane test
+  - name: Fastlane Build
+    task:
+      env_vars:
+        - name: LANG
+          value: en_US.UTF-8
+      prologue:
+        commands:
+          - checkout
+          - cache restore
+          - bundle install --path vendor/bundle
+          - cache store
+      jobs:
+        - name: bundle exec fastlane build
+          commands:
+            - bundle exec xcversion select 12.0.1
+            - bundle exec fastlane build
