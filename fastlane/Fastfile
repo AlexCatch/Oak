@@ -30,21 +30,10 @@ platform :ios do
     upload_to_app_store
   end
 
-  desc "Build Project"
-  lane :build do
-    build_app(
-      skip_codesigning: true,
-      skip_archive: true,
-      scheme: "Oak",
-    )
-  end
-
-
   desc "Run Unit tests"
   lane :unit do
     run_tests(
       scheme: "OakTests",
-      test_without_building: true,
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
     )
   end
