@@ -17,6 +17,14 @@ blocks:
           - bundle install --path vendor/bundle
           - cache store
       jobs:
-        - name: bundle exec fastlane unit
+        - name: Run tests
           commands:
             - bundle exec fastlane unit
+  - name: Upload Code Coverage
+    task:
+      secrets:
+        - name: Codecov
+      jobs:
+        - name: Upload coverage
+          commands:
+            - 'bash <(curl -s https://codecov.io/bash) -j ''Oak'''
