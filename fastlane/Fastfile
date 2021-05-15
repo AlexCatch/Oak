@@ -34,7 +34,6 @@ platform :ios do
   lane :unit do
     run_tests(
       scheme: "OakTests",
-      buildlog_path: "./fastlane/fastlane-buildlog",
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
     )
   end
