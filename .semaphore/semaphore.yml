@@ -17,23 +17,7 @@ blocks:
           - bundle install --path vendor/bundle
           - cache store
       jobs:
-        - name: bundle exec fastlane test
+        - name: bundle exec fastlane unit
           commands:
-            - bundle exec xcversion select 12.0.1
-            - bundle exec fastlane test
-  - name: Fastlane Build
-    task:
-      env_vars:
-        - name: LANG
-          value: en_US.UTF-8
-      prologue:
-        commands:
-          - checkout
-          - cache restore
-          - bundle install --path vendor/bundle
-          - cache store
-      jobs:
-        - name: bundle exec fastlane build
-          commands:
-            - bundle exec xcversion select 12.0.1
-            - bundle exec fastlane build
+            - bundle exec xcversion select 12.15
+            - bundle exec fastlane unit
