@@ -19,5 +19,5 @@ blocks:
       jobs:
         - name: bundle exec fastlane unit
           commands:
-            - bundle exec xcversion select 12.15
+            - xcversion select 12.15
             - bundle exec fastlane unit
