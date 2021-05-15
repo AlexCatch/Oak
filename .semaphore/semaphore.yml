@@ -4,36 +4,22 @@ agent:
   machine:
     type: a1-standard-4
     os_image: macos-xcode12
+global_job_config:
+  prologue:
+    commands:
+      - checkout
+      - cache restore
+      - bundle install --path vendor/bundle
+      - cache store
 blocks:
-  - name: Build Project
-    task:
-      env_vars:
-        - name: LANG
-          value: en_US.UTF-8
-      prologue:
-        commands:
-          - checkout
-          - cache restore
-          - bundle install --path vendor/bundle
-          - cache store
-      jobs:
-        - name: bundle exec fastlane build
-          commands:
-            - bundle exec fastlane build
   - name: Fastlane Tests
     task:
       env_vars:
         - name: LANG
           value: en_US.UTF-8
       jobs:
-        - name: bundle exec fastlane unit
+        - name: Run tests & upload coverage
           commands:
             - bundle exec fastlane unit
-  - name: Upload Code Coverage
-    task:
-      secrets:
-        - name: Codecov
-      jobs:
-        - name: Upload coverage
-          commands:
             - 'bash <(curl -s https://codecov.io/bash) -j ''Oak'''
+    dependencies: []
