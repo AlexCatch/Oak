@@ -19,5 +19,4 @@ blocks:
       jobs:
         - name: bundle exec fastlane unit
           commands:
-            - xcversion list
             - bundle exec fastlane unit
