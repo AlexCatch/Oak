@@ -34,7 +34,6 @@ struct AccountsView: View {
                 })
             })
             .navigationTitle("Accounts")
-            .navigationViewStyle(StackNavigationViewStyle())
             .sheet(item: $viewModel.activeSheet) { item in
                 switch item {
                 case .codeScanner:
@@ -55,7 +54,14 @@ struct AccountsView: View {
                     ])
                 }
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            UITableView.appearance().contentInset.top = 10
+        }
+        .onDisappear {
+            UITableView.appearance().contentInset.top = 0
+        }
     }
 }
 
