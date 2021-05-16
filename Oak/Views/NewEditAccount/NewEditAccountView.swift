@@ -142,7 +142,7 @@ struct NewEditAccountView: View {
                     if viewModel.type == .totp {
                         StepperInputRow(value: $viewModel.period, title: "Period", min: 30, max: 300)
                     } else {
-                        StepperInputRow(value: $viewModel.counter, title: "Counter", min: 1, max: Int(Int16.max))
+                        StepperInputRow(value: $viewModel.counter, title: "Counter", min: 0, max: Int(Int16.max))
                     }
                 }
                 if viewModel.account != nil {

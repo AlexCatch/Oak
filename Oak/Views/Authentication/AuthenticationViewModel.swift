@@ -65,17 +65,16 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    func authenticatePassword(with rootViewBinding: Binding<RootView>) {
+    func authenticatePassword() -> Bool {
         let storedPassword = keychainService.get(key: .password)
 
         guard storedPassword == password else {
             haptics.generate(type: .error)
-            return
+            return false
         }
         
         haptics.generate(type: .success)
-        // success auth - go to accounts
-        rootViewBinding.wrappedValue = .accounts
+        return true
     }
 }
 

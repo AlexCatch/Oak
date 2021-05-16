@@ -16,7 +16,12 @@ enum SettingsKey: String {
     case isSetup = "isSetup"
 }
 
-class Settings {
+protocol Settings {
+    func bool(key: SettingsKey) -> Bool
+    func set(key: SettingsKey, value: Any)
+}
+
+class RealSettings: Settings {
     func bool(key: SettingsKey) -> Bool {
         return UserDefaults.standard.bool(forKey: key.rawValue)
     }
@@ -28,6 +33,6 @@ class Settings {
 
 extension Resolver {
     static func RegisterSettingsUtil() {
-        register { Settings() }.scope(.shared)
+        register { RealSettings() as Settings }.scope(.shared)
     }
 }

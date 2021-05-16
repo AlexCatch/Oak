@@ -22,7 +22,7 @@ class NewEditAccountViewModel: ObservableObject {
     @Published var algorithm: Algorithm = .sha1
     @Published var digits: Int = 6
     @Published var period: Int = 30
-    @Published var counter: Int = 1
+    @Published var counter: Int = 0
     
     @Published var saveError: String?
     @Published var deletionRequested = false
@@ -46,6 +46,7 @@ class NewEditAccountViewModel: ObservableObject {
     
     func setAccount(account: Account?) {
         guard let account = account else {
+            self.account = nil
             return
         }
         
@@ -76,17 +77,13 @@ class NewEditAccountViewModel: ObservableObject {
     }
     
     func save() {
-        guard let dismiss = self.dismiss else {
-            return
-        }
-        
         do {
             if self.account != nil {
                 try updateAccount()
             } else {
                 try newAccount()
             }
-            dismiss()
+            dismiss?()
         } catch {
             saveError = "Failed to create account."
         }
@@ -100,6 +97,7 @@ class NewEditAccountViewModel: ObservableObject {
         guard let account = account else {
             return
         }
+        
         try? accountsService.delete(accounts: [account])
         dismiss?()
     }
@@ -121,7 +119,7 @@ class NewEditAccountViewModel: ObservableObject {
         existingAccount.algorithm = algorithm
         existingAccount.digits = Int16(digits)
         existingAccount.period = type == .totp ? Int16(period) : 30
-        existingAccount.counter = type == .hotp ? Int16(counter) : 1
+        existingAccount.counter = type == .hotp ? Int16(counter) : 0
         try accountsService.save(account: existingAccount)
     }
 }

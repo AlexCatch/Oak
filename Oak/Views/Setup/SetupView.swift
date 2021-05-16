@@ -32,8 +32,8 @@ struct SetupView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Setup")
             .navigationBarItems(trailing:Button("Confirm", action: {
-                // ask vm if password is legit
-                viewModel.setup(with: $activeSheet)
+                viewModel.setup()
+                activeSheet = .accounts
             }).disabled(!viewModel.areInputsValid))
         }
     }

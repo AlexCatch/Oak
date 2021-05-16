@@ -9,7 +9,14 @@ import Foundation
 import Resolver
 import CoreData
 
-class PersistentStore {
+protocol PersistentStore {
+    var viewContext: NSManagedObjectContext { get }
+    func save() throws
+    func toggleICloudSync(sync: Bool)
+    func deleteUserAccounts()
+}
+
+class RealPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!
     @Injected private var iCloudSettings: ICloudSettings
     
@@ -78,6 +85,6 @@ class PersistentStore {
 
 extension Resolver {
     static func RegisterPersistentContainer() {
-        register { PersistentStore() }.scope(.application)
+        register { RealPersistentStore() as PersistentStore }.scope(.application)
     }
 }

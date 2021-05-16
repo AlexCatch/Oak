@@ -9,7 +9,7 @@ import Foundation
 import CloudKit
 import Resolver
 
-class ICloudSettings: Settings {
+class ICloudSettings: RealSettings {
     override func bool(key: SettingsKey) -> Bool {
         return NSUbiquitousKeyValueStore.default.bool(forKey: key.rawValue)
     }

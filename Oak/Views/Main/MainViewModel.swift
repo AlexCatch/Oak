@@ -18,14 +18,11 @@ enum RootView {
 class MainViewModel: ObservableObject {
     @Injected private var settings: Settings
     @Injected private var window: Window
-    
-    private let keychainService: KeychainService
+    @Injected private var keychainService: KeychainService
     
     @Published var activeView: RootView = .auth
     
-    init(keychainService: KeychainService) {
-        self.keychainService = keychainService
-        
+    init() {
         if !settings.bool(key: .isSetup) {
             activeView = .setup
         } else {
@@ -54,6 +51,6 @@ class MainViewModel: ObservableObject {
 
 extension Resolver {
     static func RegisterMainViewModel() {
-        register { MainViewModel(keychainService: resolve()) }
+        register { MainViewModel() }
     }
 }

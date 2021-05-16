@@ -18,7 +18,7 @@ struct AccountDisplayable: Identifiable {
 class AccountRowViewModel: Identifiable, ObservableObject {
     var id: String {
         get {
-            return account.objectID.uriRepresentation().absoluteString ?? ""
+            return account.objectID.uriRepresentation().absoluteString
         }
     }
     

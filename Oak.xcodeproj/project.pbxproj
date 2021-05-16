@@ -18,6 +18,20 @@
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
 		09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */; };
+		09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E218265179D70066C4AB /* MockKeychainService.swift */; };
+		09C4E21B26517A430066C4AB /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21A26517A430066C4AB /* Setup.swift */; };
+		09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21C26517B950066C4AB /* MockSettings.swift */; };
+		09C4E22126517D070066C4AB /* SetupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22026517D070066C4AB /* SetupViewModelTests.swift */; };
+		09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E224265183760066C4AB /* MockPersistentStore.swift */; };
+		09C4E227265186230066C4AB /* AccountsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E226265186230066C4AB /* AccountsViewModelTests.swift */; };
+		09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2282651863C0066C4AB /* OakTestCase.swift */; };
+		09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */; };
+		09C4E22F265196430066C4AB /* ScanQRCodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22E265196430066C4AB /* ScanQRCodeViewModelTests.swift */; };
+		09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E23026519D4F0066C4AB /* AuthenticationViewModelTests.swift */; };
+		09C4E23326519F450066C4AB /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E23226519F450066C4AB /* MainViewModelTests.swift */; };
+		09C4E2352651A0700066C4AB /* NewEditAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2342651A0700066C4AB /* NewEditAccountViewModelTests.swift */; };
+		09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2362651A6CB0066C4AB /* HOTPCodeViewModelTests.swift */; };
+		09C4E2392651ABF50066C4AB /* UpdatePasswordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2382651ABF50066C4AB /* UpdatePasswordViewModelTests.swift */; };
 		09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */; };
 		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
 		09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeViewModel.swift */; };
@@ -39,7 +53,6 @@
 		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
 		FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */; };
-		FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C68C25C63C9D000D597E /* OakTests.swift */; };
 		FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C69725C63C9D000D597E /* OakUITests.swift */; };
 		FA42C6B225C64919000D597E /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B125C64919000D597E /* AccountRow.swift */; };
 		FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B625C64A79000D597E /* CircularProgressView.swift */; };
@@ -95,6 +108,20 @@
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		09BA752525D0555600891033 /* HOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeView.swift; sourceTree = "<group>"; };
 		09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeViewModel.swift; sourceTree = "<group>"; };
+		09C4E218265179D70066C4AB /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
+		09C4E21A26517A430066C4AB /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		09C4E21C26517B950066C4AB /* MockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettings.swift; sourceTree = "<group>"; };
+		09C4E22026517D070066C4AB /* SetupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E224265183760066C4AB /* MockPersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistentStore.swift; sourceTree = "<group>"; };
+		09C4E226265186230066C4AB /* AccountsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E2282651863C0066C4AB /* OakTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakTestCase.swift; sourceTree = "<group>"; };
+		09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E22E265196430066C4AB /* ScanQRCodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E23026519D4F0066C4AB /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E23226519F450066C4AB /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E2342651A0700066C4AB /* NewEditAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E2362651A6CB0066C4AB /* HOTPCodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeViewModelTests.swift; sourceTree = "<group>"; };
+		09C4E2382651ABF50066C4AB /* UpdatePasswordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModelTests.swift; sourceTree = "<group>"; };
 		09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeView.swift; sourceTree = "<group>"; };
 		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
@@ -117,7 +144,6 @@
 		FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C68825C63C9D000D597E /* OakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA42C68C25C63C9D000D597E /* OakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakTests.swift; sourceTree = "<group>"; };
 		FA42C68E25C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C69325C63C9D000D597E /* OakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C69725C63C9D000D597E /* OakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakUITests.swift; sourceTree = "<group>"; };
@@ -200,6 +226,17 @@
 				092F944525D5C46700FB537A /* PersistentStore.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		09C4E217265179C20066C4AB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				09C4E218265179D70066C4AB /* MockKeychainService.swift */,
+				09C4E21A26517A430066C4AB /* Setup.swift */,
+				09C4E21C26517B950066C4AB /* MockSettings.swift */,
+				09C4E224265183760066C4AB /* MockPersistentStore.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		09CFA33E25CF4504003BE427 /* AccountRow */ = {
@@ -319,8 +356,18 @@
 		FA42C68B25C63C9D000D597E /* OakTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA42C68C25C63C9D000D597E /* OakTests.swift */,
+				09C4E217265179C20066C4AB /* Mocks */,
 				FA42C68E25C63C9D000D597E /* Info.plist */,
+				09C4E22026517D070066C4AB /* SetupViewModelTests.swift */,
+				09C4E226265186230066C4AB /* AccountsViewModelTests.swift */,
+				09C4E2282651863C0066C4AB /* OakTestCase.swift */,
+				09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */,
+				09C4E22E265196430066C4AB /* ScanQRCodeViewModelTests.swift */,
+				09C4E23026519D4F0066C4AB /* AuthenticationViewModelTests.swift */,
+				09C4E23226519F450066C4AB /* MainViewModelTests.swift */,
+				09C4E2342651A0700066C4AB /* NewEditAccountViewModelTests.swift */,
+				09C4E2362651A6CB0066C4AB /* HOTPCodeViewModelTests.swift */,
+				09C4E2382651ABF50066C4AB /* UpdatePasswordViewModelTests.swift */,
 			);
 			path = OakTests;
 			sourceTree = "<group>";
@@ -654,7 +701,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA42C68D25C63C9D000D597E /* OakTests.swift in Sources */,
+				09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */,
+				09C4E227265186230066C4AB /* AccountsViewModelTests.swift in Sources */,
+				09C4E22126517D070066C4AB /* SetupViewModelTests.swift in Sources */,
+				09C4E2392651ABF50066C4AB /* UpdatePasswordViewModelTests.swift in Sources */,
+				09C4E23326519F450066C4AB /* MainViewModelTests.swift in Sources */,
+				09C4E2352651A0700066C4AB /* NewEditAccountViewModelTests.swift in Sources */,
+				09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */,
+				09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */,
+				09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */,
+				09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */,
+				09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */,
+				09C4E21B26517A430066C4AB /* Setup.swift in Sources */,
+				09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */,
+				09C4E22F265196430066C4AB /* ScanQRCodeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +867,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
@@ -835,6 +896,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;

@@ -22,10 +22,6 @@ class RealKeychainService: KeychainService {
     
     private let keychain = KeychainSwift()
     
-    init() {
-//        keychain.clear()
-    }
-    
     func set(key: KeychainKeys, value: String) {
         keychain.set(value, forKey: key.rawValue)
     }

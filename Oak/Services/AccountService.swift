@@ -24,6 +24,7 @@ struct CreateAccountData {
 protocol AccountService {
     var delegate: AccountServiceDelegate? { get set }
     func filter(predicate: NSPredicate?) throws
+    func fetchAll() -> [Account]
     func save(parsedURI: ParsedURI) throws
     func save(data: CreateAccountData) throws
     func save(account: Account) throws
@@ -45,11 +46,10 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         }
     }
     
-    private var persistentStore: PersistentStore
+    @Injected public var persistentStore: PersistentStore
     private var accountsDataController: NSFetchedResultsController<Account>?
     
     override init() {
-        persistentStore = Resolver.resolve()
         super.init()
         
         accountsDataController = Account.resultsController(context: persistentStore.viewContext, request: Account.fetchRequest(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)])
@@ -57,6 +57,11 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         
         // do an initial fetch
         try? accountsDataController?.performFetch()
+    }
+    
+    func fetchAll() -> [Account] {
+        try? accountsDataController?.performFetch()
+        return accountsDataController?.fetchedObjects ?? []
     }
     
     func filter(predicate: NSPredicate?) throws {
@@ -102,6 +107,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         account.issuer = data.issuer
         account.name = data.name
         account.secret = data.secret
+        account.usesBase32 = data.base32Encoded
         account.algorithm = data.algorithm
         account.type = data.type
         account.digits = Int16(data.digits)

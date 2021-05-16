@@ -24,7 +24,9 @@ struct AuthenticationView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Authenticaton")
             .navigationBarItems(trailing: Button("Unlock", action: {
-                viewModel.authenticatePassword(with: $activeSheet)
+                if viewModel.authenticatePassword() {
+                    activeSheet = .accounts
+                }
             }))
         }.onAppear {
             viewModel.rootViewBinding = $activeSheet
