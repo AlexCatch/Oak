@@ -23,6 +23,7 @@ struct CreateAccountData {
 
 protocol AccountService {
     var delegate: AccountServiceDelegate? { get set }
+    func filter(predicate: NSPredicate?) throws
     func save(parsedURI: ParsedURI) throws
     func save(data: CreateAccountData) throws
     func save(account: Account) throws
@@ -56,6 +57,20 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         
         // do an initial fetch
         try? accountsDataController?.performFetch()
+    }
+    
+    func filter(predicate: NSPredicate?) throws {
+        if let predicate = predicate {
+            accountsDataController?.fetchRequest.predicate = predicate
+        } else {
+            accountsDataController?.fetchRequest.predicate = nil
+        }
+        
+        try accountsDataController?.performFetch()
+        
+        if let accounts = accountsDataController?.fetchedObjects {
+            delegate?.accountsChanged(accounts: accounts)
+        }
     }
 
     func save(parsedURI: ParsedURI) throws {

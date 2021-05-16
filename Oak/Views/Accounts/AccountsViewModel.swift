@@ -36,6 +36,8 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     @Published var activeSheet: Sheet?
     @Published var activeActionSheet: ActionSheet?
     
+    @Published var searchText: String = ""
+    
     // Account we're currently editing - used from list context menu
     var selectedAccountIndex: Int?
     var selectedAccount: Account? {
@@ -58,6 +60,12 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     
     func navigate(to sheet: Sheet) {
         activeSheet = sheet
+        UITableView.appearance().contentInset.top = 0
+    }
+    
+    func performQuery(text: String) {
+        let predicate = text.trimmed().isEmpty ? nil : NSPredicate(format: "name CONTAINS[cd] %@ OR issuer CONTAINS[cd] %@", text, text)
+        try? accountService.filter(predicate: predicate)
     }
     
     func editAccount(account: Account) {
@@ -69,11 +77,11 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     
     func hideSheet() {
         activeSheet = nil
+        UITableView.appearance().contentInset.top = -35
     }
     
     func accountsChanged(accounts: [Account]) {
         accountRowModels = accounts.map {  AccountRowViewModel(account: $0) }
-        
     }
 }
 

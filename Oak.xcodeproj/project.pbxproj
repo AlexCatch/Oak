@@ -24,6 +24,7 @@
 		09CFCEC82650247B001954C5 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */; };
 		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
 		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
+		09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 09CFCECE26516905001954C5 /* SwiftlySearch */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -152,6 +153,7 @@
 				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
+				09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
 				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
 			);
@@ -476,6 +478,7 @@
 				FA87C00425C87EFD009C7FF7 /* SwiftOTP */,
 				FA87C00A25C88446009C7FF7 /* CodeScanner */,
 				FA03411625C9C640004752F3 /* Resolver */,
+				09CFCECE26516905001954C5 /* SwiftlySearch */,
 			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* Oak.app */;
@@ -553,6 +556,7 @@
 				FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
 				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
+				09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
@@ -976,6 +980,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
 		FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Resolver.git";
@@ -1011,6 +1023,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		09CFCECE26516905001954C5 /* SwiftlySearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
+			productName = SwiftlySearch;
+		};
 		FA03411625C9C640004752F3 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */;

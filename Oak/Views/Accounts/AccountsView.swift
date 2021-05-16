@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import CodeScanner
 import Resolver
+import SwiftlySearch
 
 struct AccountsView: View {
     @StateObject private var viewModel: AccountsViewModel = Resolver.resolve()
@@ -17,9 +18,14 @@ struct AccountsView: View {
         NavigationView {
             VStack {
                 List(viewModel.accountRowModels, id: \.id) { vm in
-                    AccountRow(viewModel: vm, editAccountCallback: viewModel.editAccount)
+                        AccountRow(viewModel: vm, editAccountCallback: viewModel.editAccount)
                 }
-                .listStyle(InsetGroupedListStyle())
+                .listStyle(GroupedListStyle())
+                .navigationBarSearch($viewModel.searchText, placeholder: "Search")
+                .onChange(of: viewModel.searchText, perform: viewModel.performQuery)
+            }
+            .onAppear {
+                UITableView.appearance().contentInset.top = -35
             }
             .navigationBarItems(trailing: HStack {
                 Button(action: {
@@ -56,12 +62,6 @@ struct AccountsView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
-            UITableView.appearance().contentInset.top = 10
-        }
-        .onDisappear {
-            UITableView.appearance().contentInset.top = 0
-        }
     }
 }
 

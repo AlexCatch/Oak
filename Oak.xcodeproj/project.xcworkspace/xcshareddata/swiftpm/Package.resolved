@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "SwiftlySearch",
+        "repositoryURL": "https://github.com/thislooksfun/SwiftlySearch",
+        "state": {
+          "branch": null,
+          "revision": "7741806e979e59e9583962da43d09ec92f598026",
+          "version": "1.2.4"
+        }
+      },
+      {
         "package": "SwiftOTP",
         "repositoryURL": "https://github.com/lachlanbell/SwiftOTP.git",
         "state": {
