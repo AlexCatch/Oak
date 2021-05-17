@@ -35,6 +35,7 @@ platform :ios do
     run_tests(
       scheme: "OakTests",
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
+      devices: ["iPhone 11 Pro Max", "iPhone 12 Pro Max"]
     )
   end
 end
