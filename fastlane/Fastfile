@@ -31,11 +31,11 @@ platform :ios do
   end
 
   desc "Run Unit tests"
-  lane :unit do
+  lane :test do
     run_tests(
       scheme: "OakTests",
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
-      devices: ["iPhone 11 Pro Max", "iPhone 12 Pro Max"]
+      device: "iPhone 12 Pro Max",
     )
   end
 end

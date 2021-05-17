@@ -51,7 +51,7 @@ class AuthenticationViewUITests: XCTestCase {
         launchWithBiometrics(on: app, with: springboard)
         Biometrics.successfulAuthentication()
         
-        XCTAssertTrue(app.staticTexts["Accounts"].waitForExistence(timeout: 3))
+        XCTAssertTrue(app.staticTexts["Accounts"].waitForExistence(timeout: 10))
     }
     
     func testAuthenticationBiometricsFailure() {
@@ -62,7 +62,7 @@ class AuthenticationViewUITests: XCTestCase {
         Biometrics.unsuccessfulAuthentication()
         
         let cancelButton = springboard.alerts.buttons["Cancel"].firstMatch
-        XCTAssertTrue(cancelButton.waitForExistence(timeout: 3))
+        XCTAssertTrue(cancelButton.waitForExistence(timeout: 10))
         XCTAssertFalse(app.staticTexts["Accounts"].exists)
     }
     

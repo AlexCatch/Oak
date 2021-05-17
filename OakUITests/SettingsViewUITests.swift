@@ -75,7 +75,7 @@ class SettingsViewUITests: XCTestCase {
         acceptPermissionsPromptIfRequired(with: springboard)
         Biometrics.successfulAuthentication()
         
-        XCTAssertTrue(app.staticTexts["Accounts"].waitForExistence(timeout: 3))
+        XCTAssertTrue(app.staticTexts["Accounts"].waitForExistence(timeout: 10))
     }
     
     private func acceptPermissionsPromptIfRequired(with springboard: XCUIApplication) {
