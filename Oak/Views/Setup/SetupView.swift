@@ -19,7 +19,9 @@ struct SetupView: View {
                     footer: Text("Please write your password down somewhere safe - it can't be reset and if you forget it you won't be able to access your codes.")
                 ) {
                     SecureField("Password", text: $viewModel.password)
+                        .accessibility(identifier: "PasswordSecureField")
                     SecureField("Confirm Password", text: $viewModel.passwordConfirmation)
+                        .accessibility(identifier: "PasswordConfirmationSecureField")
                 }
                 Section(footer: Text("If you enable Face ID or Touch ID, it will be required when you launch or switch to the app")) {
                     ToggableRow(title: "Require on Start", key: .requireAuthOnStart)
@@ -34,7 +36,7 @@ struct SetupView: View {
             .navigationBarItems(trailing:Button("Confirm", action: {
                 viewModel.setup()
                 activeSheet = .accounts
-            }).disabled(!viewModel.areInputsValid))
+            }).accessibility(identifier: "ConfirmButton").disabled(!viewModel.areInputsValid))
         }
     }
 }

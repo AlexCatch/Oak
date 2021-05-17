@@ -32,7 +32,8 @@ struct AccountsView: View {
                     viewModel.navigate(to: .settings)
                 }, label: {
                     Image(systemName: "gear")
-                }) 
+                })
+                .accessibility(identifier: "SettingsButton")
                 Button(action: {
                     viewModel.activeActionSheet = .add
                 }, label: {

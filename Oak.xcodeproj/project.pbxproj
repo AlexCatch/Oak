@@ -11,6 +11,7 @@
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
 		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
+		09441E322651CCC4002B1619 /* SetupViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441E312651CCC4002B1619 /* SetupViewUITests.swift */; };
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
 		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
@@ -18,6 +19,8 @@
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
 		09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */; };
+		09BED8DA2651CFE40036F4F0 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */; };
+		09BED8DC2651D29A0036F4F0 /* SettingsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */; };
 		09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E218265179D70066C4AB /* MockKeychainService.swift */; };
 		09C4E21B26517A430066C4AB /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21A26517A430066C4AB /* Setup.swift */; };
 		09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21C26517B950066C4AB /* MockSettings.swift */; };
@@ -53,7 +56,6 @@
 		FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67725C63C9C000D597E /* AccountsView.swift */; };
 		FA42C67A25C63C9D000D597E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67925C63C9D000D597E /* Assets.xcassets */; };
 		FA42C67D25C63C9D000D597E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */; };
-		FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C69725C63C9D000D597E /* OakUITests.swift */; };
 		FA42C6B225C64919000D597E /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B125C64919000D597E /* AccountRow.swift */; };
 		FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B625C64A79000D597E /* CircularProgressView.swift */; };
 		FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6C625C658A3000D597E /* SettingsView.swift */; };
@@ -80,14 +82,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA42C68925C63C9D000D597E /* PBXContainerItemProxy */ = {
+		09441E342651CCC4002B1619 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FA42C67125C63C9C000D597E;
 			remoteInfo = Oak;
 		};
-		FA42C69425C63C9D000D597E /* PBXContainerItemProxy */ = {
+		FA42C68925C63C9D000D597E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
 			proxyType = 1;
@@ -101,6 +103,9 @@
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
 		092F944525D5C46700FB537A /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		09441E2F2651CCC4002B1619 /* OakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
+		09441E332651CCC4002B1619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
@@ -108,6 +113,8 @@
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		09BA752525D0555600891033 /* HOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeView.swift; sourceTree = "<group>"; };
 		09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeViewModel.swift; sourceTree = "<group>"; };
+		09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
+		09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewUITests.swift; sourceTree = "<group>"; };
 		09C4E218265179D70066C4AB /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
 		09C4E21A26517A430066C4AB /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		09C4E21C26517B950066C4AB /* MockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettings.swift; sourceTree = "<group>"; };
@@ -145,9 +152,6 @@
 		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C68825C63C9D000D597E /* OakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C68E25C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA42C69325C63C9D000D597E /* OakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA42C69725C63C9D000D597E /* OakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakUITests.swift; sourceTree = "<group>"; };
-		FA42C69925C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C6B125C64919000D597E /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
 		FA42C6B625C64A79000D597E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		FA42C6C625C658A3000D597E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09441E2C2651CCC4002B1619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA42C66F25C63C9C000D597E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,13 +203,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA42C69025C63C9D000D597E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -209,6 +213,17 @@
 				097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */,
 			);
 			path = NewEditAccount;
+			sourceTree = "<group>";
+		};
+		09441E302651CCC4002B1619 /* OakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09441E312651CCC4002B1619 /* SetupViewUITests.swift */,
+				09441E332651CCC4002B1619 /* Info.plist */,
+				09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */,
+				09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */,
+			);
+			path = OakUITests;
 			sourceTree = "<group>";
 		};
 		0953B95925D87BBC008DD9BE /* Frameworks */ = {
@@ -311,7 +326,7 @@
 			children = (
 				FA42C67425C63C9C000D597E /* Oak */,
 				FA42C68B25C63C9D000D597E /* OakTests */,
-				FA42C69625C63C9D000D597E /* OakUITests */,
+				09441E302651CCC4002B1619 /* OakUITests */,
 				FA42C67325C63C9C000D597E /* Products */,
 				0953B95925D87BBC008DD9BE /* Frameworks */,
 			);
@@ -322,7 +337,7 @@
 			children = (
 				FA42C67225C63C9C000D597E /* Oak.app */,
 				FA42C68825C63C9D000D597E /* OakTests.xctest */,
-				FA42C69325C63C9D000D597E /* OakUITests.xctest */,
+				09441E2F2651CCC4002B1619 /* OakUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -370,15 +385,6 @@
 				09C4E2382651ABF50066C4AB /* UpdatePasswordViewModelTests.swift */,
 			);
 			path = OakTests;
-			sourceTree = "<group>";
-		};
-		FA42C69625C63C9D000D597E /* OakUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FA42C69725C63C9D000D597E /* OakUITests.swift */,
-				FA42C69925C63C9D000D597E /* Info.plist */,
-			);
-			path = OakUITests;
 			sourceTree = "<group>";
 		};
 		FA42C6A825C64904000D597E /* Views */ = {
@@ -507,6 +513,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		09441E2E2651CCC4002B1619 /* OakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09441E362651CCC4002B1619 /* Build configuration list for PBXNativeTarget "OakUITests" */;
+			buildPhases = (
+				09441E2B2651CCC4002B1619 /* Sources */,
+				09441E2C2651CCC4002B1619 /* Frameworks */,
+				09441E2D2651CCC4002B1619 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09441E352651CCC4002B1619 /* PBXTargetDependency */,
+			);
+			name = OakUITests;
+			packageProductDependencies = (
+			);
+			productName = OakUITests;
+			productReference = 09441E2F2651CCC4002B1619 /* OakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FA42C67125C63C9C000D597E /* Oak */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA42C69C25C63C9D000D597E /* Build configuration list for PBXNativeTarget "Oak" */;
@@ -549,41 +575,23 @@
 			productReference = FA42C68825C63C9D000D597E /* OakTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA42C69225C63C9D000D597E /* OakUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA42C6A225C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakUITests" */;
-			buildPhases = (
-				FA42C68F25C63C9D000D597E /* Sources */,
-				FA42C69025C63C9D000D597E /* Frameworks */,
-				FA42C69125C63C9D000D597E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA42C69525C63C9D000D597E /* PBXTargetDependency */,
-			);
-			name = OakUITests;
-			productName = OakUITests;
-			productReference = FA42C69325C63C9D000D597E /* OakUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FA42C66A25C63C9C000D597E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					09441E2E2651CCC4002B1619 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = FA42C67125C63C9C000D597E;
+					};
 					FA42C67125C63C9C000D597E = {
 						CreatedOnToolsVersion = 12.3;
 					};
 					FA42C68725C63C9D000D597E = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = FA42C67125C63C9C000D597E;
-					};
-					FA42C69225C63C9D000D597E = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = FA42C67125C63C9C000D597E;
 					};
@@ -611,12 +619,19 @@
 			targets = (
 				FA42C67125C63C9C000D597E /* Oak */,
 				FA42C68725C63C9D000D597E /* OakTests */,
-				FA42C69225C63C9D000D597E /* OakUITests */,
+				09441E2E2651CCC4002B1619 /* OakUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		09441E2D2651CCC4002B1619 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA42C67025C63C9C000D597E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,16 +648,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA42C69125C63C9D000D597E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		09441E2B2651CCC4002B1619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09441E322651CCC4002B1619 /* SetupViewUITests.swift in Sources */,
+				09BED8DC2651D29A0036F4F0 /* SettingsViewUITests.swift in Sources */,
+				09BED8DA2651CFE40036F4F0 /* XCUIElement+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA42C66E25C63C9C000D597E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -718,30 +736,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA42C68F25C63C9D000D597E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA42C69825C63C9D000D597E /* OakUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		09441E352651CCC4002B1619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA42C67125C63C9C000D597E /* Oak */;
+			targetProxy = 09441E342651CCC4002B1619 /* PBXContainerItemProxy */;
+		};
 		FA42C68A25C63C9D000D597E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA42C67125C63C9C000D597E /* Oak */;
 			targetProxy = FA42C68925C63C9D000D597E /* PBXContainerItemProxy */;
 		};
-		FA42C69525C63C9D000D597E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA42C67125C63C9C000D597E /* Oak */;
-			targetProxy = FA42C69425C63C9D000D597E /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		09441E372651CCC4002B1619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Oak;
+			};
+			name = Debug;
+		};
+		09441E382651CCC4002B1619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Oak;
+			};
+			name = Release;
+		};
 		FA42C69A25C63C9D000D597E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -960,49 +1010,18 @@
 			};
 			name = Release;
 		};
-		FA42C6A325C63C9D000D597E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Oak;
-			};
-			name = Debug;
-		};
-		FA42C6A425C63C9D000D597E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Oak;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		09441E362651CCC4002B1619 /* Build configuration list for PBXNativeTarget "OakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09441E372651CCC4002B1619 /* Debug */,
+				09441E382651CCC4002B1619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FA42C66D25C63C9C000D597E /* Build configuration list for PBXProject "Oak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1026,15 +1045,6 @@
 			buildConfigurations = (
 				FA42C6A025C63C9D000D597E /* Debug */,
 				FA42C6A125C63C9D000D597E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA42C6A225C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA42C6A325C63C9D000D597E /* Debug */,
-				FA42C6A425C63C9D000D597E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -36,5 +36,9 @@ platform :ios do
       scheme: "OakTests",
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
     )
+    run_tests(
+      scheme: "OakUITests",
+      derived_data_path: "~/Library/Developer/Xcode/DerivedData",
+    )
   end
 end

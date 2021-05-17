@@ -28,9 +28,15 @@ struct ToggableRow: View {
     }
     
     var body: some View {
-        Toggle(isOn: $isOn) {
+        HStack {
             Text(title)
+            Spacer()
+            Toggle(isOn: $isOn) {
+                Text(title)
+            }
         }
+        .labelsHidden()
+        .accessibility(identifier: "\(key.rawValue)Switch")
         .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
         .onChange(of: isOn, perform: { value in
             settings.set(key: key, value: value)
