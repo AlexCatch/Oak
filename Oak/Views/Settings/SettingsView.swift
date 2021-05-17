@@ -16,9 +16,10 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Security"), footer: Text("If you enable Face ID or Touch ID, it will be required when you launch or switch to the app")) {
+                Section(header: Text("Authentication"), footer: Text("If you enable Face ID or Touch ID, it will be required when you launch or switch to the app").isHidden(!viewModel.biometricsEnabled, remove: true)) {
                     ToggableRow(title: "Require on start", key: .requireAuthOnStart)
                     ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
+                        .isHidden(!viewModel.biometricsEnabled, remove: true)
                 }
                 Section(header: Text("Sync"), footer: Text("If this option is enabled, your accounts will automatically be backed up and synced across all devices using the same account")) {
                     ICloudToggableRow(title: "iCloud", key: .iCloudEnabled)
@@ -27,6 +28,7 @@ struct SettingsView: View {
                     Button("Change Password") {
                         viewModel.navigate(sheet: .updatePassword)
                     }
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 }
             }
             .listStyle(InsetGroupedListStyle())

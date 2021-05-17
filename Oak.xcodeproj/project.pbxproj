@@ -21,6 +21,8 @@
 		09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */; };
 		09BED8DA2651CFE40036F4F0 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */; };
 		09BED8DC2651D29A0036F4F0 /* SettingsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */; };
+		09BED91A26530D760036F4F0 /* AuthenticationViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */; };
+		09BED91E265314760036F4F0 /* Biometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91D265314760036F4F0 /* Biometrics.m */; };
 		09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E218265179D70066C4AB /* MockKeychainService.swift */; };
 		09C4E21B26517A430066C4AB /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21A26517A430066C4AB /* Setup.swift */; };
 		09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21C26517B950066C4AB /* MockSettings.swift */; };
@@ -38,7 +40,7 @@
 		09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */; };
 		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
 		09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeViewModel.swift */; };
-		09CFCEC82650247B001954C5 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */; };
+		09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */; };
 		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
 		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
 		09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 09CFCECE26516905001954C5 /* SwiftlySearch */; };
@@ -115,6 +117,10 @@
 		09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
 		09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewUITests.swift; sourceTree = "<group>"; };
+		09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewUITests.swift; sourceTree = "<group>"; };
+		09BED91C265314760036F4F0 /* OakUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OakUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		09BED91D265314760036F4F0 /* Biometrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Biometrics.m; sourceTree = "<group>"; };
+		09BED91F265314820036F4F0 /* Biometrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Biometrics.h; sourceTree = "<group>"; };
 		09C4E218265179D70066C4AB /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
 		09C4E21A26517A430066C4AB /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		09C4E21C26517B950066C4AB /* MockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettings.swift; sourceTree = "<group>"; };
@@ -132,7 +138,7 @@
 		09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeView.swift; sourceTree = "<group>"; };
 		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
-		09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenModifier.swift; sourceTree = "<group>"; };
 		09CFCEC926504079001954C5 /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
 		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -218,10 +224,12 @@
 		09441E302651CCC4002B1619 /* OakUITests */ = {
 			isa = PBXGroup;
 			children = (
+				09BED91B265314590036F4F0 /* Misc */,
 				09441E312651CCC4002B1619 /* SetupViewUITests.swift */,
 				09441E332651CCC4002B1619 /* Info.plist */,
 				09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */,
 				09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */,
+				09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */,
 			);
 			path = OakUITests;
 			sourceTree = "<group>";
@@ -241,6 +249,16 @@
 				092F944525D5C46700FB537A /* PersistentStore.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		09BED91B265314590036F4F0 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				09BED91D265314760036F4F0 /* Biometrics.m */,
+				09BED91C265314760036F4F0 /* OakUITests-Bridging-Header.h */,
+				09BED91F265314820036F4F0 /* Biometrics.h */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		09C4E217265179C20066C4AB /* Mocks */ = {
@@ -287,7 +305,7 @@
 		09CFCEC62650246F001954C5 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				09CFCEC72650247B001954C5 /* ViewDidLoadModifier.swift */,
+				09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -586,6 +604,7 @@
 				TargetAttributes = {
 					09441E2E2651CCC4002B1619 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = FA42C67125C63C9C000D597E;
 					};
 					FA42C67125C63C9C000D597E = {
@@ -656,7 +675,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09441E322651CCC4002B1619 /* SetupViewUITests.swift in Sources */,
+				09BED91E265314760036F4F0 /* Biometrics.m in Sources */,
 				09BED8DC2651D29A0036F4F0 /* SettingsViewUITests.swift in Sources */,
+				09BED91A26530D760036F4F0 /* AuthenticationViewUITests.swift in Sources */,
 				09BED8DA2651CFE40036F4F0 /* XCUIElement+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,7 +702,7 @@
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
-				09CFCEC82650247B001954C5 /* ViewDidLoadModifier.swift in Sources */,
+				09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */,
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
@@ -755,6 +776,7 @@
 		09441E372651CCC4002B1619 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakUITests/Info.plist;
@@ -766,6 +788,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OakUITests/Misc/OakUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Oak;
@@ -775,6 +799,7 @@
 		09441E382651CCC4002B1619 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakUITests/Info.plist;
@@ -786,6 +811,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OakUITests/Misc/OakUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Oak;

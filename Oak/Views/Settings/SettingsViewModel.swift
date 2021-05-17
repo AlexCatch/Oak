@@ -18,6 +18,7 @@ class SettingsViewModel: ObservableObject {
     }
     
     @Published var activeSheet: Sheet?
+    @Published var biometricsEnabled = Biometrics().enabled()
     
     func navigate(sheet: Sheet) {
         activeSheet = sheet

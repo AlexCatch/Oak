@@ -19,16 +19,21 @@ struct AuthenticationView: View {
             List {
                 Section(header: Text("Enter your password to unlock oak")) {
                     SecureField("Password", text: $viewModel.password)
+                        .accessibilityIdentifier("EnterPasswordSecureField")
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Authenticaton")
+            .navigationTitle("Authentication")
             .navigationBarItems(trailing: Button("Unlock", action: {
                 if viewModel.authenticatePassword() {
                     activeSheet = .accounts
                 }
-            }))
-        }.onAppear {
+            }).accessibility(identifier: "UnlockButton"))
+        }
+        .alert(isPresented: $viewModel.authFailed) {
+            Alert(title: Text("Incorrect Password"), message: Text("Please double check your password and try again."), dismissButton: .cancel())
+        }
+        .onAppear {
             viewModel.rootViewBinding = $activeSheet
             viewModel.attemptBiometrics(for: scenePhase)
         }

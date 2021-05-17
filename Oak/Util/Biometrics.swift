@@ -12,17 +12,17 @@ import Resolver
 class Biometrics {
     let context = LAContext()
     
-    func enabled(callback: (_ success: Bool) -> Void) {
+    func enabled() -> Bool {
         var error: NSError?
         let biometricsPolicy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
         
         if (context.canEvaluatePolicy(biometricsPolicy, error: &error)) {
             if error != nil {
-                callback(false)
-                return
+                return false
             }
-            callback(context.biometryType != .none)
+            return context.biometryType != .none
         }
+        return false
     }
     
     func authenticate(onComplete: @escaping (_ success: Bool) -> Void) {

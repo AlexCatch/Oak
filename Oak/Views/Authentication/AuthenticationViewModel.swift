@@ -18,6 +18,7 @@ class AuthenticationViewModel: ObservableObject {
     var rootViewBinding: Binding<RootView>?
     
     @Published var password: String = ""
+    @Published var authFailed = false
     
     var passwordValid: Bool {
         return !password.isEmpty
@@ -45,22 +46,19 @@ class AuthenticationViewModel: ObservableObject {
             return
         }
         
-        biometrics.enabled { (success: Bool) in
+        guard biometrics.enabled() else {
+            return
+        }
+        
+        biometrics.authenticate { (success: Bool) in
             guard success else {
-                //biometrics aren't supported at the device level
+                // Failed to authenticate
                 return
             }
             
-            biometrics.authenticate { (success: Bool) in
-                guard success else {
-                    // Failed to authenticate
-                    return
-                }
-                
-                self.haptics.generate(type: .success)
-                if let binding = self.rootViewBinding {
-                    binding.wrappedValue = .accounts
-                }
+            self.haptics.generate(type: .success)
+            if let binding = self.rootViewBinding {
+                binding.wrappedValue = .accounts
             }
         }
     }
@@ -70,6 +68,7 @@ class AuthenticationViewModel: ObservableObject {
 
         guard storedPassword == password else {
             haptics.generate(type: .error)
+            authFailed = true
             return false
         }
         
