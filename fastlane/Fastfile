@@ -37,13 +37,5 @@ platform :ios do
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
       device: "iPhone 12 Pro Max",
     )
-    multi_scan(
-      project: File.absolute_path('../Oak.xcodeproj'),
-      scheme: 'OakUITests',
-      skip_build: true,
-      device: 'iPhone 12 Pro Max',
-      fail_build: false,
-      parallel_testrun_count: 2,
-    )
   end
 end
