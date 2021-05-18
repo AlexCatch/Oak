@@ -28,9 +28,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA42C68725C63C9D000D597E"
-               BuildableName = "OakTests.xctest"
-               BlueprintName = "OakTests"
+               BlueprintIdentifier = "09441E2E2651CCC4002B1619"
+               BuildableName = "OakUITests.xctest"
+               BlueprintName = "OakUITests"
                ReferencedContainer = "container:Oak.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,26 +40,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA42C67125C63C9C000D597E"
-            BuildableName = "Oak.app"
-            BlueprintName = "Oak"
-            ReferencedContainer = "container:Oak.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA42C68725C63C9D000D597E"
-               BuildableName = "OakTests.xctest"
-               BlueprintName = "OakTests"
+               BlueprintIdentifier = "09441E2E2651CCC4002B1619"
+               BuildableName = "OakUITests.xctest"
+               BlueprintName = "OakUITests"
                ReferencedContainer = "container:Oak.xcodeproj">
             </BuildableReference>
          </TestableReference>
