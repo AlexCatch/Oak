@@ -39,6 +39,16 @@ struct AccountsView: View {
                 }, label: {
                     Image(systemName: "plus")
                 })
+                .actionSheet(item: $viewModel.activeActionSheet) { item in
+                    switch item {
+                    case .add:
+                        return ActionSheet(title: Text("New Account"), buttons: [
+                            .default(Text("Scan QR Code")) { viewModel.navigate(to: .codeScanner) },
+                            .default(Text("Enter Information")) { viewModel.navigate(to: .newAccount) },
+                            .cancel()
+                        ])
+                    }
+                }
             })
             .navigationTitle("Accounts")
             .sheet(item: $viewModel.activeSheet) { item in
@@ -49,16 +59,6 @@ struct AccountsView: View {
                     SettingsView(dismiss: viewModel.hideSheet)
                 case .newAccount:
                     NewEditAccountView(dismiss: viewModel.hideSheet, account: viewModel.selectedAccount)
-                }
-            }
-            .actionSheet(item: $viewModel.activeActionSheet) { item in
-                switch item {
-                case .add:
-                    return ActionSheet(title: Text("New Account"), buttons: [
-                        .default(Text("Scan QR Code")) { viewModel.navigate(to: .codeScanner) },
-                        .default(Text("Enter Information")) { viewModel.navigate(to: .newAccount) },
-                        .cancel()
-                    ])
                 }
             }
         }
