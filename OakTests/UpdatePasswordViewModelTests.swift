@@ -7,7 +7,7 @@
 
 import XCTest
 import Resolver
-@testable import Oak
+@testable import OakOTP
 
 class UpdatePasswordViewModelTests: OakTestCase {
     func testInputsAreValid() {

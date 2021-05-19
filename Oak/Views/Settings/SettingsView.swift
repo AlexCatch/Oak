@@ -16,7 +16,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Authentication"), footer: Text("If you enable Face ID or Touch ID, it will be required when you launch or switch to the app").isHidden(!viewModel.biometricsEnabled, remove: true)) {
+                Section(header: Text("Authentication"), footer: Text("If you enable Require On Start, authentication will be required when you launch or switch to the app")) {
                     ToggableRow(title: "Require on start", key: .requireAuthOnStart)
                     ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
                         .isHidden(!viewModel.biometricsEnabled, remove: true)

@@ -7,7 +7,7 @@
 
 import XCTest
 import Resolver
-@testable import Oak
+@testable import OakOTP
 
 class MainViewModelTests: OakTestCase {
     func testSetInitialActiveView() {

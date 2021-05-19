@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA42C67125C63C9C000D597E"
-               BuildableName = "Oak.app"
-               BlueprintName = "Oak"
-               ReferencedContainer = "container:Oak.xcodeproj">
+               BuildableName = "OakOTP.app"
+               BlueprintName = "OakOTP"
+               ReferencedContainer = "container:OakOTP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09441E2E2651CCC4002B1619"
-               BuildableName = "OakUITests.xctest"
-               BlueprintName = "OakUITests"
-               ReferencedContainer = "container:Oak.xcodeproj">
+               BuildableName = "OakOTPUITests.xctest"
+               BlueprintName = "OakOTPUITests"
+               ReferencedContainer = "container:OakOTP.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -42,9 +42,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA42C68725C63C9D000D597E"
-               BuildableName = "OakTests.xctest"
-               BlueprintName = "OakTests"
-               ReferencedContainer = "container:Oak.xcodeproj">
+               BuildableName = "OakOTPTests.xctest"
+               BlueprintName = "OakOTPTests"
+               ReferencedContainer = "container:OakOTP.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA42C67125C63C9C000D597E"
-            BuildableName = "Oak.app"
-            BlueprintName = "Oak"
-            ReferencedContainer = "container:Oak.xcodeproj">
+            BuildableName = "OakOTP.app"
+            BlueprintName = "OakOTP"
+            ReferencedContainer = "container:OakOTP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA42C67125C63C9C000D597E"
-            BuildableName = "Oak.app"
-            BlueprintName = "Oak"
-            ReferencedContainer = "container:Oak.xcodeproj">
+            BuildableName = "OakOTP.app"
+            BlueprintName = "OakOTP"
+            ReferencedContainer = "container:OakOTP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

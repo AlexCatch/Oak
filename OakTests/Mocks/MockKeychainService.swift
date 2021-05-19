@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Oak
+@testable import OakOTP
 
 class MockKeychainService: KeychainService {
     var items: Dictionary<KeychainKeys, String> = [:]

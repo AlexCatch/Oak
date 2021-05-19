@@ -7,7 +7,7 @@
 
 import XCTest
 import SwiftUI
-@testable import Oak
+@testable import OakOTP
 import CodeScanner
 import Resolver
 

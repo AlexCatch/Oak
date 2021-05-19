@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreData
-@testable import Oak
+@testable import OakOTP
 
 class MockPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!

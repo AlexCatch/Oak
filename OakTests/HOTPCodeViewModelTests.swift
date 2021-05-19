@@ -8,7 +8,7 @@
 import XCTest
 import CoreData
 import Resolver
-@testable import Oak
+@testable import OakOTP
 
 class HOTPCodeViewModelTests: OakTestCase {
     private func createAccount(context: NSManagedObjectContext) -> Account {

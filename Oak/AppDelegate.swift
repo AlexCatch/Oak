@@ -14,6 +14,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color("AccentColor"))
+        UITableView.appearance().tableHeaderView = UIView(frame: CGRect.zero)
      return true
     }
     

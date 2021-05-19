@@ -8,7 +8,7 @@
 import XCTest
 import SwiftUI
 import Resolver
-@testable import Oak
+@testable import OakOTP
 
 class SetupViewModelTests: OakTestCase {
     

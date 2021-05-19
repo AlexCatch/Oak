@@ -124,7 +124,8 @@ struct NewEditAccountView: View {
             List {
                 Section() {
                     TextInputRow(title: "Name", placeholder: "john@doe.com", input: $viewModel.name)
-                        .textContentType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     TextInputRow(title: "Issuer", placeholder: "Github", input: $viewModel.issuer)
                 }
                 Section() {

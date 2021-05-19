@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Oak
+@testable import OakOTP
 import Resolver
 
 class AccountsViewModelTests: OakTestCase {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Oak
+@testable import OakOTP
 
 class MockSettings: Settings {
     private var settings: Dictionary<SettingsKey, Any> = [:]

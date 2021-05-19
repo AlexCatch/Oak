@@ -8,7 +8,7 @@
 import XCTest
 import Resolver
 import CoreData
-@testable import Oak
+@testable import OakOTP
 
 class NewEditAccountViewModelTests: OakTestCase {
     private func createAccount(context: NSManagedObjectContext, type: CodeType = .totp) -> Account {

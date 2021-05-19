@@ -60,7 +60,6 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     
     func navigate(to sheet: Sheet) {
         activeSheet = sheet
-        UITableView.appearance().contentInset.top = 0
     }
     
     func performQuery(text: String) {
@@ -77,7 +76,6 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     
     func hideSheet() {
         activeSheet = nil
-        UITableView.appearance().contentInset.top = -35
     }
     
     func accountsChanged(accounts: [Account]) {

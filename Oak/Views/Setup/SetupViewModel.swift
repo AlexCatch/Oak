@@ -16,6 +16,7 @@ class SetupViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var passwordConfirmation = ""
     @Published var errorMessage: String?
+    @Published var biometricsEnabled = Biometrics().enabled()
     
     var areInputsValid: Bool {
         return

@@ -26,6 +26,11 @@ Push a new release build to the App Store
 fastlane ios test
 ```
 Run Unit tests
+### ios publish
+```
+fastlane ios publish
+```
+Test, build & upload app to appstore
 
 ----
 

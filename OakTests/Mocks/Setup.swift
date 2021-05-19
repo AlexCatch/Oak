@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Oak
+@testable import OakOTP
 import Resolver
 
 extension Resolver {
