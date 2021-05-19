@@ -9,12 +9,6 @@ import Foundation
 import SwiftUI
 import Resolver
 
-struct AccountDisplayable: Identifiable {
-    var id: String
-    var name: String
-    var username: String?
-}
-
 class AccountRowViewModel: Identifiable, ObservableObject {
     var id: String {
         get {

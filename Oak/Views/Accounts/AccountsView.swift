@@ -14,6 +14,14 @@ import SwiftlySearch
 struct AccountsView: View {
     @StateObject private var viewModel: AccountsViewModel = Resolver.resolve()
     
+    init() {
+        do {
+            try WatchSessionService.sharedManager.setApplicationContext(context: ["hello": "helloworld", "demo": "\(UUID().uuidString)"])
+        } catch let err {
+            print(err)
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {

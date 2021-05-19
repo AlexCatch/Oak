@@ -59,10 +59,6 @@ class RealPersistentStore: PersistentStore {
         try viewContext.save()
     }
     
-    deinit {
-        print("PersistentStore is being deallocated and it shouldnt")
-    }
-    
     public func toggleICloudSync(sync: Bool) {
         setupContainer(sync: sync)
     }

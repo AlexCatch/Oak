@@ -44,6 +44,40 @@
 		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
 		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
 		09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 09CFCECE26516905001954C5 /* SwiftlySearch */; };
+		09E0C7E426556C00008CF693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E0C7E326556C00008CF693 /* Assets.xcassets */; };
+		09E0C7EB26556C00008CF693 /* WatchOak Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09E0C7EA26556C00008CF693 /* WatchOak Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09E0C7F026556C00008CF693 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C7EF26556C00008CF693 /* AccountsView.swift */; };
+		09E0C7F226556C00008CF693 /* OakOTPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C7F126556C00008CF693 /* OakOTPApp.swift */; };
+		09E0C7F426556C00008CF693 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C7F326556C00008CF693 /* ComplicationController.swift */; };
+		09E0C7F626556C00008CF693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E0C7F526556C00008CF693 /* Assets.xcassets */; };
+		09E0C7F926556C00008CF693 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E0C7F826556C00008CF693 /* Preview Assets.xcassets */; };
+		09E0C80426556C00008CF693 /* WatchOakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C80326556C00008CF693 /* WatchOakTests.swift */; };
+		09E0C80F26556C00008CF693 /* WatchOakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C80E26556C00008CF693 /* WatchOakUITests.swift */; };
+		09E0C81326556C00008CF693 /* WatchOak.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 09E0C7E126556BFF008CF693 /* WatchOak.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09E0C82326558AB1008CF693 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C72325C6EC74000D597E /* Account.swift */; };
+		09E0C82526558DE9008CF693 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = 09E0C82426558DE9008CF693 /* SwiftOTP */; };
+		09E0C82626558E1F008CF693 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
+		09E0C82826558E29008CF693 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 09E0C82726558E29008CF693 /* Resolver */; };
+		09E0C82A26559293008CF693 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E0C82926559293008CF693 /* CoreData.framework */; };
+		09E0C82B2655929A008CF693 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
+		09E0C830265592B2008CF693 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C79625C7219A000D597E /* Settings.swift */; };
+		09E0C832265593E9008CF693 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
+		09E0C833265593EC008CF693 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
+		09E0C834265593EC008CF693 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
+		09E0C83726559646008CF693 /* AccountListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C83626559646008CF693 /* AccountListItem.swift */; };
+		09E0C83F265597A0008CF693 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B625C64A79000D597E /* CircularProgressView.swift */; };
+		09E0C84226559DBA008CF693 /* PersistantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84126559DBA008CF693 /* PersistantStore.swift */; };
+		09E0C84326559E92008CF693 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
+		09E0C84626559F28008CF693 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84526559F28008CF693 /* AccountsViewModel.swift */; };
+		09E0C84926559F5B008CF693 /* Services+Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84826559F5B008CF693 /* Services+Injected.swift */; };
+		09E0C84B26559FB0008CF693 /* ViewModels+Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84A26559FB0008CF693 /* ViewModels+Injected.swift */; };
+		09E0C84D2655A026008CF693 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84C2655A026008CF693 /* Injection.swift */; };
+		09E0C84F2655A191008CF693 /* AccountListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C84E2655A191008CF693 /* AccountListItemViewModel.swift */; };
+		09E0C8552655A570008CF693 /* IsHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */; };
+		09E0C8582655AB45008CF693 /* WatchSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C8562655AB1E008CF693 /* WatchSessionService.swift */; };
+		09E0C85B2655AC64008CF693 /* WatchSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E0C85A2655AC64008CF693 /* WatchSessionService.swift */; };
+		09E0C85D2655B161008CF693 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E0C85C2655B161008CF693 /* WatchConnectivity.framework */; };
+		09E0C85F2655B167008CF693 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E0C85E2655B167008CF693 /* WatchConnectivity.framework */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
 		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
@@ -91,6 +125,34 @@
 			remoteGlobalIDString = FA42C67125C63C9C000D597E;
 			remoteInfo = OakOTP;
 		};
+		09E0C7EC26556C00008CF693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E0C7E926556C00008CF693;
+			remoteInfo = "WatchOak Extension";
+		};
+		09E0C80026556C00008CF693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E0C7E926556C00008CF693;
+			remoteInfo = "WatchOak Extension";
+		};
+		09E0C80B26556C00008CF693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E0C7E026556BFF008CF693;
+			remoteInfo = WatchOak;
+		};
+		09E0C81126556C00008CF693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E0C7E026556BFF008CF693;
+			remoteInfo = WatchOak;
+		};
 		FA42C68925C63C9D000D597E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
@@ -99,6 +161,31 @@
 			remoteInfo = Oak;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09E0C81426556C00008CF693 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				09E0C81326556C00008CF693 /* WatchOak.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C81726556C00008CF693 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				09E0C7EB26556C00008CF693 /* WatchOak Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
@@ -141,6 +228,34 @@
 		09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenModifier.swift; sourceTree = "<group>"; };
 		09CFCEC926504079001954C5 /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
 		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
+		09E0C7E126556BFF008CF693 /* WatchOak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchOak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E0C7E326556C00008CF693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09E0C7E526556C00008CF693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E0C7EA26556C00008CF693 /* WatchOak Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchOak Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E0C7EF26556C00008CF693 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		09E0C7F126556C00008CF693 /* OakOTPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakOTPApp.swift; sourceTree = "<group>"; };
+		09E0C7F326556C00008CF693 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		09E0C7F526556C00008CF693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09E0C7F826556C00008CF693 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09E0C7FA26556C00008CF693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E0C7FF26556C00008CF693 /* WatchOakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchOakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E0C80326556C00008CF693 /* WatchOakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOakTests.swift; sourceTree = "<group>"; };
+		09E0C80526556C00008CF693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E0C80A26556C00008CF693 /* WatchOakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchOakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E0C80E26556C00008CF693 /* WatchOakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOakUITests.swift; sourceTree = "<group>"; };
+		09E0C81026556C00008CF693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E0C82926559293008CF693 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		09E0C83626559646008CF693 /* AccountListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListItem.swift; sourceTree = "<group>"; };
+		09E0C84126559DBA008CF693 /* PersistantStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantStore.swift; sourceTree = "<group>"; };
+		09E0C84526559F28008CF693 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		09E0C84826559F5B008CF693 /* Services+Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injected.swift"; sourceTree = "<group>"; };
+		09E0C84A26559FB0008CF693 /* ViewModels+Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injected.swift"; sourceTree = "<group>"; };
+		09E0C84C2655A026008CF693 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		09E0C84E2655A191008CF693 /* AccountListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListItemViewModel.swift; sourceTree = "<group>"; };
+		09E0C8562655AB1E008CF693 /* WatchSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionService.swift; sourceTree = "<group>"; };
+		09E0C85A2655AC64008CF693 /* WatchSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionService.swift; sourceTree = "<group>"; };
+		09E0C85C2655B161008CF693 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		09E0C85E2655B167008CF693 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -189,10 +304,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09E0C7E726556C00008CF693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C85D2655B161008CF693 /* WatchConnectivity.framework in Frameworks */,
+				09E0C82A26559293008CF693 /* CoreData.framework in Frameworks */,
+				09E0C82826558E29008CF693 /* Resolver in Frameworks */,
+				09E0C82526558DE9008CF693 /* SwiftOTP in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C7FC26556C00008CF693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C80726556C00008CF693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA42C66F25C63C9C000D597E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E0C85F2655B167008CF693 /* WatchConnectivity.framework in Frameworks */,
 				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
@@ -224,6 +365,9 @@
 		0953B95925D87BBC008DD9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09E0C85C2655B161008CF693 /* WatchConnectivity.framework */,
+				09E0C85E2655B167008CF693 /* WatchConnectivity.framework */,
+				09E0C82926559293008CF693 /* CoreData.framework */,
 				0953B95A25D87BBC008DD9BE /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -310,6 +454,102 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		09E0C7E226556BFF008CF693 /* WatchOak */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C7E326556C00008CF693 /* Assets.xcassets */,
+				09E0C7E526556C00008CF693 /* Info.plist */,
+			);
+			path = WatchOak;
+			sourceTree = "<group>";
+		};
+		09E0C7EE26556C00008CF693 /* WatchOak Extension */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C8592655AC55008CF693 /* Services */,
+				09E0C84726559F51008CF693 /* Injected */,
+				09E0C84026559D5A008CF693 /* Persistance */,
+				09E0C835265595D3008CF693 /* Shared */,
+				09E0C7EF26556C00008CF693 /* AccountsView.swift */,
+				09E0C84526559F28008CF693 /* AccountsViewModel.swift */,
+				09E0C7F126556C00008CF693 /* OakOTPApp.swift */,
+				09E0C7F326556C00008CF693 /* ComplicationController.swift */,
+				09E0C7F526556C00008CF693 /* Assets.xcassets */,
+				09E0C7FA26556C00008CF693 /* Info.plist */,
+				09E0C7F726556C00008CF693 /* Preview Content */,
+			);
+			path = "WatchOak Extension";
+			sourceTree = "<group>";
+		};
+		09E0C7F726556C00008CF693 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C7F826556C00008CF693 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09E0C80226556C00008CF693 /* WatchOakTests */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C80326556C00008CF693 /* WatchOakTests.swift */,
+				09E0C80526556C00008CF693 /* Info.plist */,
+			);
+			path = WatchOakTests;
+			sourceTree = "<group>";
+		};
+		09E0C80D26556C00008CF693 /* WatchOakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C80E26556C00008CF693 /* WatchOakUITests.swift */,
+				09E0C81026556C00008CF693 /* Info.plist */,
+			);
+			path = WatchOakUITests;
+			sourceTree = "<group>";
+		};
+		09E0C835265595D3008CF693 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C8502655A207008CF693 /* AccountListItem */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		09E0C84026559D5A008CF693 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C84126559DBA008CF693 /* PersistantStore.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		09E0C84726559F51008CF693 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C84826559F5B008CF693 /* Services+Injected.swift */,
+				09E0C84A26559FB0008CF693 /* ViewModels+Injected.swift */,
+				09E0C84C2655A026008CF693 /* Injection.swift */,
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		09E0C8502655A207008CF693 /* AccountListItem */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C83626559646008CF693 /* AccountListItem.swift */,
+				09E0C84E2655A191008CF693 /* AccountListItemViewModel.swift */,
+			);
+			path = AccountListItem;
+			sourceTree = "<group>";
+		};
+		09E0C8592655AC55008CF693 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09E0C85A2655AC64008CF693 /* WatchSessionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FA03412525C9C8B3004752F3 /* Injected */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +585,10 @@
 				FA42C67425C63C9C000D597E /* Oak */,
 				FA42C68B25C63C9D000D597E /* OakTests */,
 				099EC37F265546FA00CA5F86 /* OakOTPUITests */,
+				09E0C7E226556BFF008CF693 /* WatchOak */,
+				09E0C7EE26556C00008CF693 /* WatchOak Extension */,
+				09E0C80226556C00008CF693 /* WatchOakTests */,
+				09E0C80D26556C00008CF693 /* WatchOakUITests */,
 				FA42C67325C63C9C000D597E /* Products */,
 				0953B95925D87BBC008DD9BE /* Frameworks */,
 			);
@@ -356,6 +600,10 @@
 				FA42C67225C63C9C000D597E /* OakOTP.app */,
 				FA42C68825C63C9D000D597E /* OakOTPTests.xctest */,
 				099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */,
+				09E0C7E126556BFF008CF693 /* WatchOak.app */,
+				09E0C7EA26556C00008CF693 /* WatchOak Extension.appex */,
+				09E0C7FF26556C00008CF693 /* WatchOakTests.xctest */,
+				09E0C80A26556C00008CF693 /* WatchOakUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,6 +703,7 @@
 				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
 				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
 				FADAE49725C9ED9A005BC18E /* KeychainService.swift */,
+				09E0C8562655AB1E008CF693 /* WatchSessionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -549,6 +798,80 @@
 			productReference = 099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		09E0C7E026556BFF008CF693 /* WatchOak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E0C81F26556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOak" */;
+			buildPhases = (
+				09E0C7DF26556BFF008CF693 /* Resources */,
+				09E0C81726556C00008CF693 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E0C7ED26556C00008CF693 /* PBXTargetDependency */,
+			);
+			name = WatchOak;
+			productName = WatchOak;
+			productReference = 09E0C7E126556BFF008CF693 /* WatchOak.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		09E0C7E926556C00008CF693 /* WatchOak Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E0C81E26556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOak Extension" */;
+			buildPhases = (
+				09E0C7E626556C00008CF693 /* Sources */,
+				09E0C7E726556C00008CF693 /* Frameworks */,
+				09E0C7E826556C00008CF693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchOak Extension";
+			packageProductDependencies = (
+				09E0C82426558DE9008CF693 /* SwiftOTP */,
+				09E0C82726558E29008CF693 /* Resolver */,
+			);
+			productName = "WatchOak Extension";
+			productReference = 09E0C7EA26556C00008CF693 /* WatchOak Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		09E0C7FE26556C00008CF693 /* WatchOakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E0C82026556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOakTests" */;
+			buildPhases = (
+				09E0C7FB26556C00008CF693 /* Sources */,
+				09E0C7FC26556C00008CF693 /* Frameworks */,
+				09E0C7FD26556C00008CF693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E0C80126556C00008CF693 /* PBXTargetDependency */,
+			);
+			name = WatchOakTests;
+			productName = WatchOakTests;
+			productReference = 09E0C7FF26556C00008CF693 /* WatchOakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09E0C80926556C00008CF693 /* WatchOakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E0C82126556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOakUITests" */;
+			buildPhases = (
+				09E0C80626556C00008CF693 /* Sources */,
+				09E0C80726556C00008CF693 /* Frameworks */,
+				09E0C80826556C00008CF693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E0C80C26556C00008CF693 /* PBXTargetDependency */,
+			);
+			name = WatchOakUITests;
+			productName = WatchOakUITests;
+			productReference = 09E0C80A26556C00008CF693 /* WatchOakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FA42C67125C63C9C000D597E /* OakOTP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA42C69C25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakOTP" */;
@@ -556,10 +879,12 @@
 				FA42C66E25C63C9C000D597E /* Sources */,
 				FA42C66F25C63C9C000D597E /* Frameworks */,
 				FA42C67025C63C9C000D597E /* Resources */,
+				09E0C81426556C00008CF693 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				09E0C81226556C00008CF693 /* PBXTargetDependency */,
 			);
 			name = OakOTP;
 			packageProductDependencies = (
@@ -604,6 +929,20 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = FA42C67125C63C9C000D597E;
 					};
+					09E0C7E026556BFF008CF693 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					09E0C7E926556C00008CF693 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					09E0C7FE26556C00008CF693 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 09E0C7E926556C00008CF693;
+					};
+					09E0C80926556C00008CF693 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 09E0C7E026556BFF008CF693;
+					};
 					FA42C67125C63C9C000D597E = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -636,12 +975,47 @@
 				FA42C67125C63C9C000D597E /* OakOTP */,
 				FA42C68725C63C9D000D597E /* OakOTPTests */,
 				099EC37D265546FA00CA5F86 /* OakOTPUITests */,
+				09E0C7E026556BFF008CF693 /* WatchOak */,
+				09E0C7E926556C00008CF693 /* WatchOak Extension */,
+				09E0C7FE26556C00008CF693 /* WatchOakTests */,
+				09E0C80926556C00008CF693 /* WatchOakUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		099EC37C265546FA00CA5F86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C7DF26556BFF008CF693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C7E426556C00008CF693 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C7E826556C00008CF693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C7F926556C00008CF693 /* Preview Assets.xcassets in Resources */,
+				09E0C7F626556C00008CF693 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C7FD26556C00008CF693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C80826556C00008CF693 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -679,6 +1053,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09E0C7E626556C00008CF693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C833265593EC008CF693 /* String+Extensions.swift in Sources */,
+				09E0C82326558AB1008CF693 /* Account.swift in Sources */,
+				09E0C7F026556C00008CF693 /* AccountsView.swift in Sources */,
+				09E0C7F226556C00008CF693 /* OakOTPApp.swift in Sources */,
+				09E0C85B2655AC64008CF693 /* WatchSessionService.swift in Sources */,
+				09E0C82626558E1F008CF693 /* OTPService.swift in Sources */,
+				09E0C832265593E9008CF693 /* URL+Extensions.swift in Sources */,
+				09E0C830265592B2008CF693 /* Settings.swift in Sources */,
+				09E0C84926559F5B008CF693 /* Services+Injected.swift in Sources */,
+				09E0C8552655A570008CF693 /* IsHiddenModifier.swift in Sources */,
+				09E0C82B2655929A008CF693 /* Oak.xcdatamodeld in Sources */,
+				09E0C83726559646008CF693 /* AccountListItem.swift in Sources */,
+				09E0C84F2655A191008CF693 /* AccountListItemViewModel.swift in Sources */,
+				09E0C84226559DBA008CF693 /* PersistantStore.swift in Sources */,
+				09E0C84626559F28008CF693 /* AccountsViewModel.swift in Sources */,
+				09E0C834265593EC008CF693 /* Double+Extensions.swift in Sources */,
+				09E0C84B26559FB0008CF693 /* ViewModels+Injected.swift in Sources */,
+				09E0C84326559E92008CF693 /* AccountService.swift in Sources */,
+				09E0C84D2655A026008CF693 /* Injection.swift in Sources */,
+				09E0C83F265597A0008CF693 /* CircularProgressView.swift in Sources */,
+				09E0C7F426556C00008CF693 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C7FB26556C00008CF693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C80426556C00008CF693 /* WatchOakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E0C80626556C00008CF693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E0C80F26556C00008CF693 /* WatchOakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA42C66E25C63C9C000D597E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -699,6 +1117,7 @@
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
+				09E0C8582655AB45008CF693 /* WatchSessionService.swift in Sources */,
 				09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */,
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
@@ -762,6 +1181,26 @@
 			target = FA42C67125C63C9C000D597E /* OakOTP */;
 			targetProxy = 099EC383265546FA00CA5F86 /* PBXContainerItemProxy */;
 		};
+		09E0C7ED26556C00008CF693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E0C7E926556C00008CF693 /* WatchOak Extension */;
+			targetProxy = 09E0C7EC26556C00008CF693 /* PBXContainerItemProxy */;
+		};
+		09E0C80126556C00008CF693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E0C7E926556C00008CF693 /* WatchOak Extension */;
+			targetProxy = 09E0C80026556C00008CF693 /* PBXContainerItemProxy */;
+		};
+		09E0C80C26556C00008CF693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E0C7E026556BFF008CF693 /* WatchOak */;
+			targetProxy = 09E0C80B26556C00008CF693 /* PBXContainerItemProxy */;
+		};
+		09E0C81226556C00008CF693 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E0C7E026556BFF008CF693 /* WatchOak */;
+			targetProxy = 09E0C81126556C00008CF693 /* PBXContainerItemProxy */;
+		};
 		FA42C68A25C63C9D000D597E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA42C67125C63C9C000D597E /* OakOTP */;
@@ -773,7 +1212,9 @@
 		099EC386265546FA00CA5F86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakOTPUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -784,6 +1225,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.OakOTPUITests";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -794,7 +1237,9 @@
 		099EC387265546FA00CA5F86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakOTPUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -805,10 +1250,200 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.OakOTPUITests";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = OakOTP;
+			};
+			name = Release;
+		};
+		09E0C81526556C00008CF693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				IBSC_MODULE = WatchOak_Extension;
+				INFOPLIST_FILE = WatchOak/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		09E0C81626556C00008CF693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				IBSC_MODULE = WatchOak_Extension;
+				INFOPLIST_FILE = WatchOak/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore sh.catch.Oak.watchkitapp";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		09E0C81826556C00008CF693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchOak Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchOak Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak.watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		09E0C81926556C00008CF693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchOak Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchOak Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak.watchkitapp.watchkitextension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		09E0C81A26556C00008CF693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = WatchOakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.WatchOakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchOak Extension.appex/WatchOak Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		09E0C81B26556C00008CF693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = WatchOakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.WatchOakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchOak Extension.appex/WatchOak Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		09E0C81C26556C00008CF693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = WatchOakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.WatchOakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = WatchOak;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		09E0C81D26556C00008CF693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = WatchOakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.WatchOakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = WatchOak;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -991,7 +1626,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1002,6 +1639,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
@@ -1013,7 +1652,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				INFOPLIST_FILE = OakTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1024,6 +1665,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
@@ -1038,6 +1681,42 @@
 			buildConfigurations = (
 				099EC386265546FA00CA5F86 /* Debug */,
 				099EC387265546FA00CA5F86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E0C81E26556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOak Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E0C81826556C00008CF693 /* Debug */,
+				09E0C81926556C00008CF693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E0C81F26556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E0C81526556C00008CF693 /* Debug */,
+				09E0C81626556C00008CF693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E0C82026556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E0C81A26556C00008CF693 /* Debug */,
+				09E0C81B26556C00008CF693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E0C82126556C00008CF693 /* Build configuration list for PBXNativeTarget "WatchOakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E0C81C26556C00008CF693 /* Debug */,
+				09E0C81D26556C00008CF693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1119,6 +1798,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
 			productName = SwiftlySearch;
+		};
+		09E0C82426558DE9008CF693 /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+		09E0C82726558E29008CF693 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 		FA03411625C9C640004752F3 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;
