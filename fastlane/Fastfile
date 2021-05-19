@@ -20,16 +20,6 @@ platform :ios do
     setup_semaphore
   end
 
-  desc "Push a new release build to the App Store"
-  lane :release do
-    match(type: "appstore")
-    increment_build_number(
-      xcodeproj: "Oak.xcodeproj"
-    )
-    build_app(scheme: "OakOTP")
-    upload_to_app_store
-  end
-
   desc "Run Unit tests"
   lane :test do
     run_tests(
