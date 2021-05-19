@@ -16,11 +16,6 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
-### ios release
-```
-fastlane ios release
-```
-Push a new release build to the App Store
 ### ios test
 ```
 fastlane ios test
