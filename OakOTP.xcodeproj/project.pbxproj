@@ -21,6 +21,7 @@
 		099EC38B2655470F00CA5F86 /* AuthenticationViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */; };
 		099EC38C2655484600CA5F86 /* Biometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91D265314760036F4F0 /* Biometrics.m */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
+		09AED5F5265702F9008B18B0 /* ChangePasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
 		09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */; };
 		09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E218265179D70066C4AB /* MockKeychainService.swift */; };
@@ -113,6 +114,7 @@
 		099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099EC382265546FA00CA5F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUITests.swift; sourceTree = "<group>"; };
 		09BA752525D0555600891033 /* HOTPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeView.swift; sourceTree = "<group>"; };
 		09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
@@ -243,10 +245,11 @@
 			children = (
 				09441E312651CCC4002B1619 /* SetupViewUITests.swift */,
 				09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */,
+				099EC382265546FA00CA5F86 /* Info.plist */,
+				09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */,
 				09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */,
 				09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */,
 				09BED91B265314590036F4F0 /* Misc */,
-				099EC382265546FA00CA5F86 /* Info.plist */,
 			);
 			path = OakOTPUITests;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				099EC38A2655470F00CA5F86 /* XCUIElement+Extensions.swift in Sources */,
 				099EC3892655470F00CA5F86 /* SettingsViewUITests.swift in Sources */,
 				099EC38C2655484600CA5F86 /* Biometrics.m in Sources */,
+				09AED5F5265702F9008B18B0 /* ChangePasswordUITests.swift in Sources */,
 				099EC38B2655470F00CA5F86 /* AuthenticationViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

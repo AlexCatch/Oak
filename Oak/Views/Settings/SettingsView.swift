@@ -27,7 +27,7 @@ struct SettingsView: View {
                 Section(header: Text("Manage")) {
                     Button("Change Password") {
                         viewModel.navigate(sheet: .updatePassword)
-                    }
+                    }.accessibility(identifier: "ChangePasswordButton")
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 }
             }

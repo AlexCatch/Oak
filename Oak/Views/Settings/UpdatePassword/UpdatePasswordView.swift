@@ -19,13 +19,16 @@ struct UpdatePasswordView: View {
             List {
                 Section(header: Text("Current Password")) {
                     SecureField("Password", text: $viewModel.enteredCurrentPassword)
+                        .accessibility(identifier: "CurrentPasswordSecureField")
                 }
                 Section(
                     header: Text("New Password"),
                     footer: Text("Please write your password down somewhere safe - it can't be reset and if you forget it you won't be able to access your codes.")
                 ) {
                     SecureField("Password", text: $viewModel.newPassword)
+                        .accessibility(identifier: "NewPasswordSecureField")
                     SecureField("Confirm Password", text: $viewModel.newPasswordConfirm)
+                        .accessibility(identifier: "NewPasswordConfirmSecureField")
                 }
             }
             .listStyle(InsetGroupedListStyle())
@@ -43,7 +46,7 @@ struct UpdatePasswordView: View {
                 Text("Dismiss")
             }), trailing:Button("Confirm", action: {
                 viewModel.saveChanges(dismiss: dismiss)
-            }).disabled(!viewModel.inputsAreValid))
+            }).accessibility(identifier: "ConfirmButton").disabled(!viewModel.inputsAreValid))
         }
     }
 }
