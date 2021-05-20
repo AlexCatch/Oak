@@ -7,6 +7,8 @@
 
 OakOTP is an iOS app built with SwiftUI for managing your 2FA codes.
 
+[![Download](https://github.com/AlexCatch/Oak/blob/master/DesignAssets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/gb/app/oakotp/id1567761178)
+
 - Supports iPhone & iPad
 - Supports scanning a QR code or entering credentials manually
 - Supports both TOTP & HOTP codes
