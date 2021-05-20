@@ -72,12 +72,9 @@ class RealPersistentStore: PersistentStore {
         let database = container.privateCloudDatabase
         
         database.delete(withRecordZoneID: .init(zoneName: "com.apple.coredata.cloudkit.zone"), completionHandler: { (zoneID, error) in
-            if let error = error {
+            if error != nil {
                 // If we failed to delete we need to mark somewhere that we failed so it's time to try again on relaunch
                 self.iCloudSettings.set(key: .failedToDeleteZone, value: true)
-                print("deleting zone error \(error.localizedDescription)")
-            } else {
-                print("did delete entire zone")
             }
         })
     }
