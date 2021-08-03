@@ -7,10 +7,7 @@ agent:
 global_job_config:
   prologue:
     commands:
-      - checkout
-      - cache restore
-      - bundle install --path vendor/bundle
-      - cache store
+      - cache clear - checkout - cache restore - bundle install --path vendor/bundle - cache store
 blocks:
   - name: Fastlane Tests
     task:
