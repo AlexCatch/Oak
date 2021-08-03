@@ -14,6 +14,12 @@
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
 		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
+		0960271C26B9D5F8009AFCFB /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960271B26B9D5F8009AFCFB /* BackupService.swift */; };
+		0960271E26B9D6B3009AFCFB /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960271D26B9D6B3009AFCFB /* Backup.swift */; };
+		0960272026B9D72D009AFCFB /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960271F26B9D72D009AFCFB /* Encryption.swift */; };
+		0960272326B9D7F6009AFCFB /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0960272226B9D7F6009AFCFB /* CryptoSwift */; };
+		0960272526B9DE0B009AFCFB /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960272426B9DE0B009AFCFB /* Data+Extensions.swift */; };
+		0960272826B9E665009AFCFB /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960272726B9E665009AFCFB /* EncryptionTests.swift */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		099EC3882655470B00CA5F86 /* SetupViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441E312651CCC4002B1619 /* SetupViewUITests.swift */; };
 		099EC3892655470F00CA5F86 /* SettingsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */; };
@@ -110,6 +116,11 @@
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
+		0960271B26B9D5F8009AFCFB /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		0960271D26B9D6B3009AFCFB /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
+		0960271F26B9D72D009AFCFB /* Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
+		0960272426B9DE0B009AFCFB /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		0960272726B9E665009AFCFB /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099EC382265546FA00CA5F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +212,7 @@
 				09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
 				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
+				0960272326B9D7F6009AFCFB /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +250,14 @@
 				092F944525D5C46700FB537A /* PersistentStore.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		0960272626B9E651009AFCFB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0960272726B9E665009AFCFB /* EncryptionTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		099EC37F265546FA00CA5F86 /* OakOTPUITests */ = {
@@ -392,6 +412,7 @@
 		FA42C68B25C63C9D000D597E /* OakTests */ = {
 			isa = PBXGroup;
 			children = (
+				0960272626B9E651009AFCFB /* Utils */,
 				09C4E217265179C20066C4AB /* Mocks */,
 				FA42C68E25C63C9D000D597E /* Info.plist */,
 				09C4E22026517D070066C4AB /* SetupViewModelTests.swift */,
@@ -437,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				FA42C72325C6EC74000D597E /* Account.swift */,
+				0960271D26B9D6B3009AFCFB /* Backup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +477,7 @@
 		FA87C02225C88896009C7FF7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0960271B26B9D5F8009AFCFB /* BackupService.swift */,
 				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
 				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
 				FADAE49725C9ED9A005BC18E /* KeychainService.swift */,
@@ -468,6 +491,7 @@
 				FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */,
 				092A678025CC781400E8118E /* Double+Extensions.swift */,
 				09AAE5B425CD8C18002054AA /* String+Extensions.swift */,
+				0960272426B9DE0B009AFCFB /* Data+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -518,6 +542,7 @@
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
 				092A677B25CC605A00E8118E /* Window.swift */,
 				09CFCEC926504079001954C5 /* ICloudSettings.swift */,
+				0960271F26B9D72D009AFCFB /* Encryption.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -571,6 +596,7 @@
 				FA87C00A25C88446009C7FF7 /* CodeScanner */,
 				FA03411625C9C640004752F3 /* Resolver */,
 				09CFCECE26516905001954C5 /* SwiftlySearch */,
+				0960272226B9D7F6009AFCFB /* CryptoSwift */,
 			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* OakOTP.app */;
@@ -631,6 +657,7 @@
 				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
 				09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
+				0960272126B9D7F6009AFCFB /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
@@ -709,6 +736,7 @@
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
 				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
+				0960271E26B9D6B3009AFCFB /* Backup.swift in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
@@ -716,6 +744,7 @@
 				09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */,
 				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
 				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
+				0960272526B9DE0B009AFCFB /* Data+Extensions.swift in Sources */,
 				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
@@ -724,6 +753,7 @@
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */,
+				0960272026B9D72D009AFCFB /* Encryption.swift in Sources */,
 				09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */,
 				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
 				FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */,
@@ -732,6 +762,7 @@
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
 				09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */,
 				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
+				0960271C26B9D5F8009AFCFB /* BackupService.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,
 			);
@@ -747,6 +778,7 @@
 				09C4E2392651ABF50066C4AB /* UpdatePasswordViewModelTests.swift in Sources */,
 				09C4E23326519F450066C4AB /* MainViewModelTests.swift in Sources */,
 				09C4E2352651A0700066C4AB /* NewEditAccountViewModelTests.swift in Sources */,
+				0960272826B9E665009AFCFB /* EncryptionTests.swift in Sources */,
 				09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */,
 				09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */,
 				09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */,
@@ -1078,6 +1110,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0960272126B9D7F6009AFCFB /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 		09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch";
@@ -1121,6 +1161,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0960272226B9D7F6009AFCFB /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0960272126B9D7F6009AFCFB /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
 		09CFCECE26516905001954C5 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
