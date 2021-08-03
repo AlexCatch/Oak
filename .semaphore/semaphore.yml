@@ -7,6 +7,7 @@ agent:
 global_job_config:
   prologue:
     commands:
+      - gem install bundler -v 2.2.17
       - checkout
       - cache restore
       - bundle install --path vendor/bundle
