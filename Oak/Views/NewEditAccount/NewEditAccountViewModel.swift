@@ -120,7 +120,7 @@ class NewEditAccountViewModel: ObservableObject {
         existingAccount.digits = Int16(digits)
         existingAccount.period = type == .totp ? Int16(period) : 30
         existingAccount.counter = type == .hotp ? Int16(counter) : 0
-        try accountsService.save(account: existingAccount)
+        try accountsService.save()
     }
 }
 

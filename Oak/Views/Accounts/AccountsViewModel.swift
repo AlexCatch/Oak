@@ -37,6 +37,10 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     @Published var activeActionSheet: ActionSheet?
     
     @Published var searchText: String = ""
+    @Published var isDeleting = false
+    
+    var accountRowToDelete: AccountRowViewModel?
+    var accountRowToDeleteIndex: Int?
     
     // Account we're currently editing - used from list context menu
     var selectedAccountIndex: Int?
@@ -72,6 +76,54 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
             self.selectedAccountIndex = index
         }
         navigate(to: .newAccount)
+    }
+    
+    func move(source: IndexSet, destination: Int) {
+        accountRowModels.move(fromOffsets: source, toOffset: destination)
+        for (index, viewModel) in accountRowModels.enumerated() {
+            viewModel.account.order = Int16(index)
+            try? accountService.save()
+        }
+    }
+    
+    func delete(at index: IndexSet) {
+        guard let accountIndex = index.first else {
+            return
+        }
+        
+        // Remove locally from our data store, if the user cancels we can just refetch
+        accountRowToDelete = accountRowModels[accountIndex]
+        accountRowToDeleteIndex = accountIndex
+        isDeleting = true
+        
+        accountRowModels.remove(at: accountIndex)
+    }
+    
+    func confirmDeletion() {
+        guard let accountRow = accountRowToDelete else {
+            return
+        }
+        
+        try? accountService.delete(accounts: [accountRow.account])
+        
+        isDeleting = false
+        accountRowToDeleteIndex = nil
+        accountRowToDelete = nil
+    }
+    
+    func cancelDeletion() {
+        guard let accountIndex = accountRowToDeleteIndex, let account = accountRowToDelete else {
+            return
+        }
+        
+        // Reinsert our item into our list
+        withAnimation(.spring()) {
+            accountRowModels.insert(account, at: accountIndex)
+            
+            accountRowToDelete = nil
+            accountRowToDeleteIndex = nil
+            isDeleting = false
+        }
     }
     
     func hideSheet() {

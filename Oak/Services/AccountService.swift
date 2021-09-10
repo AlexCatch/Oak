@@ -27,7 +27,7 @@ protocol AccountService {
     func fetchAll() -> [Account]
     func save(parsedURI: ParsedURI) throws
     func save(data: CreateAccountData) throws
-    func save(account: Account) throws
+    func save() throws
     func delete(accounts: [Account]) throws
     func updateCounter(account: Account) throws -> Account
 }
@@ -37,6 +37,9 @@ protocol AccountServiceDelegate: AnyObject {
 }
 
 class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountService {
+    
+    static let DefaultSortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
+    
     weak var delegate: AccountServiceDelegate? {
         didSet {
             // When our delegate is set - send our initial accounts
@@ -52,7 +55,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
     override init() {
         super.init()
         
-        accountsDataController = Account.resultsController(context: persistentStore.viewContext, request: Account.fetchRequest(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)])
+        accountsDataController = Account.resultsController(context: persistentStore.viewContext, request: Account.fetchRequest(), sortDescriptors: RealAccountService.DefaultSortDescriptors)
         accountsDataController?.delegate = self
         
         // do an initial fetch
@@ -67,6 +70,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
     func filter(predicate: NSPredicate?) throws {
         if let predicate = predicate {
             accountsDataController?.fetchRequest.predicate = predicate
+            accountsDataController?.fetchRequest.sortDescriptors = RealAccountService.DefaultSortDescriptors
         } else {
             accountsDataController?.fetchRequest.predicate = nil
         }
@@ -125,7 +129,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         try persistentStore.save()
     }
     
-    func save(account: Account) throws {
+    func save() throws {
         try persistentStore.viewContext.save()
     }
     

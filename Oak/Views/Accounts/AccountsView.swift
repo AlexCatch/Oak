@@ -16,14 +16,26 @@ struct AccountsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.accountRowModels, id: \.id) { vm in
-                    AccountRow(viewModel: vm, editAccountCallback: viewModel.editAccount)
+                List {
+                    ForEach(viewModel.accountRowModels, id: \.id) {vm in
+                        AccountRow(viewModel: vm, editAccountCallback: viewModel.editAccount)
+                            .alert(isPresented: $viewModel.isDeleting) {
+                                Alert(
+                                    title: Text("Delete"),
+                                    message: Text("Are you sure you want to delete this account? This cannot be undone so please make sure you've backed up your secret elsewhere"),
+                                    primaryButton: .destructive(Text("Delete"), action: viewModel.confirmDeletion),
+                                    secondaryButton: .cancel(Text("Cancel"), action: viewModel.cancelDeletion)
+                                )
+                            }
+                    }
+                    .onMove(perform: viewModel.move)
+                    .onDelete(perform: viewModel.delete)
                 }
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarSearch($viewModel.searchText, placeholder: "Search", hidesNavigationBarDuringPresentation: false)
                 .onChange(of: viewModel.searchText, perform: viewModel.performQuery)
             }
-            .navigationBarItems(trailing: HStack {
+            .navigationBarItems(leading: EditButton(), trailing: HStack {
                 Button(action: {
                     viewModel.navigate(to: .settings)
                 }, label: {

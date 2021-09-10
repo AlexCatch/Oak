@@ -49,6 +49,25 @@ extension Account {
     }
 }
 
+extension Account: Encodable {
+    private enum CodingKeys: String, CodingKey { case counter, digits, order, period, algorithmRaw, issuer, name, secret, typeRaw, usesBase32, createdAt }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(counter, forKey: .counter)
+        try container.encode(digits, forKey: .digits)
+        try container.encode(order, forKey: .order)
+        try container.encode(period, forKey: .period)
+        try container.encode(algorithmRaw, forKey: .algorithmRaw)
+        try container.encode(issuer, forKey: .issuer)
+        try container.encode(name, forKey: .name)
+        try container.encode(secret, forKey: .secret)
+        try container.encode(typeRaw, forKey: .typeRaw)
+        try container.encode(usesBase32, forKey: .usesBase32)
+        try container.encode(createdAt, forKey: .createdAt)
+    }
+}
+
 extension NSManagedObject {
     static func resultsController<T>(context: NSManagedObjectContext, request: NSFetchRequest<T>, sortDescriptors: [NSSortDescriptor] = []) -> NSFetchedResultsController<T> {
         request.sortDescriptors = sortDescriptors

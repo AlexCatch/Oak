@@ -57,4 +57,59 @@ class AccountsViewModelTests: OakTestCase {
         XCTAssert(vm.activeSheet == .newAccount)
         XCTAssert(vm.selectedAccount == accounts[0])
     }
+    
+    func testConfirmDeletion() {
+        let vm = AccountsViewModel()
+        let accountService: AccountService = Resolver.resolve()
+        
+        let accounts = createAccounts()
+        
+        vm.accountsChanged(accounts: accounts)
+        vm.delete(at: IndexSet([0]))
+        vm.confirmDeletion()
+        
+        let fetchedAccounts = accountService.fetchAll()
+        XCTAssertEqual(fetchedAccounts.count, 1)
+        XCTAssertEqual(vm.accountRowModels.count, 1)
+        XCTAssertFalse(vm.isDeleting)
+        XCTAssertNil(vm.accountRowToDelete)
+        XCTAssertNil(vm.accountRowToDeleteIndex)
+    }
+    
+    func testCancelDeletion() {
+        let vm = AccountsViewModel()
+        let accountService: AccountService = Resolver.resolve()
+        
+        let accounts = createAccounts()
+        
+        vm.accountsChanged(accounts: accounts)
+        vm.delete(at: IndexSet([0]))
+        vm.cancelDeletion()
+        
+        let fetchedAccounts = accountService.fetchAll()
+        XCTAssertEqual(fetchedAccounts.count, 2)
+        XCTAssertEqual(vm.accountRowModels.count, 2)
+        XCTAssertFalse(vm.isDeleting)
+        XCTAssertNil(vm.accountRowToDelete)
+        XCTAssertNil(vm.accountRowToDeleteIndex)
+    }
+    
+    func testMove() {
+        let vm = AccountsViewModel()
+        let accountService: AccountService = Resolver.resolve()
+        
+        let accounts = createAccounts()
+        
+        vm.accountsChanged(accounts: accounts)
+        
+        // Check sure our accounts have switched
+        XCTAssertEqual(vm.accountRowModels[0].account.issuer, "Google")
+        XCTAssertEqual(vm.accountRowModels[1].account.issuer, "Facebook")
+        
+        vm.move(source: IndexSet([0]), destination: 2)
+        
+        // Check sure our accounts have switched
+        XCTAssertEqual(vm.accountRowModels[0].account.issuer, "Facebook")
+        XCTAssertEqual(vm.accountRowModels[1].account.issuer, "Google")
+    }
 }
