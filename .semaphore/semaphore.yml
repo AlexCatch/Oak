@@ -8,6 +8,7 @@ global_job_config:
   prologue:
     commands:
       - checkout
+      - gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
       - cache restore
       - bundle install --path vendor/bundle
       - cache store
