@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import OakOTP
+import OakOTPCommon
 import Resolver
 
 class AccountsViewModelTests: OakTestCase {
@@ -96,7 +97,6 @@ class AccountsViewModelTests: OakTestCase {
     
     func testMove() {
         let vm = AccountsViewModel()
-        let accountService: AccountService = Resolver.resolve()
         
         let accounts = createAccounts()
         

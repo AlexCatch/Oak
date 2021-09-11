@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091D3F4526ECD6080070A6DB /* OakOTPCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 091D3F4426ECD6080070A6DB /* OakOTPCommon */; };
 		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
-		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
-		0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0953E6B326E9477E00B19DC6 /* Introspect */; };
 		0953E6B726EBE16500B19DC6 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6B526EBE16500B19DC6 /* IntentsUI.framework */; };
 		0953E6B826EBE16500B19DC6 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6B626EBE16500B19DC6 /* Intents.framework */; };
 		0953E6BA26EBE3B200B19DC6 /* SiriService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6B926EBE3B200B19DC6 /* SiriService.swift */; };
@@ -22,7 +21,6 @@
 		0953E6EC26EBFE8600B19DC6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6EB26EBFE8600B19DC6 /* IntentHandler.swift */; };
 		0953E6F026EBFE8600B19DC6 /* OakOTPIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0953E6F526EBFE9B00B19DC6 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6E026EBF39400B19DC6 /* Intents.intentdefinition */; };
-		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		099EC3882655470B00CA5F86 /* SetupViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441E312651CCC4002B1619 /* SetupViewUITests.swift */; };
 		099EC3892655470F00CA5F86 /* SettingsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */; };
@@ -37,7 +35,6 @@
 		09C4E21B26517A430066C4AB /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21A26517A430066C4AB /* Setup.swift */; };
 		09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21C26517B950066C4AB /* MockSettings.swift */; };
 		09C4E22126517D070066C4AB /* SetupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22026517D070066C4AB /* SetupViewModelTests.swift */; };
-		09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E224265183760066C4AB /* MockPersistentStore.swift */; };
 		09C4E227265186230066C4AB /* AccountsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E226265186230066C4AB /* AccountsViewModelTests.swift */; };
 		09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2282651863C0066C4AB /* OakTestCase.swift */; };
 		09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */; };
@@ -51,7 +48,6 @@
 		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
 		09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeViewModel.swift */; };
 		09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */; };
-		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
 		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
 		09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 09CFCECE26516905001954C5 /* SwiftlySearch */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
@@ -61,7 +57,6 @@
 		FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */; };
 		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
-		FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CBE25CA0733009C215F /* Utils+Injection.swift */; };
 		FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CC425CA091C009C215F /* UpdatePasswordView.swift */; };
 		FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
@@ -72,17 +67,11 @@
 		FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6B625C64A79000D597E /* CircularProgressView.swift */; };
 		FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6C625C658A3000D597E /* SettingsView.swift */; };
 		FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C6CE25C65B8B000D597E /* ToggableRow.swift */; };
-		FA42C72425C6EC74000D597E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C72325C6EC74000D597E /* Account.swift */; };
-		FA42C79725C7219A000D597E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C79625C7219A000D597E /* Settings.swift */; };
 		FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA42C7A025C78076000D597E /* KeychainSwift */; };
 		FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */; };
 		FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */; };
-		FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00425C87EFD009C7FF7 /* SwiftOTP */; };
 		FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00A25C88446009C7FF7 /* CodeScanner */; };
 		FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */; };
-		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
-		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
-		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
 		FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB0825C8F959001DE486 /* MainView.swift */; };
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
@@ -132,10 +121,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		091D3F4326ECD5D10070A6DB /* OakOTPCommon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OakOTPCommon; sourceTree = "<group>"; };
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
-		092F944525D5C46700FB537A /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -146,7 +135,6 @@
 		0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OakOTPIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0953E6EB26EBFE8600B19DC6 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		0953E6ED26EBFE8600B19DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099EC382265546FA00CA5F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,7 +152,6 @@
 		09C4E21A26517A430066C4AB /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		09C4E21C26517B950066C4AB /* MockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettings.swift; sourceTree = "<group>"; };
 		09C4E22026517D070066C4AB /* SetupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModelTests.swift; sourceTree = "<group>"; };
-		09C4E224265183760066C4AB /* MockPersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistentStore.swift; sourceTree = "<group>"; };
 		09C4E226265186230066C4AB /* AccountsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModelTests.swift; sourceTree = "<group>"; };
 		09C4E2282651863C0066C4AB /* OakTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakTestCase.swift; sourceTree = "<group>"; };
 		09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowViewModelTests.swift; sourceTree = "<group>"; };
@@ -178,7 +165,6 @@
 		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenModifier.swift; sourceTree = "<group>"; };
-		09CFCEC926504079001954C5 /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
 		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
@@ -186,7 +172,6 @@
 		FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
 		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		FA404CBE25CA0733009C215F /* Utils+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Injection.swift"; sourceTree = "<group>"; };
 		FA404CC425CA091C009C215F /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* OakOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OakOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,14 +187,9 @@
 		FA42C6C625C658A3000D597E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FA42C6CE25C65B8B000D597E /* ToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggableRow.swift; sourceTree = "<group>"; };
 		FA42C6E025C665BC000D597E /* Oak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oak.entitlements; sourceTree = "<group>"; };
-		FA42C72325C6EC74000D597E /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		FA42C79625C7219A000D597E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
 		FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowViewModel.swift; sourceTree = "<group>"; };
 		FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeView.swift; sourceTree = "<group>"; };
-		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
-		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
-		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FAB8CB0825C8F959001DE486 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -241,14 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0953E6B726EBE16500B19DC6 /* IntentsUI.framework in Frameworks */,
+				091D3F4526ECD6080070A6DB /* OakOTPCommon in Frameworks */,
 				0953E6B826EBE16500B19DC6 /* Intents.framework in Frameworks */,
 				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
 				09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */,
-				0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
-				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,15 +277,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		095A2BB725D5BABB0030C585 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */,
-				092F944525D5C46700FB537A /* PersistentStore.swift */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
 		099EC37F265546FA00CA5F86 /* OakOTPUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +307,6 @@
 				09C4E218265179D70066C4AB /* MockKeychainService.swift */,
 				09C4E21A26517A430066C4AB /* Setup.swift */,
 				09C4E21C26517B950066C4AB /* MockSettings.swift */,
-				09C4E224265183760066C4AB /* MockPersistentStore.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -386,7 +355,6 @@
 				FA03411B25C9C7BE004752F3 /* Services+Injection.swift */,
 				FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */,
 				FA03412625C9C8D0004752F3 /* Injection.swift */,
-				FA404CBE25CA0733009C215F /* Utils+Injection.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -412,6 +380,7 @@
 		FA42C66925C63C9C000D597E = {
 			isa = PBXGroup;
 			children = (
+				091D3F4326ECD5D10070A6DB /* OakOTPCommon */,
 				0953E6F426EBFE8E00B19DC6 /* Shared */,
 				FA42C67425C63C9C000D597E /* Oak */,
 				FA42C68B25C63C9D000D597E /* OakTests */,
@@ -437,13 +406,11 @@
 			isa = PBXGroup;
 			children = (
 				09CFCEC62650246F001954C5 /* Modifiers */,
-				095A2BB725D5BABB0030C585 /* Persistence */,
 				FA03412525C9C8B3004752F3 /* Injected */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
 				FA87C02225C88896009C7FF7 /* Services */,
-				FA42C72225C6EC51000D597E /* Models */,
 				FA42C6A825C64904000D597E /* Views */,
 				FA42C67525C63C9C000D597E /* OakApp.swift */,
 				094EF7B926500EA90027F9F4 /* AppDelegate.swift */,
@@ -503,14 +470,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		FA42C72225C6EC51000D597E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FA42C72325C6EC74000D597E /* Account.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		FA87C00F25C88715009C7FF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,8 +484,6 @@
 		FA87C02225C88896009C7FF7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
-				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
 				FADAE49725C9ED9A005BC18E /* KeychainService.swift */,
 				0953E6B926EBE3B200B19DC6 /* SiriService.swift */,
 			);
@@ -536,7 +493,6 @@
 		FA87C02E25C890B5009C7FF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */,
 				092A678025CC781400E8118E /* Double+Extensions.swift */,
 				09AAE5B425CD8C18002054AA /* String+Extensions.swift */,
 			);
@@ -584,11 +540,9 @@
 		FAB8CB2425C8FE96001DE486 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
 				092A677B25CC605A00E8118E /* Window.swift */,
-				09CFCEC926504079001954C5 /* ICloudSettings.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -618,6 +572,8 @@
 			dependencies = (
 			);
 			name = OakOTPIntents;
+			packageProductDependencies = (
+			);
 			productName = OakOTPIntents;
 			productReference = 0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -657,11 +613,10 @@
 			name = OakOTP;
 			packageProductDependencies = (
 				FA42C7A025C78076000D597E /* KeychainSwift */,
-				FA87C00425C87EFD009C7FF7 /* SwiftOTP */,
 				FA87C00A25C88446009C7FF7 /* CodeScanner */,
 				FA03411625C9C640004752F3 /* Resolver */,
 				09CFCECE26516905001954C5 /* SwiftlySearch */,
-				0953E6B326E9477E00B19DC6 /* Introspect */,
+				091D3F4426ECD6080070A6DB /* OakOTPCommon */,
 			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* OakOTP.app */;
@@ -721,11 +676,9 @@
 			mainGroup = FA42C66925C63C9C000D597E;
 			packageReferences = (
 				FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */,
 				FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
 				09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
-				0953E6B226E9477E00B19DC6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
@@ -803,7 +756,6 @@
 				092A678125CC781400E8118E /* Double+Extensions.swift in Sources */,
 				09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */,
 				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
-				092F944625D5C46700FB537A /* PersistentStore.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
 				0953E6E126EBF39400B19DC6 /* Intents.intentdefinition in Sources */,
@@ -813,7 +765,6 @@
 				09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
-				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
 				09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */,
@@ -822,7 +773,6 @@
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				0953E6BA26EBE3B200B19DC6 /* SiriService.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
-				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
@@ -831,20 +781,14 @@
 				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
 				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
 				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,
-				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
 				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,
-				FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */,
-				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */,
 				09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */,
 				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
 				FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */,
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
-				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
-				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
-				09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */,
 				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,
@@ -864,7 +808,6 @@
 				09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */,
 				09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */,
 				09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */,
-				09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */,
 				09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */,
 				09C4E21B26517A430066C4AB /* Setup.swift in Sources */,
 				09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */,
@@ -1250,14 +1193,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0953E6B226E9477E00B19DC6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
 		09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch";
@@ -1282,14 +1217,6 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lachlanbell/SwiftOTP.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.3;
-			};
-		};
 		FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
@@ -1301,10 +1228,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0953E6B326E9477E00B19DC6 /* Introspect */ = {
+		091D3F4426ECD6080070A6DB /* OakOTPCommon */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0953E6B226E9477E00B19DC6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
+			productName = OakOTPCommon;
 		};
 		09CFCECE26516905001954C5 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1321,30 +1247,12 @@
 			package = FA42C79F25C78076000D597E /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		FA87C00425C87EFD009C7FF7 /* SwiftOTP */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA87C00325C87EFD009C7FF7 /* XCRemoteSwiftPackageReference "SwiftOTP" */;
-			productName = SwiftOTP;
-		};
 		FA87C00A25C88446009C7FF7 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */,
-			);
-			currentVersion = 095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */;
-			path = Oak.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FA42C66A25C63C9C000D597E /* Project object */;
 }

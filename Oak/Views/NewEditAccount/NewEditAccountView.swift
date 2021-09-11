@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 fileprivate struct TextInputRow: View {
     let title: String

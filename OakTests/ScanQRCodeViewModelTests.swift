@@ -9,6 +9,7 @@ import XCTest
 import SwiftUI
 @testable import OakOTP
 import CodeScanner
+import OakOTPCommon
 import Resolver
 
 class ScanQRCodeViewModelTests: OakTestCase {

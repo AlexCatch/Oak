@@ -6,14 +6,17 @@
 //
 
 import Foundation
+import OakOTPCommon
 import Resolver
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
+        
         RegisterAllAppServices()
         RegisterAllViewModels()
-        RegisterPersistentContainer()
-        RegisterAllUtils()
+        RegisterWindowUtil()
+        RegisterHapticsUtil()
+        RegisterBiometricsUtil()
+        Injection.registerComponents(in: root)
     }
 }
-

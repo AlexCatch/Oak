@@ -9,6 +9,7 @@ import SwiftUI
 import CodeScanner
 import Resolver
 import CoreData
+import OakOTPCommon
 
 class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     enum Sheet: Identifiable {

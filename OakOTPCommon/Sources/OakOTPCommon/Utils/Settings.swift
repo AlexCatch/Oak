@@ -8,7 +8,7 @@
 import SwiftUI
 import Resolver
 
-enum SettingsKey: String {
+public enum SettingsKey: String {
     case failedToDeleteZone = "failedToDeleteZone"
     case iCloudEnabled = "iCloudEnabled"
     case requireAuthOnStart = "requireAuthOnStart"
@@ -16,17 +16,17 @@ enum SettingsKey: String {
     case isSetup = "isSetup"
 }
 
-protocol Settings {
+public protocol Settings {
     func bool(key: SettingsKey) -> Bool
     func set(key: SettingsKey, value: Any)
 }
 
-class RealSettings: Settings {
-    func bool(key: SettingsKey) -> Bool {
+public class RealSettings: Settings {
+    public func bool(key: SettingsKey) -> Bool {
         return UserDefaults.standard.bool(forKey: key.rawValue)
     }
     
-    func set(key: SettingsKey, value: Any) {
+    public func set(key: SettingsKey, value: Any) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
     }
 }

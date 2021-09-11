@@ -8,6 +8,7 @@
 import XCTest
 import Resolver
 import CoreData
+import OakOTPCommon
 @testable import OakOTP
 
 class NewEditAccountViewModelTests: OakTestCase {

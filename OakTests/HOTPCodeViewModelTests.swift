@@ -8,6 +8,7 @@
 import XCTest
 import CoreData
 import Resolver
+import OakOTPCommon
 @testable import OakOTP
 
 class HOTPCodeViewModelTests: OakTestCase {

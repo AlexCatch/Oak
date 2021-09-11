@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 class AuthenticationViewModel: ObservableObject {
     @Injected private var settings: Settings

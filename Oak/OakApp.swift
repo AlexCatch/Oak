@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 @main
 struct OakApp: App {

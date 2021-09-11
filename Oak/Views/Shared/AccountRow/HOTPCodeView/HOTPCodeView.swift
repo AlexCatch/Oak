@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 struct HOTPCodeView: View {
     @StateObject var viewModel: HOTPCodeViewModel = Resolver.resolve()

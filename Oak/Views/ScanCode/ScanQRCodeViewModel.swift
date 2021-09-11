@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Resolver
 import CodeScanner
+import OakOTPCommon
 
 class ScanQRCodeViewModel: ObservableObject {
     @Injected private var otpService: OTPService

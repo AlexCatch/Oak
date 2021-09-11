@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 class TOTPCodeViewModel: ObservableObject, CodeViewModel {
     @Injected private var otpService: OTPService

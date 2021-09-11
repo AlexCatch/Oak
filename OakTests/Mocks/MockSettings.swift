@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OakOTPCommon
 @testable import OakOTP
 
 class MockSettings: Settings {

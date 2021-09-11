@@ -9,24 +9,30 @@ import Foundation
 import Resolver
 import CoreData
 
-protocol PersistentStore {
+open class PersistentCloudContainer: NSPersistentCloudKitContainer {
+}
+
+public protocol PersistentStore {
     var viewContext: NSManagedObjectContext { get }
     func save() throws
     func toggleICloudSync(sync: Bool)
     func deleteUserAccounts()
 }
 
-class RealPersistentStore: PersistentStore {
+public class RealPersistentStore: PersistentStore {
     
-    private var persistentContainer: NSPersistentContainer!
+    private var persistentContainer: PersistentCloudContainer!
     @Injected private var iCloudSettings: ICloudSettings
     
-    var viewContext: NSManagedObjectContext {
+    public var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
     private func setupContainer(sync: Bool) {
-        self.persistentContainer = NSPersistentCloudKitContainer(name: "Oak")
+        let bundle = Bundle.module
+        let modelURL = bundle.url(forResource: "Oak", withExtension: ".momd")!
+        let model = NSManagedObjectModel(contentsOf: modelURL)!
+        self.persistentContainer = PersistentCloudContainer(name: "Oak", managedObjectModel: model)
         
         guard let existingDescription = self.persistentContainer.persistentStoreDescriptions.first else {
             fatalError("###\(#function): Failed to retrieve a persistent store description.")
@@ -111,7 +117,7 @@ class RealPersistentStore: PersistentStore {
         setupContainer(sync: iCloudSettings.bool(key: .iCloudEnabled))
     }
     
-    func save() throws {
+    public func save() throws {
         try viewContext.save()
     }
     
@@ -129,12 +135,6 @@ class RealPersistentStore: PersistentStore {
                 self.iCloudSettings.set(key: .failedToDeleteZone, value: true)
             }
         })
-    }
-}
-
-extension Resolver {
-    static func RegisterPersistentContainer() {
-        register { RealPersistentStore() as PersistentStore }.scope(.application)
     }
 }
 

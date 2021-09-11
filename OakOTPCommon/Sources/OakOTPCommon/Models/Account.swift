@@ -9,7 +9,29 @@ import Foundation
 import CoreData
 import SwiftOTP
 
-extension Account {
+public class Account: NSManagedObject {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Account> {
+        return NSFetchRequest<Account>(entityName: "Account")
+    }
+    
+    public var id: String {
+        return objectID.uriRepresentation().absoluteString
+    }
+
+    @NSManaged public var algorithmRaw: String?
+    @NSManaged public var counter: Int16
+    @NSManaged public var createdAt: Date?
+    @NSManaged public var digits: Int16
+    @NSManaged public var issuer: String?
+    @NSManaged public var name: String?
+    @NSManaged public var order: Int16
+    @NSManaged public var period: Int16
+    @NSManaged public var secret: String?
+    @NSManaged public var typeRaw: String?
+    @NSManaged public var usesBase32: Bool
+}
+
+public extension Account {
     var algorithm: Algorithm {
         set {
             algorithmRaw = newValue.rawValue
@@ -68,7 +90,7 @@ extension Account: Encodable {
     }
 }
 
-extension NSManagedObject {
+public extension NSManagedObject {
     static func resultsController<T>(context: NSManagedObjectContext, request: NSFetchRequest<T>, sortDescriptors: [NSSortDescriptor] = []) -> NSFetchedResultsController<T> {
         request.sortDescriptors = sortDescriptors
         return NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)

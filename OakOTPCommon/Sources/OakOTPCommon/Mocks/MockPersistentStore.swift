@@ -7,16 +7,18 @@
 
 import Foundation
 import CoreData
-@testable import OakOTP
 
-class MockPersistentStore: PersistentStore {
+public class MockPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!
-    var viewContext: NSManagedObjectContext {
+    public var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
-    init() {
-        persistentContainer = NSPersistentContainer(name: "Oak")
+    public init() {
+        let bundle = Bundle.module
+        let modelURL = bundle.url(forResource: "Oak", withExtension: ".momd")!
+        let model = NSManagedObjectModel(contentsOf: modelURL)!
+        persistentContainer = NSPersistentContainer(name: "Oak", managedObjectModel: model)
 
         let description = NSPersistentStoreDescription()
         description.url = URL(fileURLWithPath: "/dev/null")
@@ -29,11 +31,11 @@ class MockPersistentStore: PersistentStore {
         })
     }
     
-    func save() throws {
+    public func save() throws {
         try viewContext.save()
     }
     
-    func toggleICloudSync(sync: Bool) {}
+    public func toggleICloudSync(sync: Bool) {}
     
-    func deleteUserAccounts() {}
+    public func deleteUserAccounts() {}
 }

@@ -48,6 +48,20 @@
                ReferencedContainer = "container:OakOTP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OakOTPCommonTests"
+               BuildableName = "OakOTPCommonTests"
+               BlueprintName = "OakOTPCommonTests"
+               ReferencedContainer = "container:OakOTPCommon">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -85,6 +99,16 @@
                BuildableName = "OakOTPUITests.xctest"
                BlueprintName = "OakOTPUITests"
                ReferencedContainer = "container:OakOTP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OakOTPCommonTests"
+               BuildableName = "OakOTPCommonTests"
+               BlueprintName = "OakOTPCommonTests"
+               ReferencedContainer = "container:OakOTPCommon">
             </BuildableReference>
          </TestableReference>
       </Testables>

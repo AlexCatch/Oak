@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 struct TOTPCodeView: View {
     @StateObject private var viewModel: TOTPCodeViewModel = Resolver.resolve()

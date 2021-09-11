@@ -7,6 +7,7 @@
 
 import XCTest
 import Resolver
+import OakOTPCommon
 @testable import OakOTP
 
 class MainViewModelTests: OakTestCase {

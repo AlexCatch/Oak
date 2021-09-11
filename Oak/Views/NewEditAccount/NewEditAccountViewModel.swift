@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 class NewEditAccountViewModel: ObservableObject {
     @Injected private var accountsService: AccountService

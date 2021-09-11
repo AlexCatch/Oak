@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 import CoreData
 
-struct CreateAccountData {
+public struct CreateAccountData {
     var name = ""
     var issuer = ""
     var secret = ""
@@ -19,9 +19,21 @@ struct CreateAccountData {
     var digits: Int = 6
     var period: Int?
     var counter: Int?
+    
+    public init(name: String = "", issuer: String = "", secret: String = "", base32Encoded: Bool = true, type: CodeType = .totp, algorithm: Algorithm = .sha1, digits: Int = 6, period: Int? = nil, counter: Int? = nil) {
+        self.name = name
+        self.issuer = issuer
+        self.secret = secret
+        self.base32Encoded = base32Encoded
+        self.type = type
+        self.algorithm = algorithm
+        self.digits = digits
+        self.period = period
+        self.counter = counter
+    }
 }
 
-protocol AccountService {
+public protocol AccountService {
     var delegate: AccountServiceDelegate? { get set }
     func filter(predicate: NSPredicate?) throws
     func fetchAll() -> [Account]
@@ -32,18 +44,19 @@ protocol AccountService {
     func updateCounter(account: Account) throws -> Account
 }
 
-protocol AccountServiceDelegate: AnyObject {
+public protocol AccountServiceDelegate: AnyObject {
     func accountsChanged(accounts: [Account])
 }
 
-class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountService {
+public class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountService {
     
     static let DefaultSortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
     
-    weak var delegate: AccountServiceDelegate? {
+    weak public var delegate: AccountServiceDelegate? {
         didSet {
             // When our delegate is set - send our initial accounts
             if let accounts = accountsDataController?.fetchedObjects {
+                print(accounts)
                 delegate?.accountsChanged(accounts: accounts)
             }
         }
@@ -62,12 +75,12 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         try? accountsDataController?.performFetch()
     }
     
-    func fetchAll() -> [Account] {
+    public func fetchAll() -> [Account] {
         try? accountsDataController?.performFetch()
         return accountsDataController?.fetchedObjects ?? []
     }
     
-    func filter(predicate: NSPredicate?) throws {
+    public func filter(predicate: NSPredicate?) throws {
         if let predicate = predicate {
             accountsDataController?.fetchRequest.predicate = predicate
             accountsDataController?.fetchRequest.sortDescriptors = RealAccountService.DefaultSortDescriptors
@@ -82,7 +95,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         }
     }
 
-    func save(parsedURI: ParsedURI) throws {
+    public func save(parsedURI: ParsedURI) throws {
         let account = Account(context: persistentStore.viewContext)
         account.issuer = parsedURI.issuer
         account.name = parsedURI.username
@@ -106,7 +119,7 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         try persistentStore.save()
     }
     
-    func save(data: CreateAccountData) throws {
+    public func save(data: CreateAccountData) throws {
         let account = Account(context: persistentStore.viewContext)
         account.issuer = data.issuer
         account.name = data.name
@@ -129,24 +142,24 @@ class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountS
         try persistentStore.save()
     }
     
-    func save() throws {
+    public func save() throws {
         try persistentStore.viewContext.save()
     }
     
-    func updateCounter(account: Account) throws -> Account {
+    public func updateCounter(account: Account) throws -> Account {
         account.counter = account.counter + 1
         try persistentStore.save()
         return account
     }
     
-    func delete(accounts: [Account]) throws {
+    public func delete(accounts: [Account]) throws {
         for account in accounts {
             persistentStore.viewContext.delete(account)
         }
         try persistentStore.save()
     }
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         if let fetchedAccounts = controller.fetchedObjects as? [Account] {
             delegate?.accountsChanged(accounts: fetchedAccounts)
         }

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 class SetupViewModel: ObservableObject {
     @Injected private var keychainService: KeychainService

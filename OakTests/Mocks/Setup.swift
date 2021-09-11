@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import OakOTPCommon
 @testable import OakOTP
+import OakOTPCommon
 import Resolver
 
 extension Resolver {

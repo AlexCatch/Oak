@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import OakOTPCommon
 
 struct AccountDisplayable: Identifiable {
     var id: String

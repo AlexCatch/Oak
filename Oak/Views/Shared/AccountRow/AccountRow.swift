@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OakOTPCommon
 
 typealias EditAccountCallback = (_ account: Account) -> Void
 

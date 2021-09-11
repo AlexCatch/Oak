@@ -9,40 +9,12 @@ import Foundation
 import Resolver
 import SwiftOTP
 
-protocol OTPService {
+public protocol OTPService {
     func parseSetupURI(uri: String) throws -> ParsedURI
     func generateCode(account: Account) throws -> String
 }
 
-enum OTPServiceError: Error {
-    case invalidURI
-    case invalidSecret
-    case invalidType
-}
-
-enum CodeType: String {
-    case hotp = "hotp"
-    case totp = "totp"
-}
-
-enum Algorithm: String {
-    case sha1 = "SHA1"
-    case sha256 = "SHA265"
-    case sha512 = "SHA512"
-    
-    var swiftOTPAlgorithm: OTPAlgorithm {
-        switch self {
-        case .sha1:
-            return .sha1
-        case .sha256:
-            return .sha256
-        case .sha512:
-            return .sha512
-        }
-    }
-}
-
-struct ParsedURI {
+public struct ParsedURI {
     let issuer: String
     let username: String?
     let secret: String
@@ -54,9 +26,9 @@ struct ParsedURI {
     var counter: String?
 }
 
-class RealOTPService: OTPService {
+public class RealOTPService: OTPService {
     
-    func parseSetupURI(uri: String) throws -> ParsedURI {
+    public func parseSetupURI(uri: String) throws -> ParsedURI {
         guard let url = URL(string: uri), let queryComponents = url.queryDictionary else {
             throw OTPServiceError.invalidURI
         }
@@ -81,7 +53,7 @@ class RealOTPService: OTPService {
         return parsedURI
     }
     
-    func generateCode(account: Account) throws -> String {
+    public func generateCode(account: Account) throws -> String {
         return account.type == .totp ?
             try generateTOTP(account: account) :
             try generateHOTP(account: account)
