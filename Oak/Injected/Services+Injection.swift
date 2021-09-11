@@ -13,5 +13,6 @@ extension Resolver {
         RegisterOTPService()
         RegisterAccountService()
         RegisterKeychainService()
+        RegisterSiriService()
     }
 }

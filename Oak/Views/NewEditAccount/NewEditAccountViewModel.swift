@@ -11,6 +11,7 @@ import Resolver
 
 class NewEditAccountViewModel: ObservableObject {
     @Injected private var accountsService: AccountService
+    @Injected private var siriService: SiriService
     
     @Published var account: Account?
     
@@ -100,6 +101,14 @@ class NewEditAccountViewModel: ObservableObject {
         
         try? accountsService.delete(accounts: [account])
         dismiss?()
+    }
+    
+    func addToSiri(account: Account) {
+        if !siriService.hasPermission {
+            siriService.requestPermission { result in
+                print("did give permission: \(result)")
+            }
+        }
     }
     
     private func newAccount() throws {

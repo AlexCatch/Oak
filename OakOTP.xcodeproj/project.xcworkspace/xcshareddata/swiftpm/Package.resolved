@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {
           "branch": null,
-          "revision": "5669f222e46c8134fb1f399c745fa6882b43532e",
-          "version": "1.3.8"
+          "revision": "8d4f6384e0a8cc41f2005247241dd553963a492a",
+          "version": "1.4.1"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/hmlongco/Resolver.git",
         "state": {
           "branch": null,
-          "revision": "2d15bf5b33b3c95704e84a5b2a43485606bdd5c4",
-          "version": "1.4.0"
+          "revision": "609908e0b67911ebf7386609552a48d4ec07958e",
+          "version": "1.4.4"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/thislooksfun/SwiftlySearch",
         "state": {
           "branch": null,
-          "revision": "7741806e979e59e9583962da43d09ec92f598026",
-          "version": "1.2.4"
+          "revision": "a7184413250a91f012d5d26eed874b5b2fdaeaac",
+          "version": "1.2.5"
         }
       },
       {

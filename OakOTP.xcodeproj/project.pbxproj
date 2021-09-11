@@ -14,6 +14,14 @@
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
 		0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0953E6B326E9477E00B19DC6 /* Introspect */; };
+		0953E6B726EBE16500B19DC6 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6B526EBE16500B19DC6 /* IntentsUI.framework */; };
+		0953E6B826EBE16500B19DC6 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6B626EBE16500B19DC6 /* Intents.framework */; };
+		0953E6BA26EBE3B200B19DC6 /* SiriService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6B926EBE3B200B19DC6 /* SiriService.swift */; };
+		0953E6E126EBF39400B19DC6 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6E026EBF39400B19DC6 /* Intents.intentdefinition */; };
+		0953E6E926EBFE8600B19DC6 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953E6B626EBE16500B19DC6 /* Intents.framework */; };
+		0953E6EC26EBFE8600B19DC6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6EB26EBFE8600B19DC6 /* IntentHandler.swift */; };
+		0953E6F026EBFE8600B19DC6 /* OakOTPIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0953E6F526EBFE9B00B19DC6 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0953E6E026EBF39400B19DC6 /* Intents.intentdefinition */; };
 		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		099EC3882655470B00CA5F86 /* SetupViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441E312651CCC4002B1619 /* SetupViewUITests.swift */; };
@@ -86,6 +94,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0953E6EE26EBFE8600B19DC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0953E6E726EBFE8600B19DC6;
+			remoteInfo = OakOTPIntents;
+		};
 		099EC383265546FA00CA5F86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
@@ -102,6 +117,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0953E6DE26EBF29700B19DC6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0953E6F026EBFE8600B19DC6 /* OakOTPIntents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
@@ -110,6 +139,13 @@
 		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0953E6B526EBE16500B19DC6 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		0953E6B626EBE16500B19DC6 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		0953E6B926EBE3B200B19DC6 /* SiriService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriService.swift; sourceTree = "<group>"; };
+		0953E6E026EBF39400B19DC6 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OakOTPIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0953E6EB26EBFE8600B19DC6 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		0953E6ED26EBFE8600B19DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +221,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0953E6E526EBFE8600B19DC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0953E6E926EBFE8600B19DC6 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099EC37B265546FA00CA5F86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +240,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0953E6B726EBE16500B19DC6 /* IntentsUI.framework in Frameworks */,
+				0953E6B826EBE16500B19DC6 /* Intents.framework in Frameworks */,
 				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
@@ -228,9 +274,28 @@
 		0953B95925D87BBC008DD9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0953E6B626EBE16500B19DC6 /* Intents.framework */,
+				0953E6B526EBE16500B19DC6 /* IntentsUI.framework */,
 				0953B95A25D87BBC008DD9BE /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0953E6EA26EBFE8600B19DC6 /* OakOTPIntents */ = {
+			isa = PBXGroup;
+			children = (
+				0953E6EB26EBFE8600B19DC6 /* IntentHandler.swift */,
+				0953E6ED26EBFE8600B19DC6 /* Info.plist */,
+			);
+			path = OakOTPIntents;
+			sourceTree = "<group>";
+		};
+		0953E6F426EBFE8E00B19DC6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0953E6E026EBF39400B19DC6 /* Intents.intentdefinition */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		095A2BB725D5BABB0030C585 /* Persistence */ = {
@@ -347,9 +412,11 @@
 		FA42C66925C63C9C000D597E = {
 			isa = PBXGroup;
 			children = (
+				0953E6F426EBFE8E00B19DC6 /* Shared */,
 				FA42C67425C63C9C000D597E /* Oak */,
 				FA42C68B25C63C9D000D597E /* OakTests */,
 				099EC37F265546FA00CA5F86 /* OakOTPUITests */,
+				0953E6EA26EBFE8600B19DC6 /* OakOTPIntents */,
 				FA42C67325C63C9C000D597E /* Products */,
 				0953B95925D87BBC008DD9BE /* Frameworks */,
 			);
@@ -361,6 +428,7 @@
 				FA42C67225C63C9C000D597E /* OakOTP.app */,
 				FA42C68825C63C9D000D597E /* OakOTPTests.xctest */,
 				099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */,
+				0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -460,6 +528,7 @@
 				FA87C02325C888C0009C7FF7 /* OTPService.swift */,
 				FA87C03D25C899F5009C7FF7 /* AccountService.swift */,
 				FADAE49725C9ED9A005BC18E /* KeychainService.swift */,
+				0953E6B926EBE3B200B19DC6 /* SiriService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -536,6 +605,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0953E6E726EBFE8600B19DC6 /* OakOTPIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0953E6F126EBFE8600B19DC6 /* Build configuration list for PBXNativeTarget "OakOTPIntents" */;
+			buildPhases = (
+				0953E6E426EBFE8600B19DC6 /* Sources */,
+				0953E6E526EBFE8600B19DC6 /* Frameworks */,
+				0953E6E626EBFE8600B19DC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OakOTPIntents;
+			productName = OakOTPIntents;
+			productReference = 0953E6E826EBFE8600B19DC6 /* OakOTPIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		099EC37D265546FA00CA5F86 /* OakOTPUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 099EC385265546FA00CA5F86 /* Build configuration list for PBXNativeTarget "OakOTPUITests" */;
@@ -561,10 +647,12 @@
 				FA42C66E25C63C9C000D597E /* Sources */,
 				FA42C66F25C63C9C000D597E /* Frameworks */,
 				FA42C67025C63C9C000D597E /* Resources */,
+				0953E6DE26EBF29700B19DC6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0953E6EF26EBFE8600B19DC6 /* PBXTargetDependency */,
 			);
 			name = OakOTP;
 			packageProductDependencies = (
@@ -606,6 +694,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					0953E6E726EBFE8600B19DC6 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					099EC37D265546FA00CA5F86 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = FA42C67125C63C9C000D597E;
@@ -643,11 +734,19 @@
 				FA42C67125C63C9C000D597E /* OakOTP */,
 				FA42C68725C63C9D000D597E /* OakOTPTests */,
 				099EC37D265546FA00CA5F86 /* OakOTPUITests */,
+				0953E6E726EBFE8600B19DC6 /* OakOTPIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0953E6E626EBFE8600B19DC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099EC37C265546FA00CA5F86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -674,6 +773,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0953E6E426EBFE8600B19DC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0953E6F526EBFE9B00B19DC6 /* Intents.intentdefinition in Sources */,
+				0953E6EC26EBFE8600B19DC6 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		099EC37A265546FA00CA5F86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,6 +806,7 @@
 				092F944625D5C46700FB537A /* PersistentStore.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
+				0953E6E126EBF39400B19DC6 /* Intents.intentdefinition in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
@@ -711,6 +820,7 @@
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
+				0953E6BA26EBE3B200B19DC6 /* SiriService.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
 				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
 				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
@@ -765,6 +875,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0953E6EF26EBFE8600B19DC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0953E6E726EBFE8600B19DC6 /* OakOTPIntents */;
+			targetProxy = 0953E6EE26EBFE8600B19DC6 /* PBXContainerItemProxy */;
+		};
 		099EC384265546FA00CA5F86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA42C67125C63C9C000D597E /* OakOTP */;
@@ -778,6 +893,48 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0953E6F226EBFE8600B19DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakOTPIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.OakOTPIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0953E6F326EBFE8600B19DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
+				INFOPLIST_FILE = OakOTPIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak.OakOTPIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		099EC386265546FA00CA5F86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -939,12 +1096,13 @@
 		FA42C69D25C63C9D000D597E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
@@ -955,7 +1113,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak";
@@ -969,12 +1127,13 @@
 		FA42C69E25C63C9D000D597E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
@@ -985,7 +1144,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore sh.catch.Oak";
@@ -1043,6 +1202,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0953E6F126EBFE8600B19DC6 /* Build configuration list for PBXNativeTarget "OakOTPIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0953E6F226EBFE8600B19DC6 /* Debug */,
+				0953E6F326EBFE8600B19DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		099EC385265546FA00CA5F86 /* Build configuration list for PBXNativeTarget "OakOTPUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

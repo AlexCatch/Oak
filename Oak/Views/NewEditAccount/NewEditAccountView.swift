@@ -146,6 +146,16 @@ struct NewEditAccountView: View {
                         StepperInputRow(value: $viewModel.counter, title: "Counter", min: 0, max: Int(Int16.max))
                     }
                 }
+                if let account = viewModel.account {
+                    Section() {
+                        Button(action: {
+                            viewModel.addToSiri(account: account)
+                        }, label: {
+                            Text("Add to Siri")
+                                .bold()
+                        })
+                    }
+                }
                 if viewModel.account != nil {
                     Section() {
                         Button(action: {
