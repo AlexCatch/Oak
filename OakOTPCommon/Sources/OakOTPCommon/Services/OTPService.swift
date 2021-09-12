@@ -11,7 +11,13 @@ import SwiftOTP
 
 public protocol OTPService {
     func parseSetupURI(uri: String) throws -> ParsedURI
-    func generateCode(account: Account) throws -> String
+    func generateCode(account: Account, date: Date) throws -> String
+}
+
+public extension OTPService {
+    func generateCode(account: Account, date: Date = Date()) throws -> String {
+        return try generateCode(account: account, date: date)
+    }
 }
 
 public struct ParsedURI {
@@ -27,7 +33,7 @@ public struct ParsedURI {
 }
 
 public class RealOTPService: OTPService {
-    
+
     public func parseSetupURI(uri: String) throws -> ParsedURI {
         guard let url = URL(string: uri), let queryComponents = url.queryDictionary else {
             throw OTPServiceError.invalidURI
@@ -53,9 +59,9 @@ public class RealOTPService: OTPService {
         return parsedURI
     }
     
-    public func generateCode(account: Account) throws -> String {
+    public func generateCode(account: Account, date: Date = Date()) throws -> String {
         return account.type == .totp ?
-            try generateTOTP(account: account) :
+            try generateTOTP(account: account, date: date) :
             try generateHOTP(account: account)
     }
     

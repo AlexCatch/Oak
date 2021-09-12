@@ -1,7 +1,26 @@
 import XCTest
+import Resolver
 @testable import OakOTPCommon
 
-final class OakOTPCommonTests: XCTestCase {
+final class OTPServiceTests: OakOTPCommonTestCase {
+    
+    private func createTOTPAccount() throws -> Account {
+        let persistent: PersistentStore = Resolver.resolve()
+        let account1 = Account(context: persistent.viewContext)
+        account1.issuer = "Google"
+        account1.name = "john@doe.co.uk"
+        account1.secret = "helloworld"
+        account1.algorithm = .sha1
+        account1.type = .totp
+        account1.createdAt = Date()
+        account1.digits = Int16(6)
+        account1.period = Int16(30)
+    
+        try persistent.save()
+        
+        return account1
+    }
+    
     func testTOTPBasicParseURISuccess() throws {
         let testString = "otpauth://totp/alex%40alexcatchpoledev.me?secret=helloworld&issuer=Github"
         let service = RealOTPService()
@@ -60,5 +79,16 @@ final class OakOTPCommonTests: XCTestCase {
         XCTAssertEqual(parsedURI.counter, "5")
         
         XCTAssertNil(parsedURI.period)
+    }
+    
+    func testTOTPCodeGeneration() throws {
+        let service = RealOTPService()
+        let account = try createTOTPAccount()
+        
+        let date = Date(timeIntervalSinceReferenceDate: 653070472.957172)
+        let rightCodeForDate = "518279"
+        let code = try service.generateCode(account: account, date: date)
+        
+        XCTAssertEqual(code, rightCodeForDate)
     }
 }

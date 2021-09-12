@@ -10,6 +10,7 @@ import CoreData
 
 public class MockPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!
+    
     public var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
