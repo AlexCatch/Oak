@@ -28,7 +28,7 @@ blocks:
       epilogue:
         always:
           commands:
-            - test-results publish fastlane/test_output/report.junit
+            - test-results publish fastlane/test_output/report.xml
     dependencies: []
 after_pipeline:
   task:
