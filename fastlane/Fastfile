@@ -25,7 +25,9 @@ platform :ios do
     run_tests(
       scheme: "OakTests",
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
+      result_bundle: true,
       device: "iPhone 12 Pro Max",
+      output_types: "junit",
     )
   end
 
