@@ -25,4 +25,14 @@ blocks:
             - 'bash <(curl -s https://codecov.io/bash) -J ''Oak'''
       secrets:
         - name: Codecov
+      epilogue:
+        always:
+          commands:
+            - test-results publish fastlane/test_output/report.junit
     dependencies: []
+after_pipeline:
+  task:
+    jobs:
+      - name: Publish Test Results
+        commands:
+          - test-results gen-pipeline-report
