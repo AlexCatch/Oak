@@ -28,6 +28,7 @@ platform :ios do
       result_bundle: true,
       device: "iPhone 12 Pro Max",
       output_types: "junit",
+      output_files: "report.xml",
     )
   end
 
