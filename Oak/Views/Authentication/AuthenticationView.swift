@@ -33,9 +33,9 @@ struct AuthenticationView: View {
         .alert(isPresented: $viewModel.authFailed) {
             Alert(title: Text("Incorrect Password"), message: Text("Please double check your password and try again."), dismissButton: .cancel())
         }
-        .onAppear {
+        .task {
             viewModel.rootViewBinding = $activeSheet
-            viewModel.attemptBiometrics(for: scenePhase)
+            await viewModel.attemptBiometrics(for: scenePhase)
         }
     }
 }

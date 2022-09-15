@@ -22,7 +22,7 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Debug Development"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -31,7 +31,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09441E2E2651CCC4002B1619"
+               BlueprintIdentifier = "099EC37D265546FA00CA5F86"
                BuildableName = "OakOTPUITests.xctest"
                BlueprintName = "OakOTPUITests"
                ReferencedContainer = "container:OakOTP.xcodeproj">
@@ -50,7 +50,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Debug Development"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -71,7 +71,7 @@
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release Development"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -87,10 +87,10 @@
       </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug Development">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release Development"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

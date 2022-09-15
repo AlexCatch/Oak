@@ -37,10 +37,13 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     @objc private func applicationWillEnterForeground() {
-        attemptBiometrics(for: .active)
+        Task {
+            await attemptBiometrics(for: .active)
+        }
     }
     
-    func attemptBiometrics(for scenePhase: ScenePhase) {
+    @MainActor
+    func attemptBiometrics(for scenePhase: ScenePhase) async {
         guard settings.bool(key: .biometricsEnabled), scenePhase == .active || scenePhase == .inactive else {
             // biometrics aren't enabled at the app level
             return
@@ -50,16 +53,16 @@ class AuthenticationViewModel: ObservableObject {
             return
         }
         
-        biometrics.authenticate { (success: Bool) in
-            guard success else {
-                // Failed to authenticate
-                return
-            }
-            
-            self.haptics.generate(type: .success)
-            if let binding = self.rootViewBinding {
-                binding.wrappedValue = .accounts
-            }
+        let isAuthenticated = await biometrics.authenticate()
+        
+        guard isAuthenticated else {
+            // Failed to authenticate
+            return
+        }
+        
+        self.haptics.generate(type: .success)
+        if let binding = self.rootViewBinding {
+            binding.wrappedValue = .accounts
         }
     }
     

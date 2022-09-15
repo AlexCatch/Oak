@@ -25,23 +25,19 @@ class Biometrics {
         return false
     }
     
-    func authenticate(onComplete: @escaping (_ success: Bool) -> Void) {
+    func authenticate() async -> Bool {
         var error: NSError?
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             if error != nil {
-                onComplete(false)
-                return
+                // TODO - Add Sentry Errors
+                return false
             }
             
             let reason = context.biometryType == .faceID ? "Use Face ID to unlock Oak" : "Use Touch ID to unlock Oak"
-
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                DispatchQueue.main.async {
-                    onComplete(success)
-                }
-            }
+            let isAuthenticated = try? await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason)
+            return isAuthenticated ?? false
         } else {
-            onComplete(true)
+            return true
         }
     }
 }
