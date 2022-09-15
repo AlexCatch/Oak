@@ -10,6 +10,7 @@ import Resolver
 
 extension Resolver {
     static func RegisterAllUtils() {
+        RegisterBuildConfigurationUtil()
         RegisterSettingsUtil()
         RegisterICloudSettingsUtil()
         RegisterHapticsUtil()

@@ -20,6 +20,7 @@ protocol PersistentStore {
 class RealPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!
     @Injected private var iCloudSettings: ICloudSettings
+    @Injected private var buildConfiguration: BuildConfiguration
     
     var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
@@ -69,7 +70,7 @@ class RealPersistentStore: PersistentStore {
     }
     
     public func deleteUserAccounts() {
-        let container = CKContainer.default()
+        let container = CKContainer(identifier: buildConfiguration.ICloudContainerName)
         let database = container.privateCloudDatabase
         
         database.delete(withRecordZoneID: .init(zoneName: "com.apple.coredata.cloudkit.zone"), completionHandler: { (zoneID, error) in
