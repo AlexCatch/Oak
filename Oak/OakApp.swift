@@ -8,6 +8,7 @@
 import SwiftUI
 import Dependencies
 import SwiftData
+import ComposableArchitecture
 
 enum RootView {
     case setup
@@ -32,12 +33,15 @@ struct OakApp: App {
     }
     
     var rootView: some View {
-        switch activeView {
-        case .setup:
-            return AnyView(SetupView(activeSheet: $activeView))
-        case .accounts:
-            return AnyView(AccountsView())
-        }
+        SetupView(store: Store(initialState: SetupFeature.State(), reducer: {
+            SetupFeature()
+        }))
+//        switch activeView {
+//        case .setup:
+//            return AnyView(SetupView())
+//        case .accounts:
+//            return AnyView(AccountsView())
+//        }
     }
     
     var body: some Scene {

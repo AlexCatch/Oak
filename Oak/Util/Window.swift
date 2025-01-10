@@ -5,11 +5,11 @@
 //  Created by Alex Catchpole on 04/02/2021.
 //
 
-import UIKit
+@preconcurrency import UIKit
 import Dependencies
 
 struct Window {
-    var dismissAllSheets: (_ animated: Bool) -> Void
+    var dismissAllSheets: @Sendable (_ animated: Bool) -> Void
 }
 
 extension Window: DependencyKey {
@@ -23,7 +23,7 @@ extension Window: DependencyKey {
             return window
         }
         return Self { animated in
-            window?.rootViewController?.dismiss(animated: animated, completion: nil)
+//            window?.rootViewController?.dismiss(animated: animated, completion: nil)
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftData
 import Dependencies
 
 @Observable
-class ModelManager {
+final class ModelManager: @unchecked Sendable {
     @ObservationIgnored
     @Dependency(\.buildConfiguration) var buildConfiguration: BuildConfiguration
     
@@ -37,7 +37,7 @@ class ModelManager {
 }
 
 private enum ModelManagerKey: DependencyKey {
-    static var liveValue = ModelManager()
+    static let liveValue = ModelManager()
 }
 
 extension DependencyValues {

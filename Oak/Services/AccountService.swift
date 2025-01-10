@@ -38,7 +38,7 @@ protocol AccountServiceDelegate: AnyObject {
 
 class RealAccountService: NSObject, NSFetchedResultsControllerDelegate, AccountService {
     
-    static let DefaultSortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
+//    static let DefaultSortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
     
     weak var delegate: AccountServiceDelegate? {
         didSet {

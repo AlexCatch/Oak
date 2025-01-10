@@ -10,7 +10,7 @@ import Dependencies
 import DependenciesAdditions
 
 private enum ICloudUserDefaultsKey: DependencyKey {
-    static var liveValue = UserDefaults.Dependency.ubiquitous
+    static let liveValue = UserDefaults.Dependency.ubiquitous
 }
 
 extension DependencyValues {
@@ -20,7 +20,7 @@ extension DependencyValues {
     }
 }
 
-class ICloudSettings {
+final class ICloudSettings: @unchecked Sendable {
     @Dependency(\.iCloudUserDefaults) var userDefaults
     
     public func bool(forKey key: SettingsKey) -> Bool? {
@@ -34,7 +34,7 @@ class ICloudSettings {
 }
 
 private enum ICloudSettingsDependencyKey: DependencyKey {
-    static var liveValue = ICloudSettings()
+    static let liveValue = ICloudSettings()
 }
 
 extension DependencyValues {

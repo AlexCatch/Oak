@@ -4,19 +4,19 @@
 //
 //  Created by Alex Catchpole on 02/02/2021.
 //
-
+import Foundation
 import UIKit
 import Dependencies
 
-struct Haptics {
-    var generate: (_ type: UINotificationFeedbackGenerator.FeedbackType) -> Void
+struct Haptics: Sendable {
+    var generate: @Sendable (_ type: UINotificationFeedbackGenerator.FeedbackType) async -> Void
 }
 
 extension Haptics: DependencyKey {
     static var liveValue: Self {
-        let generator = UINotificationFeedbackGenerator()
-        return Self { type in
-            generator.notificationOccurred(type)
+        return Haptics { type in
+            let generator = await UINotificationFeedbackGenerator()
+            await generator.notificationOccurred(type)
         }
     }
     static var previewValue: Self {

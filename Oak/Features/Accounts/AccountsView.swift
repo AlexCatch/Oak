@@ -9,15 +9,16 @@ import SwiftUI
 import CoreData
 import Resolver
 import SwiftlySearch
+import SwiftData
 
 struct AccountsView: View {
-    let accounts: [Account] = []
+    @Query var accounts: [Account]
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(accounts, id: \.id) {vm in
-                        Text("hello")
+                    ForEach(accounts, id: \.id) {account in
+                        Text(account.name ?? "")
 //                        AccountRow(viewModel: vm, editAccountCallback: {account in print("hello")})
 //                            .alert(isPresented: .constant(false)) {
 //                                Alert(
@@ -31,7 +32,6 @@ struct AccountsView: View {
                     .onMove(perform: {_,_ in })
                     .onDelete(perform: {_ in })
                 }
-                .listStyle(InsetGroupedListStyle())
 //                .navigationBarSearch({}, placeholder: "Search", hidesNavigationBarDuringPresentation: false)
                 .onChange(of: "", perform: {newValue in })
             }

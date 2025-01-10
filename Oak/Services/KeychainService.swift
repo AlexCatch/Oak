@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import KeychainSwift
+@preconcurrency import KeychainSwift
 import Dependencies
 
 enum KeychainKeys: String {
@@ -14,8 +14,8 @@ enum KeychainKeys: String {
 }
 
 struct KeychainService {
-    var set: (_ key: KeychainKeys, _ value: String) -> Void
-    var get: (_ key: KeychainKeys) -> String?
+    var set: @Sendable (_ key: KeychainKeys, _ value: String) -> Void
+    var get: @Sendable (_ key: KeychainKeys) -> String?
 }
 
 extension KeychainService: DependencyKey {
@@ -27,7 +27,21 @@ extension KeychainService: DependencyKey {
             return keychain.get(key.rawValue)
         }
     }
-    static var previewValue = liveValue
+    
+    static var previewValue: Self {
+        let storage = LockIsolated([String: String]())
+        return Self { key, value in
+            storage.withValue {
+                $0[key.rawValue] = value
+            }
+        } get: { key in
+            storage.value[key.rawValue]
+        }
+    }
+    
+    static var testValue: Self {
+        return .previewValue
+    }
 }
 
 extension DependencyValues {

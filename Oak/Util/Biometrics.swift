@@ -6,54 +6,50 @@
 //
 
 import Foundation
-import LocalAuthentication
+@preconcurrency import LocalAuthentication
 import Dependencies
 
-protocol Biometrics {
-    func enabled() -> Bool
-    func authenticate() async -> Bool
+struct Biometrics {
+    var enabled: @Sendable () -> Bool
+    var authenticate: @Sendable () async -> Bool
 }
 
-class LiveBiometrics: Biometrics {
-    let context = LAContext()
-    
-    func enabled() -> Bool {
-        var error: NSError?
-        let biometricsPolicy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
-        
-        if (context.canEvaluatePolicy(biometricsPolicy, error: &error)) {
-            if error != nil {
+extension Biometrics: DependencyKey {
+    static var liveValue: Self {
+        let context = LAContext()
+        return Biometrics {
+            var error: NSError?
+            guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+                print(error?.localizedDescription ?? "Failed to evaluate policy")
                 return false
             }
-            return context.biometryType != .none
-        }
-        return false
-    }
-    
-    func authenticate() async -> Bool {
-        var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            if error != nil {
-                // TODO - Add Sentry Errors
-                return false
-            }
-            
-            let reason = context.biometryType == .faceID ? "Use Face ID to unlock Oak" : "Use Touch ID to unlock Oak"
-            let isAuthenticated = try? await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason)
-            return isAuthenticated ?? false
-        } else {
             return true
+        } authenticate: {
+            let reason = context.biometryType == .faceID ? "Use Face ID to unlock Oak" : "Use Touch ID to unlock Oak"
+            do {
+                _ = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason)
+                return true
+            } catch {
+                return false
+            }
         }
     }
-}
+    static var previewValue: Self {
+        return Biometrics {
+            false
+        } authenticate: {
+            return false
+        }
 
-private enum BiometricsKey: DependencyKey {
-    static let liveValue: any Biometrics = LiveBiometrics()
+    }
+    static var testValue: Self {
+        return .previewValue
+    }
 }
 
 extension DependencyValues {
     var biometrics: Biometrics {
-        get { self[BiometricsKey.self] }
-        set { self[BiometricsKey.self] = newValue }
+        get { self[Biometrics.self] }
+        set { self[Biometrics.self] = newValue }
     }
 }

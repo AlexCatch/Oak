@@ -53,14 +53,14 @@ struct ParsedURI {
     var counter: String?
 }
 
-struct OTPService {
-    var parseSetupURI: (_ uri: String) throws -> ParsedURI
-    var generateCode: (_ account: Account) throws -> String
+struct OTPService : Sendable{
+    var parseSetupURI: @Sendable (_ uri: String) throws -> ParsedURI
+    var generateCode: @Sendable (_ account: Account) throws -> String
 }
 
 extension OTPService: DependencyKey {
     static var liveValue: Self {
-        func generateHOTP(account: Account) throws -> String {
+        @Sendable func generateHOTP(account: Account) throws -> String {
             guard let secret = account.decodeSecret() else {
                 throw OTPServiceError.invalidSecret
             }
@@ -74,7 +74,7 @@ extension OTPService: DependencyKey {
             return code
         }
         
-        func generateTOTP(account: Account, date: Date = Date()) throws -> String {
+        @Sendable func generateTOTP(account: Account, date: Date = Date()) throws -> String {
             guard let secret = account.decodeSecret() else {
                 throw OTPServiceError.invalidSecret
             }
@@ -89,7 +89,7 @@ extension OTPService: DependencyKey {
             return code
         }
         
-        func parseUsername(url: URL) throws -> String {
+        @Sendable func parseUsername(url: URL) throws -> String {
             guard let parsedUsername = url.pathComponents.last?.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespacesAndNewlines) else {
                 throw OTPServiceError.invalidUsername
             }
