@@ -11,7 +11,7 @@ import Resolver
 
 struct AuthenticationView: View {
     @Environment(\.scenePhase) var scenePhase
-    @StateObject private var viewModel: AuthenticationViewModel = Resolver.resolve()
+    @StateObject private var viewModel: AuthenticationViewModel = AuthenticationViewModel()
     @Binding var activeSheet: RootView
     
     var body: some View {

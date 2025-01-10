@@ -28,7 +28,7 @@ class ScanQRCodeViewModel: ObservableObject {
     func onScan(results: Result<String, CodeScannerView.ScanError>, dismiss: () -> Void) {
         do {
             let uri = try results.get()
-            let parsedUri = try otpService.parseSetupURI(uri: uri)
+            let parsedUri = try otpService.parseSetupURI(uri)
             try accountsService.save(parsedURI: parsedUri)
             dismiss()
         } catch {

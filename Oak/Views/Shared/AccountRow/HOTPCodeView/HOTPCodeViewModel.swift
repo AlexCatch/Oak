@@ -24,7 +24,7 @@ class HOTPCodeViewModel: ObservableObject, CodeViewModel {
             self.account = updatedAccount
         }
         
-        guard let account = account, let code = try? otpService.generateCode(account: account) else {
+        guard let account = account, let code = try? otpService.generateCode(account) else {
             self.code = "Error"
             return
         }

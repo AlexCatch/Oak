@@ -37,16 +37,16 @@ class UpdatePasswordViewModel: ObservableObject {
     }
     
     func saveChanges(dismiss: () -> Void) {
-        let currentPassword = keychainService.get(key: .password)
+        let currentPassword = keychainService.get(.password)
         guard currentPassword == enteredCurrentPassword else {
             // current password doesn't match the entered
             self.updatePasswordError = "Your current password is incorrect."
-            haptics.generate(type: .error)
+            haptics.generate(.error)
             dismiss()
             return
         }
         
-        keychainService.set(key: .password, value: newPassword)
+        keychainService.set(.password, newPassword)
     }
 }
 

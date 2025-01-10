@@ -44,7 +44,7 @@ class AuthenticationViewModel: ObservableObject {
     
     @MainActor
     func attemptBiometrics(for scenePhase: ScenePhase) async {
-        guard settings.bool(key: .biometricsEnabled), scenePhase == .active || scenePhase == .inactive else {
+        guard settings.bool(forKey: .biometricsEnabled) ?? false, scenePhase == .active || scenePhase == .inactive else {
             // biometrics aren't enabled at the app level
             return
         }
@@ -60,22 +60,22 @@ class AuthenticationViewModel: ObservableObject {
             return
         }
         
-        self.haptics.generate(type: .success)
+        self.haptics.generate(.success)
         if let binding = self.rootViewBinding {
             binding.wrappedValue = .accounts
         }
     }
     
     func authenticatePassword() -> Bool {
-        let storedPassword = keychainService.get(key: .password)
+        let storedPassword = keychainService.get(.password)
 
         guard storedPassword == password else {
-            haptics.generate(type: .error)
+            haptics.generate(.error)
             authFailed = true
             return false
         }
         
-        haptics.generate(type: .success)
+        haptics.generate(.success)
         return true
     }
 }

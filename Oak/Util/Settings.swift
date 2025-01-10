@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import Resolver
+import Dependencies
+import DependenciesAdditions
 
 enum SettingsKey: String {
     case failedToDeleteZone = "failedToDeleteZone"
@@ -16,23 +17,33 @@ enum SettingsKey: String {
     case isSetup = "isSetup"
 }
 
-protocol Settings {
-    func bool(key: SettingsKey) -> Bool
-    func set(key: SettingsKey, value: Any)
-}
-
-class RealSettings: Settings {
-    func bool(key: SettingsKey) -> Bool {
-        return UserDefaults.standard.bool(forKey: key.rawValue)
-    }
+struct Settings {
+    @Dependency(\.userDefaults) var userDefaults
     
-    func set(key: SettingsKey, value: Any) {
-        UserDefaults.standard.set(value, forKey: key.rawValue)
+    public func bool(forKey key: SettingsKey) -> Bool? {
+        return userDefaults.bool(forKey: key.rawValue)
+    }
+
+    public func set(_ value: Bool?, forKey key: SettingsKey) {
+        userDefaults.set(value, forKey: key.rawValue)
     }
 }
 
-extension Resolver {
-    static func RegisterSettingsUtil() {
-        register { RealSettings() as Settings }.scope(.shared)
+extension Settings: DependencyKey {
+    static var liveValue: Self {
+        return self.init()
+    }
+    static var previewValue: Self {
+        return .liveValue
+    }
+    static var testValue: Self {
+        return .liveValue
+    }
+}
+
+extension DependencyValues {
+    var settings: Settings {
+        get { self[Settings.self] }
+        set { self[Settings.self] = newValue }
     }
 }

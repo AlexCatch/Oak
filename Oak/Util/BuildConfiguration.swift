@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Resolver
+import Dependencies
 
 enum BuildEnvironment: String { // 1
     case debugDevelopment = "Debug Development"
@@ -16,9 +16,8 @@ enum BuildEnvironment: String { // 1
     case releaseDevelopment = "Release Development"
 }
 
-class BuildConfiguration { // 2
+struct BuildConfiguration {
     var environment: BuildEnvironment
-    
     var ICloudContainerName: String {
         switch environment {
         case .debugProduction, .debugDevelopment:
@@ -28,14 +27,22 @@ class BuildConfiguration { // 2
         }
     }
     
-    init() {
-        let currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as! String
-        environment = BuildEnvironment(rawValue: currentConfiguration)!
+    init(configuration: String) {
+        environment = BuildEnvironment(rawValue: configuration) ?? BuildEnvironment.debugDevelopment
     }
 }
 
-extension Resolver {
-    static func RegisterBuildConfigurationUtil() {
-        register { BuildConfiguration() }.scope(.application)
+extension BuildConfiguration: DependencyKey {
+    static var liveValue: Self {
+        let configuration = (Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String) ?? BuildEnvironment.debugDevelopment.rawValue
+        return Self.init(configuration: configuration)
     }
 }
+
+extension DependencyValues {
+    var buildConfiguration: BuildConfiguration {
+        get { self[BuildConfiguration.self] }
+        set { self[BuildConfiguration.self] = newValue }
+    }
+}
+

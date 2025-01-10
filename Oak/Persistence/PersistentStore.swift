@@ -9,6 +9,7 @@ import Foundation
 import Resolver
 import CoreData
 import CloudKit
+import Dependencies
 
 protocol PersistentStore {
     var viewContext: NSManagedObjectContext { get }
@@ -19,7 +20,7 @@ protocol PersistentStore {
 
 class RealPersistentStore: PersistentStore {
     private var persistentContainer: NSPersistentContainer!
-    @Injected private var iCloudSettings: ICloudSettings
+    @Dependency(\.iCloudSettings) private var iCloudSettings: ICloudSettings
     @Injected private var buildConfiguration: BuildConfiguration
     
     var viewContext: NSManagedObjectContext {
@@ -54,7 +55,7 @@ class RealPersistentStore: PersistentStore {
     }
     
     init() {
-        setupContainer(sync: iCloudSettings.bool(key: .iCloudEnabled))
+        setupContainer(sync: iCloudSettings.bool(forKey: .iCloudEnabled) ?? false)
     }
     
     func save() throws {
@@ -76,7 +77,7 @@ class RealPersistentStore: PersistentStore {
         database.delete(withRecordZoneID: .init(zoneName: "com.apple.coredata.cloudkit.zone"), completionHandler: { (zoneID, error) in
             if error != nil {
                 // If we failed to delete we need to mark somewhere that we failed so it's time to try again on relaunch
-                self.iCloudSettings.set(key: .failedToDeleteZone, value: true)
+                self.iCloudSettings.set(true, forKey: .failedToDeleteZone)
             }
         })
     }

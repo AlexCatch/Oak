@@ -8,16 +8,15 @@
 import Foundation
 import Resolver
 import SwiftOTP
-
-protocol OTPService {
-    func parseSetupURI(uri: String) throws -> ParsedURI
-    func generateCode(account: Account) throws -> String
-}
+import Dependencies
+import DependenciesMacros
 
 enum OTPServiceError: Error {
     case invalidURI
+    case invalidUsername
     case invalidSecret
     case invalidType
+    case failedCodeGeneration
 }
 
 enum CodeType: String {
@@ -54,71 +53,89 @@ struct ParsedURI {
     var counter: String?
 }
 
-class RealOTPService: OTPService {
-    
-    func parseSetupURI(uri: String) throws -> ParsedURI {
-        guard let url = URL(string: uri), let queryComponents = url.queryDictionary else {
-            throw OTPServiceError.invalidURI
-        }
-        
-        guard
-            let issuer = queryComponents["issuer"],
-            let secret = queryComponents["secret"],
-            let algorithmEnum = Algorithm(rawValue: queryComponents["algorithm"] ?? "SHA1"),
-            let type = url.host,
-            let typeEnum = CodeType(rawValue: type)
-        else {
-            throw OTPServiceError.invalidURI
-        }
-        
-        var parsedURI = ParsedURI(issuer: issuer, username: parseUsername(url: url), secret: secret, algorithm: algorithmEnum, type: typeEnum, period: queryComponents["period"], counter: queryComponents["counter"])
-        
-        // If we're overriding digits
-        if let digits = queryComponents["digits"] {
-            parsedURI.digits = digits
-        }
-        
-        return parsedURI
-    }
-    
-    func generateCode(account: Account) throws -> String {
-        return account.type == .totp ?
-            try generateTOTP(account: account) :
-            try generateHOTP(account: account)
-    }
-    
-    private func generateHOTP(account: Account) throws -> String {
-        guard let secret = account.decodeSecret() else {
-            throw OTPServiceError.invalidSecret
-        }
+struct OTPService {
+    var parseSetupURI: (_ uri: String) throws -> ParsedURI
+    var generateCode: (_ account: Account) throws -> String
+}
 
-        guard let hotp = HOTP(secret: secret, digits: Int(account.digits), algorithm: account.algorithm.swiftOTPAlgorithm) else {
-            throw OTPServiceError.invalidSecret
-        }
-        let code = hotp.generate(counter: UInt64(account.counter)) ?? ""
-        print("code \(code) generated for counter \(account.counter)")
-        return code
-    }
-    
-    private func generateTOTP(account: Account, date: Date = Date()) throws -> String {
-        guard let secret = account.decodeSecret() else {
-            throw OTPServiceError.invalidSecret
-        }
+extension OTPService: DependencyKey {
+    static var liveValue: Self {
+        func generateHOTP(account: Account) throws -> String {
+            guard let secret = account.decodeSecret() else {
+                throw OTPServiceError.invalidSecret
+            }
 
-        guard let totp = TOTP(secret: secret, digits: Int(account.digits), timeInterval: Int(account.period), algorithm: account.algorithm.swiftOTPAlgorithm) else {
-            throw OTPServiceError.invalidSecret
+            guard let hotp = HOTP(secret: secret, digits: Int(account.digits), algorithm: account.algorithm.swiftOTPAlgorithm) else {
+                throw OTPServiceError.invalidSecret
+            }
+            guard let code = hotp.generate(counter: UInt64(account.counter)) else {
+                throw OTPServiceError.failedCodeGeneration
+            }
+            return code
         }
+        
+        func generateTOTP(account: Account, date: Date = Date()) throws -> String {
+            guard let secret = account.decodeSecret() else {
+                throw OTPServiceError.invalidSecret
+            }
 
-        return totp.generate(time: date) ?? ""
+            guard let totp = TOTP(secret: secret, digits: Int(account.digits), timeInterval: Int(account.period), algorithm: account.algorithm.swiftOTPAlgorithm) else {
+                throw OTPServiceError.invalidSecret
+            }
+
+            guard let code = totp.generate(time: date) else {
+                throw OTPServiceError.failedCodeGeneration
+            }
+            return code
+        }
+        
+        func parseUsername(url: URL) throws -> String {
+            guard let parsedUsername = url.pathComponents.last?.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+                throw OTPServiceError.invalidUsername
+            }
+            return parsedUsername
+        }
+        
+        return Self { uri in
+            guard let url = URL(string: uri), let queryComponents = url.queryDictionary else {
+                throw OTPServiceError.invalidURI
+            }
+            
+            guard
+                let issuer = queryComponents["issuer"],
+                let secret = queryComponents["secret"],
+                let algorithmEnum = Algorithm(rawValue: queryComponents["algorithm"] ?? "SHA1"),
+                let type = url.host,
+                let typeEnum = CodeType(rawValue: type)
+            else {
+                throw OTPServiceError.invalidURI
+            }
+            
+            var parsedURI = ParsedURI(issuer: issuer, username: try parseUsername(url: url), secret: secret, algorithm: algorithmEnum, type: typeEnum, period: queryComponents["period"], counter: queryComponents["counter"])
+            
+            // If we're overriding digits
+            if let digits = queryComponents["digits"] {
+                parsedURI.digits = digits
+            }
+            
+            return parsedURI
+        } generateCode: { account in
+            return account.type == .totp ?
+                try generateTOTP(account: account) :
+                try generateHOTP(account: account)
+        }
     }
-    
-    private func parseUsername(url: URL) -> String? {
-        return url.pathComponents.last?.components(separatedBy: ":").last?.trimmingCharacters(in: .whitespacesAndNewlines)
+    static var testValue: Self {
+        return .liveValue
+    }
+    static var previewValue: Self {
+        return .liveValue
     }
 }
 
-extension Resolver {
-    public static func RegisterOTPService() {
-        register { RealOTPService() as OTPService }
-    }
+extension DependencyValues {
+    var otpService: OTPService {
+        get { self[OTPService.self] }
+        set { self[OTPService.self] = newValue }
+  }
 }

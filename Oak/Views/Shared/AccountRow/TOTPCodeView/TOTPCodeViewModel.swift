@@ -42,7 +42,7 @@ class TOTPCodeViewModel: ObservableObject, CodeViewModel {
     func generateCode() {
         codeTimer?.invalidate()
         
-        guard let account = account, let code = try? otpService.generateCode(account: account) else {
+        guard let account = account, let code = try? otpService.generateCode(account) else {
             self.code = "Error"
             return
         }

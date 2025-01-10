@@ -117,9 +117,9 @@ class NewEditAccountViewModel: ObservableObject {
         existingAccount.usesBase32 = base32Encoded
         existingAccount.type = type
         existingAccount.algorithm = algorithm
-        existingAccount.digits = Int16(digits)
-        existingAccount.period = type == .totp ? Int16(period) : 30
-        existingAccount.counter = type == .hotp ? Int16(counter) : 0
+        existingAccount.digits = digits
+        existingAccount.period = type == .totp ? period : 30
+        existingAccount.counter = type == .hotp ? counter : 0
         try accountsService.save()
     }
 }

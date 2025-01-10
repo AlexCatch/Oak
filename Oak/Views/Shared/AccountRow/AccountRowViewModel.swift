@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Resolver
+import SwiftData
 
 struct AccountDisplayable: Identifiable {
     var id: String
@@ -16,9 +17,9 @@ struct AccountDisplayable: Identifiable {
 }
 
 class AccountRowViewModel: Identifiable, ObservableObject {
-    var id: String {
+    var id: PersistentIdentifier {
         get {
-            return account.objectID.uriRepresentation().absoluteString
+            return account.id
         }
     }
     
@@ -33,11 +34,11 @@ class AccountRowViewModel: Identifiable, ObservableObject {
     }
     
     func copyCode() {
-        guard let code = try? otpService.generateCode(account: account) else {
+        guard let code = try? otpService.generateCode(account) else {
             return
         }
 
-        haptics.generate(type: .success)
+        haptics.generate(.success)
         UIPasteboard.general.string = code
 
         // we'll tell our code view we've copied for 3 seconds before toggling it back

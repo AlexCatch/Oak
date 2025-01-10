@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
-import Resolver
+import Dependencies
+import SwiftData
 
 struct ICloudToggableRow: View {
     var title: String
     var key: SettingsKey
     
-    @Injected private var iCloudSettings: ICloudSettings
-    @Injected private var persistence: PersistentStore
+    @Dependency(\.modelManager) var modelManager: ModelManager
+    @Dependency(\.iCloudSettings) var ICloudSettings: ICloudSettings
+    
+    let schema = Schema([
+        Account.self,
+    ])
     
     init(title: String, key: SettingsKey) {
         self.title = title
@@ -21,12 +26,8 @@ struct ICloudToggableRow: View {
     }
     
     var body: some View {
-        ToggableRow(title: title, key: key, settings: iCloudSettings) { toggled in
-            persistence.toggleICloudSync(sync: toggled)
-            
-            if !toggled {
-                persistence.deleteUserAccounts()
-            }
+        ToggableRow(title: title, key: key.rawValue, initialValue: ICloudSettings.bool(forKey: key) ?? false) { toggled in
+            modelManager.setupContainer(sync: toggled)
         }
     }
 }

@@ -81,7 +81,7 @@ class AccountsViewModel: NSObject, AccountServiceDelegate, ObservableObject {
     func move(source: IndexSet, destination: Int) {
         accountRowModels.move(fromOffsets: source, toOffset: destination)
         for (index, viewModel) in accountRowModels.enumerated() {
-            viewModel.account.order = Int16(index)
+            viewModel.account.order = index
             try? accountService.save()
         }
     }

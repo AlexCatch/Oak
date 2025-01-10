@@ -7,21 +7,22 @@
 
 import SwiftUI
 import Combine
-import Resolver
+import Dependencies
 
 struct ToggableRow: View {
     var title: String
-    var key: SettingsKey
+    var key: String
     var onChangeCallback: ((_ status: Bool) -> Void)?
     
-    private var settings: Settings
+    @ObservationIgnored
+    @Dependency(\.settings) var settings: Settings
+    
     @State private var isOn: Bool = false
     
-    init(title: String, key: SettingsKey, settings: Settings = Resolver.resolve(), onChange: ((_ status: Bool) -> Void)? = nil) {
+    init(title: String, key: String, initialValue: Bool, onChange: ((_ status: Bool) -> Void)? = nil) {
         self.title = title
         self.key = key
-        self.settings = settings
-        _isOn = State(initialValue: settings.bool(key: key))
+        _isOn = State(initialValue: initialValue)
         
         self.onChangeCallback = onChange
 
@@ -36,17 +37,15 @@ struct ToggableRow: View {
             }
         }
         .labelsHidden()
-        .accessibility(identifier: "\(key.rawValue)Switch")
-        .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+        .accessibility(identifier: "\(key)Switch")
         .onChange(of: isOn, perform: { value in
-            settings.set(key: key, value: value)
             self.onChangeCallback?(value)
         })
     }
 }
 
-struct ToggableRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
-    }
-}
+//struct ToggableRow_Previews: PreviewProvider {
+//    static var previews: some View {
+////        ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
+//    }
+//}

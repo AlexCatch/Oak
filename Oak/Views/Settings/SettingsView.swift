@@ -17,8 +17,8 @@ struct SettingsView: View {
         NavigationView {
             List {
                 Section(header: Text("Authentication"), footer: Text("If you enable Require On Start, authentication will be required when you launch or switch to the app")) {
-                    ToggableRow(title: "Require on start", key: .requireAuthOnStart)
-                    ToggableRow(title: "Face ID or Touch ID", key: .biometricsEnabled)
+                    ToggableRow(title: "Require on start", key: SettingsKey.requireAuthOnStart.rawValue, initialValue: false)
+                    ToggableRow(title: "Face ID or Touch ID", key: SettingsKey.biometricsEnabled.rawValue, initialValue: false)
                         .isHidden(!viewModel.biometricsEnabled, remove: true)
                 }
                 Section(header: Text("Sync"), footer: Text("If this option is enabled, your accounts will automatically be backed up and synced across all devices using the same account")) {

@@ -7,16 +7,16 @@
 
 import Foundation
 import SwiftUI
-import Resolver
+import Dependencies
 
 class SetupViewModel: ObservableObject {
-    @Injected private var keychainService: KeychainService
-    @Injected private var settings: Settings
+    @Dependency(\.keychainService)private var keychainService: KeychainService
+    @Dependency(\.settings) private var settings: Settings
     
     @Published var password: String = ""
     @Published var passwordConfirmation = ""
     @Published var errorMessage: String?
-    @Published var biometricsEnabled = Biometrics().enabled()
+    @Published var biometricsEnabled = false
     
     var areInputsValid: Bool {
         return
@@ -35,13 +35,7 @@ class SetupViewModel: ObservableObject {
     }
     
     func setup() {
-        keychainService.set(key: .password, value: password)
-        settings.set(key: .isSetup, value: true)
-    }
-}
-
-extension Resolver {
-    static func RegisterSetupViewModel() {
-        register { SetupViewModel() }
+        keychainService.set(.password, password)
+        settings.set(true, forKey: .isSetup)
     }
 }

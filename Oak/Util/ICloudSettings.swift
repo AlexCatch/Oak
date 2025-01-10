@@ -2,26 +2,44 @@
 //  ICloudSettings.swift
 //  Oak
 //
-//  Created by Alex Catchpole on 15/05/2021.
+//  Created by Alex Catchpole on 31/01/2021.
 //
 
-import Foundation
-import CloudKit
-import Resolver
+import SwiftUI
+import Dependencies
+import DependenciesAdditions
 
-class ICloudSettings: RealSettings {
-    override func bool(key: SettingsKey) -> Bool {
-        return NSUbiquitousKeyValueStore.default.bool(forKey: key.rawValue)
-    }
-    
-    override func set(key: SettingsKey, value: Any) {
-        NSUbiquitousKeyValueStore.default.set(value, forKey: key.rawValue)
-        NSUbiquitousKeyValueStore.default.synchronize()
+private enum ICloudUserDefaultsKey: DependencyKey {
+    static var liveValue = UserDefaults.Dependency.ubiquitous
+}
+
+extension DependencyValues {
+    public var iCloudUserDefaults: UserDefaults.Dependency {
+        get { self[ICloudUserDefaultsKey.self] }
+        set { self[ICloudUserDefaultsKey.self] = newValue }
     }
 }
 
-extension Resolver {
-    static func RegisterICloudSettingsUtil() {
-        register { ICloudSettings() }.scope(.shared)
+class ICloudSettings {
+    @Dependency(\.iCloudUserDefaults) var userDefaults
+    
+    public func bool(forKey key: SettingsKey) -> Bool? {
+        return userDefaults.bool(forKey: key.rawValue)
+    }
+    
+    public func set(_ value: Bool?, forKey key: SettingsKey) {
+        userDefaults.set(value, forKey: key.rawValue)
+    }
+    
+}
+
+private enum ICloudSettingsDependencyKey: DependencyKey {
+    static var liveValue = ICloudSettings()
+}
+
+extension DependencyValues {
+    var iCloudSettings: ICloudSettings {
+        get { self[ICloudSettingsDependencyKey.self] }
+        set { self[ICloudSettingsDependencyKey.self] = newValue }
     }
 }

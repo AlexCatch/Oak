@@ -6,27 +6,45 @@
 //
 
 import SwiftUI
-import Resolver
+import Dependencies
+import SwiftData
+
+enum RootView {
+    case setup
+    case accounts
+}
 
 @main
 struct OakApp: App {
+    @Dependency(\.modelManager) private var modelManager: ModelManager
+    @Dependency(\.window) var window
+    @Dependency(\.settings) var settings
     
-    @Injected private var persistentStore: PersistentStore
-    @Injected private var iCloudSettings: ICloudSettings;
-    
-    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @State private var activeView: RootView = .setup
     
     init() {
-        // If we've failed to delete our store after requesting, let's attempt to delete
-        if iCloudSettings.bool(key: .failedToDeleteZone) {
-            persistentStore.deleteUserAccounts()
-            iCloudSettings.set(key: .failedToDeleteZone, value: false)
+        let isSetup = settings.bool(forKey: .isSetup) ?? false
+        if isSetup {
+            _activeView = State(initialValue: RootView.accounts)
+        } else {
+            activeView = .setup
+        }
+    }
+    
+    var rootView: some View {
+        switch activeView {
+        case .setup:
+            return AnyView(SetupView(activeSheet: $activeView))
+        case .accounts:
+            return AnyView(AccountsView())
         }
     }
     
     var body: some Scene {
         WindowGroup {
-            MainView().environment(\.managedObjectContext, persistentStore.viewContext)
+            rootView
+                .navigationViewStyle(StackNavigationViewStyle())
+                .modelContainer(modelManager.modelContainer)
         }
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,50 +12,23 @@
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
 		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
-		0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0953B95A25D87BBC008DD9BE /* CloudKit.framework */; };
 		0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0953E6B326E9477E00B19DC6 /* Introspect */; };
-		095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
-		099EC3882655470B00CA5F86 /* SetupViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09441E312651CCC4002B1619 /* SetupViewUITests.swift */; };
-		099EC3892655470F00CA5F86 /* SettingsViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8DB2651D29A0036F4F0 /* SettingsViewUITests.swift */; };
-		099EC38A2655470F00CA5F86 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED8D92651CFE40036F4F0 /* XCUIElement+Extensions.swift */; };
-		099EC38B2655470F00CA5F86 /* AuthenticationViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91926530D760036F4F0 /* AuthenticationViewUITests.swift */; };
-		099EC38C2655484600CA5F86 /* Biometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED91D265314760036F4F0 /* Biometrics.m */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
-		09AED5F5265702F9008B18B0 /* ChangePasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */; };
 		09B8F0FD28D254B2007A8DFE /* LAContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8F0FC28D254B2007A8DFE /* LAContext+Extensions.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
 		09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752A25D0555E00891033 /* HOTPCodeViewModel.swift */; };
-		09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E218265179D70066C4AB /* MockKeychainService.swift */; };
-		09C4E21B26517A430066C4AB /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21A26517A430066C4AB /* Setup.swift */; };
-		09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E21C26517B950066C4AB /* MockSettings.swift */; };
-		09C4E22126517D070066C4AB /* SetupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22026517D070066C4AB /* SetupViewModelTests.swift */; };
-		09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E224265183760066C4AB /* MockPersistentStore.swift */; };
-		09C4E227265186230066C4AB /* AccountsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E226265186230066C4AB /* AccountsViewModelTests.swift */; };
-		09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2282651863C0066C4AB /* OakTestCase.swift */; };
-		09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22A26518DC90066C4AB /* AccountRowViewModelTests.swift */; };
-		09C4E22F265196430066C4AB /* ScanQRCodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E22E265196430066C4AB /* ScanQRCodeViewModelTests.swift */; };
-		09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E23026519D4F0066C4AB /* AuthenticationViewModelTests.swift */; };
-		09C4E23326519F450066C4AB /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E23226519F450066C4AB /* MainViewModelTests.swift */; };
-		09C4E2352651A0700066C4AB /* NewEditAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2342651A0700066C4AB /* NewEditAccountViewModelTests.swift */; };
-		09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2362651A6CB0066C4AB /* HOTPCodeViewModelTests.swift */; };
-		09C4E2392651ABF50066C4AB /* UpdatePasswordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4E2382651ABF50066C4AB /* UpdatePasswordViewModelTests.swift */; };
 		09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA35F25CF45E9003BE427 /* TOTPCodeView.swift */; };
 		09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */; };
 		09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFA36C25CF461C003BE427 /* CodeViewModel.swift */; };
 		09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */; };
-		09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCEC926504079001954C5 /* ICloudSettings.swift */; };
 		09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFCECB26504197001954C5 /* ICloudToggableRow.swift */; };
 		09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 09CFCECE26516905001954C5 /* SwiftlySearch */; };
 		09F00B4528D389AD000C0D6B /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F00B4428D389AC000C0D6B /* BuildConfiguration.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
-		FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03411B25C9C7BE004752F3 /* Services+Injection.swift */; };
-		FA03412725C9C8D0004752F3 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412625C9C8D0004752F3 /* Injection.swift */; };
-		FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */; };
 		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
-		FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CBE25CA0733009C215F /* Utils+Injection.swift */; };
 		FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CC425CA091C009C215F /* UpdatePasswordView.swift */; };
 		FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */; };
 		FA42C67625C63C9C000D597E /* OakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C67525C63C9C000D597E /* OakApp.swift */; };
@@ -77,32 +50,20 @@
 		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
 		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
-		FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB0825C8F959001DE486 /* MainView.swift */; };
+		FAAB0E402D30705100283DCB /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E3F2D30705100283DCB /* Dependencies */; };
+		FAAB0E422D30705100283DCB /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E412D30705100283DCB /* DependenciesMacros */; };
+		FAAB0EED2D307F6100283DCB /* DependenciesAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */; };
+		FAAB0EEF2D307F6100283DCB /* _AppStorageDependency in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEE2D307F6100283DCB /* _AppStorageDependency */; };
+		FAAB0EFD2D30A97E00283DCB /* SwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */; };
+		FAAB0F012D30AE8700283DCB /* ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F002D30AE8400283DCB /* ModelContainer.swift */; };
+		FAAB0F1A2D30D84D00283DCB /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */; };
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
 		FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */; };
-		FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8CEF25C9F48600688223 /* MainViewModel.swift */; };
 		FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE48D25C9E9FD005BC18E /* SetupView.swift */; };
 		FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49225C9ECC6005BC18E /* SetupViewModel.swift */; };
 		FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49725C9ED9A005BC18E /* KeychainService.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		099EC383265546FA00CA5F86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA42C67125C63C9C000D597E;
-			remoteInfo = OakOTP;
-		};
-		FA42C68925C63C9D000D597E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA42C66A25C63C9C000D597E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA42C67125C63C9C000D597E;
-			remoteInfo = Oak;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
@@ -112,9 +73,7 @@
 		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Oak.xcdatamodel; sourceTree = "<group>"; };
 		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
-		099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		099EC382265546FA00CA5F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUITests.swift; sourceTree = "<group>"; };
@@ -150,16 +109,11 @@
 		09CFA36725CF45F1003BE427 /* TOTPCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPCodeViewModel.swift; sourceTree = "<group>"; };
 		09CFA36C25CF461C003BE427 /* CodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		09CFCEC72650247B001954C5 /* IsHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsHiddenModifier.swift; sourceTree = "<group>"; };
-		09CFCEC926504079001954C5 /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
 		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
 		09F00B4428D389AC000C0D6B /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		FA03411B25C9C7BE004752F3 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
-		FA03412625C9C8D0004752F3 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
-		FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
 		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		FA404CBE25CA0733009C215F /* Utils+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Injection.swift"; sourceTree = "<group>"; };
 		FA404CC425CA091C009C215F /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
 		FA42C67225C63C9C000D597E /* OakOTPDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OakOTPDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,7 +122,6 @@
 		FA42C67925C63C9D000D597E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA42C67C25C63C9D000D597E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA42C68325C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA42C68825C63C9D000D597E /* OakOTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakOTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42C68E25C63C9D000D597E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA42C6B125C64919000D597E /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
 		FA42C6B625C64A79000D597E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
@@ -183,42 +136,35 @@
 		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
 		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
-		FAB8CB0825C8F959001DE486 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
+		FAAB0F002D30AE8400283DCB /* ModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainer.swift; sourceTree = "<group>"; };
+		FAAB0F022D30B41300283DCB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FAAB0F042D30B45000283DCB /* Testing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Testing.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/Testing.framework; sourceTree = DEVELOPER_DIR; };
+		FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
 		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
-		FACB8CEF25C9F48600688223 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FADAE48D25C9E9FD005BC18E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		FADAE49225C9ECC6005BC18E /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		FADAE49725C9ED9A005BC18E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		099EC37B265546FA00CA5F86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FA42C66F25C63C9C000D597E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0953B95B25D87BBC008DD9BE /* CloudKit.framework in Frameworks */,
+				FAAB0EFD2D30A97E00283DCB /* SwiftData.framework in Frameworks */,
+				FAAB0EED2D307F6100283DCB /* DependenciesAdditions in Frameworks */,
 				FA03411725C9C640004752F3 /* Resolver in Frameworks */,
 				FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */,
+				FAAB0E402D30705100283DCB /* Dependencies in Frameworks */,
 				09CFCECF26516905001954C5 /* SwiftlySearch in Frameworks */,
+				FAAB0E422D30705100283DCB /* DependenciesMacros in Frameworks */,
 				0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */,
+				FAAB0EEF2D307F6100283DCB /* _AppStorageDependency in Frameworks */,
 				FA42C7A125C78076000D597E /* KeychainSwift in Frameworks */,
 				FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA42C68525C63C9D000D597E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +183,9 @@
 		0953B95925D87BBC008DD9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAAB0F042D30B45000283DCB /* Testing.framework */,
+				FAAB0F022D30B41300283DCB /* XCTest.framework */,
+				FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */,
 				0953B95A25D87BBC008DD9BE /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -245,7 +194,6 @@
 		095A2BB725D5BABB0030C585 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */,
 				092F944525D5C46700FB537A /* PersistentStore.swift */,
 			);
 			path = Persistence;
@@ -343,17 +291,6 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		FA03412525C9C8B3004752F3 /* Injected */ = {
-			isa = PBXGroup;
-			children = (
-				FA03411B25C9C7BE004752F3 /* Services+Injection.swift */,
-				FA03412E25C9C985004752F3 /* ViewModels+Injection.swift */,
-				FA03412625C9C8D0004752F3 /* Injection.swift */,
-				FA404CBE25CA0733009C215F /* Utils+Injection.swift */,
-			);
-			path = Injected;
-			sourceTree = "<group>";
-		};
 		FA03413B25C9D8E6004752F3 /* ScanCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,8 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				FA42C67225C63C9C000D597E /* OakOTPDev.app */,
-				FA42C68825C63C9D000D597E /* OakOTPTests.xctest */,
-				099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,7 +334,6 @@
 			children = (
 				09CFCEC62650246F001954C5 /* Modifiers */,
 				095A2BB725D5BABB0030C585 /* Persistence */,
-				FA03412525C9C8B3004752F3 /* Injected */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
@@ -446,7 +380,6 @@
 				FADAE48C25C9E9ED005BC18E /* Setup */,
 				FA03413B25C9D8E6004752F3 /* ScanCode */,
 				FAB8CB1325C8FBBB001DE486 /* Authentication */,
-				FAB8CB0725C8F950001DE486 /* Main */,
 				FAB8CB0625C8F856001DE486 /* Accounts */,
 				FA87C00F25C88715009C7FF7 /* Shared */,
 				FA42C6C525C65894000D597E /* Settings */,
@@ -525,15 +458,6 @@
 			path = Accounts;
 			sourceTree = "<group>";
 		};
-		FAB8CB0725C8F950001DE486 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				FAB8CB0825C8F959001DE486 /* MainView.swift */,
-				FACB8CEF25C9F48600688223 /* MainViewModel.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		FAB8CB1325C8FBBB001DE486 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,11 +470,12 @@
 		FAB8CB2425C8FE96001DE486 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */,
+				FAAB0F002D30AE8400283DCB /* ModelContainer.swift */,
 				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
 				092A677B25CC605A00E8118E /* Window.swift */,
-				09CFCEC926504079001954C5 /* ICloudSettings.swift */,
 				09F00B4428D389AC000C0D6B /* BuildConfiguration.swift */,
 			);
 			path = Util;
@@ -568,24 +493,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		099EC37D265546FA00CA5F86 /* OakOTPUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 099EC385265546FA00CA5F86 /* Build configuration list for PBXNativeTarget "OakOTPUITests" */;
-			buildPhases = (
-				099EC37A265546FA00CA5F86 /* Sources */,
-				099EC37B265546FA00CA5F86 /* Frameworks */,
-				099EC37C265546FA00CA5F86 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				099EC384265546FA00CA5F86 /* PBXTargetDependency */,
-			);
-			name = OakOTPUITests;
-			productName = OakOTPUITests;
-			productReference = 099EC37E265546FA00CA5F86 /* OakOTPUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		FA42C67125C63C9C000D597E /* OakOTP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA42C69C25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakOTP" */;
@@ -606,28 +513,14 @@
 				FA03411625C9C640004752F3 /* Resolver */,
 				09CFCECE26516905001954C5 /* SwiftlySearch */,
 				0953E6B326E9477E00B19DC6 /* Introspect */,
+				FAAB0E3F2D30705100283DCB /* Dependencies */,
+				FAAB0E412D30705100283DCB /* DependenciesMacros */,
+				FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */,
+				FAAB0EEE2D307F6100283DCB /* _AppStorageDependency */,
 			);
 			productName = Oak;
 			productReference = FA42C67225C63C9C000D597E /* OakOTPDev.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FA42C68725C63C9D000D597E /* OakOTPTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA42C69F25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakOTPTests" */;
-			buildPhases = (
-				FA42C68425C63C9D000D597E /* Sources */,
-				FA42C68525C63C9D000D597E /* Frameworks */,
-				FA42C68625C63C9D000D597E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA42C68A25C63C9D000D597E /* PBXTargetDependency */,
-			);
-			name = OakOTPTests;
-			productName = OakTests;
-			productReference = FA42C68825C63C9D000D597E /* OakOTPTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -638,16 +531,8 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					099EC37D265546FA00CA5F86 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = FA42C67125C63C9C000D597E;
-					};
 					FA42C67125C63C9C000D597E = {
 						CreatedOnToolsVersion = 12.3;
-					};
-					FA42C68725C63C9D000D597E = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = FA42C67125C63C9C000D597E;
 					};
 				};
 			};
@@ -667,26 +552,19 @@
 				FA03411525C9C640004752F3 /* XCRemoteSwiftPackageReference "Resolver" */,
 				09CFCECD26516905001954C5 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				0953E6B226E9477E00B19DC6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				FAAB0E3E2D30705100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				FAAB0EEB2D307F6100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies-additions" */,
 			);
 			productRefGroup = FA42C67325C63C9C000D597E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FA42C67125C63C9C000D597E /* OakOTP */,
-				FA42C68725C63C9D000D597E /* OakOTPTests */,
-				099EC37D265546FA00CA5F86 /* OakOTPUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		099EC37C265546FA00CA5F86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FA42C67025C63C9C000D597E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -696,29 +574,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA42C68625C63C9D000D597E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		099EC37A265546FA00CA5F86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				099EC3882655470B00CA5F86 /* SetupViewUITests.swift in Sources */,
-				099EC38A2655470F00CA5F86 /* XCUIElement+Extensions.swift in Sources */,
-				099EC3892655470F00CA5F86 /* SettingsViewUITests.swift in Sources */,
-				099EC38C2655484600CA5F86 /* Biometrics.m in Sources */,
-				09AED5F5265702F9008B18B0 /* ChangePasswordUITests.swift in Sources */,
-				099EC38B2655470F00CA5F86 /* AuthenticationViewUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FA42C66E25C63C9C000D597E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -732,10 +590,10 @@
 				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
+				FAAB0F1A2D30D84D00283DCB /* ICloudSettings.swift in Sources */,
 				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
 				09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
-				FAB8CB0925C8F959001DE486 /* MainView.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
@@ -744,20 +602,16 @@
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
-				095A2BBA25D5BAE00030C585 /* Oak.xcdatamodeld in Sources */,
-				FA03412F25C9C985004752F3 /* ViewModels+Injection.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
 				09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */,
 				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
-				FA03412725C9C8D0004752F3 /* Injection.swift in Sources */,
 				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
-				FA03411C25C9C7BE004752F3 /* Services+Injection.swift in Sources */,
 				FADAE49325C9ECC6005BC18E /* SetupViewModel.swift in Sources */,
-				FA404CBF25CA0733009C215F /* Utils+Injection.swift in Sources */,
 				09B8F0FD28D254B2007A8DFE /* LAContext+Extensions.swift in Sources */,
+				FAAB0F012D30AE8700283DCB /* ModelContainer.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */,
@@ -767,93 +621,15 @@
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
-				09CFCECA26504079001954C5 /* ICloudSettings.swift in Sources */,
 				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
-				FACB8CF025C9F48600688223 /* MainViewModel.swift in Sources */,
 				09F00B4528D389AD000C0D6B /* BuildConfiguration.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA42C68425C63C9D000D597E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C4E21D26517B950066C4AB /* MockSettings.swift in Sources */,
-				09C4E227265186230066C4AB /* AccountsViewModelTests.swift in Sources */,
-				09C4E22126517D070066C4AB /* SetupViewModelTests.swift in Sources */,
-				09C4E2392651ABF50066C4AB /* UpdatePasswordViewModelTests.swift in Sources */,
-				09C4E23326519F450066C4AB /* MainViewModelTests.swift in Sources */,
-				09C4E2352651A0700066C4AB /* NewEditAccountViewModelTests.swift in Sources */,
-				09C4E2292651863C0066C4AB /* OakTestCase.swift in Sources */,
-				09C4E2372651A6CB0066C4AB /* HOTPCodeViewModelTests.swift in Sources */,
-				09C4E23126519D4F0066C4AB /* AuthenticationViewModelTests.swift in Sources */,
-				09C4E225265183760066C4AB /* MockPersistentStore.swift in Sources */,
-				09C4E22B26518DC90066C4AB /* AccountRowViewModelTests.swift in Sources */,
-				09C4E21B26517A430066C4AB /* Setup.swift in Sources */,
-				09C4E219265179D70066C4AB /* MockKeychainService.swift in Sources */,
-				09C4E22F265196430066C4AB /* ScanQRCodeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		099EC384265546FA00CA5F86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA42C67125C63C9C000D597E /* OakOTP */;
-			targetProxy = 099EC383265546FA00CA5F86 /* PBXContainerItemProxy */;
-		};
-		FA42C68A25C63C9D000D597E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA42C67125C63C9C000D597E /* OakOTP */;
-			targetProxy = FA42C68925C63C9D000D597E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		099EC386265546FA00CA5F86 /* Debug Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakOTPUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OakOTP;
-			};
-			name = "Debug Development";
-		};
-		099EC387265546FA00CA5F86 /* Release Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakOTPUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OakOTP;
-			};
-			name = "Release Development";
-		};
 		09B8F11028D2698C007A8DFE /* Debug Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -921,15 +697,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/OakDebug.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = Oak/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -937,54 +715,11 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)Dev";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.OakDebug";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = "Debug Production";
-		};
-		09B8F11228D2698C007A8DFE /* Debug Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
-			};
-			name = "Debug Production";
-		};
-		09B8F11328D2698C007A8DFE /* Debug Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakOTPUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OakOTP;
 			};
 			name = "Debug Production";
 		};
@@ -1049,17 +784,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = Oak/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1067,55 +802,11 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore sh.catch.Oak";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore sh.catch.Oak";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = "Release Production";
-		};
-		09B8F11A28D269B0007A8DFE /* Release Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
-			};
-			name = "Release Production";
-		};
-		09B8F11B28D269B0007A8DFE /* Release Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakOTPUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakOTPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/Misc/OakUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OakOTP;
 			};
 			name = "Release Production";
 		};
@@ -1243,16 +934,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/OakDebug.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = Oak/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1260,8 +952,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)Dev";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development sh.catch.OakDebug";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1275,16 +966,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Oak/Misc/Oak.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Oak/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7NWLJ33LJ5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = Oak/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1292,8 +984,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.Oak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development sh.catch.Oak";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development sh.catch.Oak";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1301,64 +992,9 @@
 			};
 			name = "Release Development";
 		};
-		FA42C6A025C63C9D000D597E /* Debug Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
-			};
-			name = "Debug Development";
-		};
-		FA42C6A125C63C9D000D597E /* Release Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NWLJ33LJ5;
-				INFOPLIST_FILE = OakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = sh.catch.OakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OakOTP.app/OakOTP";
-			};
-			name = "Release Development";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		099EC385265546FA00CA5F86 /* Build configuration list for PBXNativeTarget "OakOTPUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				099EC386265546FA00CA5F86 /* Debug Development */,
-				09B8F11328D2698C007A8DFE /* Debug Production */,
-				099EC387265546FA00CA5F86 /* Release Development */,
-				09B8F11B28D269B0007A8DFE /* Release Production */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Production";
-		};
 		FA42C66D25C63C9C000D597E /* Build configuration list for PBXProject "OakOTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1377,17 +1013,6 @@
 				09B8F11128D2698C007A8DFE /* Debug Production */,
 				FA42C69E25C63C9D000D597E /* Release Development */,
 				09B8F11928D269B0007A8DFE /* Release Production */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Production";
-		};
-		FA42C69F25C63C9D000D597E /* Build configuration list for PBXNativeTarget "OakOTPTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA42C6A025C63C9D000D597E /* Debug Development */,
-				09B8F11228D2698C007A8DFE /* Debug Production */,
-				FA42C6A125C63C9D000D597E /* Release Development */,
-				09B8F11A28D269B0007A8DFE /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Production";
@@ -1443,6 +1068,22 @@
 				minimumVersion = 1.0.7;
 			};
 		};
+		FAAB0E3E2D30705100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
+			};
+		};
+		FAAB0EEB2D307F6100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies-additions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tgrapperon/swift-dependencies-additions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1476,20 +1117,27 @@
 			package = FA87C00925C88446009C7FF7 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		095A2BB825D5BAE00030C585 /* Oak.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */,
-			);
-			currentVersion = 095A2BB925D5BAE00030C585 /* Oak.xcdatamodel */;
-			path = Oak.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		FAAB0E3F2D30705100283DCB /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB0E3E2D30705100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
-/* End XCVersionGroup section */
+		FAAB0E412D30705100283DCB /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB0E3E2D30705100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
+		};
+		FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB0EEB2D307F6100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies-additions" */;
+			productName = DependenciesAdditions;
+		};
+		FAAB0EEE2D307F6100283DCB /* _AppStorageDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAB0EEB2D307F6100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies-additions" */;
+			productName = _AppStorageDependency;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA42C66A25C63C9C000D597E /* Project object */;
 }

@@ -7,9 +7,14 @@
 
 import Foundation
 import LocalAuthentication
-import Resolver
+import Dependencies
 
-class Biometrics {
+protocol Biometrics {
+    func enabled() -> Bool
+    func authenticate() async -> Bool
+}
+
+class LiveBiometrics: Biometrics {
     let context = LAContext()
     
     func enabled() -> Bool {
@@ -42,8 +47,13 @@ class Biometrics {
     }
 }
 
-extension Resolver {
-    static func RegisterBiometricsUtil() {
-        register { Biometrics() }.scope(.shared)
+private enum BiometricsKey: DependencyKey {
+    static let liveValue: any Biometrics = LiveBiometrics()
+}
+
+extension DependencyValues {
+    var biometrics: Biometrics {
+        get { self[BiometricsKey.self] }
+        set { self[BiometricsKey.self] = newValue }
     }
 }
