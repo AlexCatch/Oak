@@ -18,7 +18,6 @@ enum RootView {
 @main
 struct OakApp: App {
     @Dependency(\.database) var database
-    
     let store: StoreOf<AppFeature>
     
     init() {
@@ -33,7 +32,7 @@ struct OakApp: App {
         WindowGroup {
             AppView(store: store)
                 .navigationViewStyle(StackNavigationViewStyle())
-                .modelContainer(SwiftDataModelConfigurationProvider.shared.container)
+                .modelContainer(database.modelContainer)
         }
     }
 }

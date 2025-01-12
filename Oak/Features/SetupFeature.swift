@@ -36,7 +36,7 @@ struct SetupFeature {
     @Dependency(\.keychainService) private var keychain
     @Dependency(\.settings) private var settings
     @Dependency(\.iCloudSettings) private var iCloudSettings
-//    @Dependency(\.database) private var database
+    @Dependency(\.database) private var database
     
     var body: some Reducer<State, Action> {
         BindingReducer()
@@ -45,7 +45,7 @@ struct SetupFeature {
             case .setup:
                 return .run { [state] send in
                     iCloudSettings.set(state.iCloudSyncEnabled, .iCloudEnabled)
-//                    database.setupContainer(sync: state.iCloudSyncEnabled)
+                    await database.toggleICloudSync(sync: state.iCloudSyncEnabled)
                     keychain.set(.password, state.password)
                     settings.set(true, forKey: .isSetup)
                     await send(.setupComplete)

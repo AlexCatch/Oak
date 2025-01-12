@@ -5,7 +5,7 @@
 //  Created by Alex Catchpole on 04/02/2021.
 //
 
-@preconcurrency import UIKit
+import UIKit
 import Dependencies
 
 struct Window {

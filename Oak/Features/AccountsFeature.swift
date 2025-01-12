@@ -37,7 +37,7 @@ struct AccountsFeature {
                 state.accounts = .loading
                 return .run { send in
                     do {
-                        let results = try accountService.fetchAll()
+                        let results = try await accountService.fetchAll()
                         await send(.fetchedAccounts(.result(results)))
                     } catch let error {
                         await send(.fetchedAccounts(.error(error: EquatableError(error))))

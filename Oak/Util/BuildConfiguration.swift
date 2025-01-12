@@ -9,32 +9,29 @@ import Foundation
 import Dependencies
 
 enum BuildEnvironment: String { // 1
-    case debugDevelopment = "Debug Development"
-    case debugProduction = "Debug Production"
-    
-    case releaseProduction = "Release Production"
-    case releaseDevelopment = "Release Development"
+    case debug = "Debug"
+    case release = "Release"
 }
 
 struct BuildConfiguration {
     var environment: BuildEnvironment
     var ICloudContainerName: String {
         switch environment {
-        case .debugProduction, .debugDevelopment:
+        case .debug:
             return "iCloud.sh.catch.oakdebug.icloud"
-        case .releaseDevelopment, .releaseProduction:
+        case .release:
             return "iCloud.sh.catch.oak.icloud"
         }
     }
     
     init(configuration: String) {
-        environment = BuildEnvironment(rawValue: configuration) ?? BuildEnvironment.debugDevelopment
+        environment = BuildEnvironment(rawValue: configuration) ?? BuildEnvironment.debug
     }
 }
 
 extension BuildConfiguration: DependencyKey {
     static var liveValue: Self {
-        let configuration = (Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String) ?? BuildEnvironment.debugDevelopment.rawValue
+        let configuration = (Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String) ?? BuildEnvironment.debug.rawValue
         return BuildConfiguration(configuration: configuration)
     }
 }

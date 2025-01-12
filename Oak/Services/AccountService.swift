@@ -10,16 +10,16 @@ import Dependencies
 import SwiftData
 
 struct AccountService {
-    var fetchAll: @Sendable () throws -> [Account]
+    var fetchAll: @Sendable () async throws -> [Account]
 }
 
 extension AccountService: DependencyKey {
     static var liveValue: Self {
-//        @Dependency(\.database) var database
+        @Dependency(\.database) var database
         return Self {
-            return []
-//            let descriptor = FetchDescriptor<Account>(sortBy: [SortDescriptor(\.order, order: .forward)])
-//            return try database.modelContext.fetch(descriptor)
+            let context = await ModelContext(database.modelContainer)
+            let descriptor = FetchDescriptor<Account>(sortBy: [SortDescriptor(\.order, order: .forward)])
+            return try context.fetch(descriptor)
         }
     }
 }
