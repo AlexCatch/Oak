@@ -20,26 +20,25 @@ extension DependencyValues {
     }
 }
 
-final class ICloudSettings: @unchecked Sendable {
-    @Dependency(\.iCloudUserDefaults) var userDefaults
-    
-    public func bool(forKey key: SettingsKey) -> Bool? {
-        return userDefaults.bool(forKey: key.rawValue)
-    }
-    
-    public func set(_ value: Bool?, forKey key: SettingsKey) {
-        userDefaults.set(value, forKey: key.rawValue)
-    }
-    
+struct ICloudSettings {
+    var bool: @Sendable (_ key: SettingsKey) -> Bool?
+    var set: @Sendable (_ value: Bool?, _ forKey: SettingsKey) -> Void
 }
 
-private enum ICloudSettingsDependencyKey: DependencyKey {
-    static let liveValue = ICloudSettings()
+extension ICloudSettings: DependencyKey {
+    static var liveValue: Self {
+        @Dependency(\.iCloudUserDefaults) var userDefaults
+        return Self(bool: { key in
+            userDefaults.bool(forKey: key.rawValue)
+        }, set: { value, key in
+            userDefaults.set(value, forKey: key.rawValue)
+        })
+    }
 }
 
 extension DependencyValues {
     var iCloudSettings: ICloudSettings {
-        get { self[ICloudSettingsDependencyKey.self] }
-        set { self[ICloudSettingsDependencyKey.self] = newValue }
+        get { self[ICloudSettings.self] }
+        set { self[ICloudSettings.self] = newValue }
     }
 }

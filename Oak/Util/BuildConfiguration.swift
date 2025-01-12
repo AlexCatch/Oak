@@ -35,7 +35,7 @@ struct BuildConfiguration {
 extension BuildConfiguration: DependencyKey {
     static var liveValue: Self {
         let configuration = (Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String) ?? BuildEnvironment.debugDevelopment.rawValue
-        return Self.init(configuration: configuration)
+        return BuildConfiguration(configuration: configuration)
     }
 }
 

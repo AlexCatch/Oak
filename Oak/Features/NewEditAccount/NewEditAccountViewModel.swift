@@ -98,13 +98,13 @@ class NewEditAccountViewModel: ObservableObject {
             return
         }
         
-        try? accountsService.delete(accounts: [account])
+//        try? accountsService.delete(accounts: [account])
         dismiss?()
     }
     
     private func newAccount() throws {
-        let data = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: type == .totp ? period : nil, counter: type == .hotp ? counter : nil)
-        try accountsService.save(data: data)
+//        let data = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: type == .totp ? period : nil, counter: type == .hotp ? counter : nil)
+//        try accountsService.save(data: data)
     }
     
     private func updateAccount() throws {
@@ -120,7 +120,7 @@ class NewEditAccountViewModel: ObservableObject {
         existingAccount.digits = digits
         existingAccount.period = type == .totp ? period : 30
         existingAccount.counter = type == .hotp ? counter : 0
-        try accountsService.save()
+//        try accountsService.save()
     }
 }
 

@@ -19,17 +19,17 @@ class HOTPCodeViewModel: ObservableObject, CodeViewModel {
     
     func generateCode(increment: Bool) {
         
-        // increment the account's counter and then generate
-        if let account = account, increment, let updatedAccount = try? accountService.updateCounter(account: account) {
-            self.account = updatedAccount
-        }
-        
-        guard let account = account, let code = try? otpService.generateCode(account) else {
-            self.code = "Error"
-            return
-        }
-        
-        self.code = formatCode(code: code)
+//        // increment the account's counter and then generate
+//        if let account = account, increment, let updatedAccount = try? accountService.updateCounter(account: account) {
+//            self.account = updatedAccount
+//        }
+//        
+//        guard let account = account, let code = try? otpService.generateCode(account) else {
+//            self.code = "Error"
+//            return
+//        }
+//        
+//        self.code = formatCode(code: code)
     }
     
     func setAccount(account: Account) {

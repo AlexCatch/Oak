@@ -1,23 +1,69 @@
 //
-//  AccountsView.swift
-//  Oak
+//  AccountFeature.swift
+//  OakOTP
 //
-//  Created by Alex Catchpole on 31/01/2021.
+//  Created by Alex on 11/01/2025.
 //
 
 import SwiftUI
-import CoreData
-import Resolver
-import SwiftlySearch
-import SwiftData
+import ComposableArchitecture
 
-struct AccountssView: View {
-    @Query var accounts: [Account]
+@CasePathable
+enum Loadable<Entity> {
+    case notAsked
+    case loading
+    case error(error: EquatableError)
+    case result(Entity)
+}
+
+@Reducer
+struct AccountsFeature {
+    @ObservableState
+    struct State {
+        var accounts: Loadable<[Account]> = .notAsked
+    }
+    
+    enum Action {
+        case fetchAccounts
+        case fetchedAccounts(Loadable<[Account]>)
+    }
+    
+    @Dependency(\.accountService) var accountService
+    
+    var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .fetchAccounts:
+                state.accounts = .loading
+                return .run { send in
+                    do {
+                        let results = try accountService.fetchAll()
+                        await send(.fetchedAccounts(.result(results)))
+                    } catch let error {
+                        await send(.fetchedAccounts(.error(error: EquatableError(error))))
+                    }
+                }
+            case .fetchedAccounts(let result):
+                state.accounts = result
+                return .none
+            }
+        }
+    }
+}
+
+struct AccountsView: View {
+    let store: StoreOf<AccountsFeature>
+    
+    init(store: StoreOf<AccountsFeature>) {
+        self.store = store
+        store.send(.fetchAccounts)
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(accounts, id: \.id) {account in
+                    ForEach(store.accounts[case: \.result] ?? [], id: \.id) {account in
                         Text(account.name ?? "")
 //                        AccountRow(viewModel: vm, editAccountCallback: {account in print("hello")})
 //                            .alert(isPresented: .constant(false)) {
@@ -71,11 +117,5 @@ struct AccountssView: View {
 //            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct AccountsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountssView()
     }
 }

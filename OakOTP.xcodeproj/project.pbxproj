@@ -10,7 +10,6 @@
 		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
 		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
-		092F944625D5C46700FB537A /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F944525D5C46700FB537A /* PersistentStore.swift */; };
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0953E6B326E9477E00B19DC6 /* Introspect */; };
 		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
@@ -51,19 +50,20 @@
 		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
 		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
+		FAA401502D3308DC0069AB48 /* AccountsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */; };
+		FAA401522D332B440069AB48 /* EquatableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401512D332B3E0069AB48 /* EquatableError.swift */; };
 		FAAB0E402D30705100283DCB /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E3F2D30705100283DCB /* Dependencies */; };
 		FAAB0E422D30705100283DCB /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E412D30705100283DCB /* DependenciesMacros */; };
 		FAAB0EED2D307F6100283DCB /* DependenciesAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */; };
 		FAAB0EEF2D307F6100283DCB /* _AppStorageDependency in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEE2D307F6100283DCB /* _AppStorageDependency */; };
 		FAAB0EFD2D30A97E00283DCB /* SwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */; };
-		FAAB0F012D30AE8700283DCB /* ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F002D30AE8400283DCB /* ModelContainer.swift */; };
+		FAAB0F012D30AE8700283DCB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F002D30AE8400283DCB /* Database.swift */; };
 		FAAB0F1A2D30D84D00283DCB /* ICloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */; };
 		FAAB0F1D2D31870B00283DCB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0F1C2D31870B00283DCB /* ComposableArchitecture */; };
 		FAAB0F1F2D3187E100283DCB /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0F1E2D3187DD00283DCB /* AppFeature.swift */; };
 		FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */; };
 		FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2525C8FE9F001DE486 /* Haptics.swift */; };
 		FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */; };
-		FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE48D25C9E9FD005BC18E /* SetupView.swift */; };
 		FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49725C9ED9A005BC18E /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,6 @@
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
-		092F944525D5C46700FB537A /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -139,8 +138,10 @@
 		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
 		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsFeature.swift; sourceTree = "<group>"; };
+		FAA401512D332B3E0069AB48 /* EquatableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableError.swift; sourceTree = "<group>"; };
 		FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
-		FAAB0F002D30AE8400283DCB /* ModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainer.swift; sourceTree = "<group>"; };
+		FAAB0F002D30AE8400283DCB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAAB0F022D30B41300283DCB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FAAB0F042D30B45000283DCB /* Testing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Testing.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/Testing.framework; sourceTree = DEVELOPER_DIR; };
 		FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudSettings.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 		FAB8CB1425C8FBCA001DE486 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FAB8CB2525C8FE9F001DE486 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
-		FADAE48D25C9E9FD005BC18E /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		FADAE49725C9ED9A005BC18E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,14 +193,6 @@
 				0953B95A25D87BBC008DD9BE /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		095A2BB725D5BABB0030C585 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				092F944525D5C46700FB537A /* PersistentStore.swift */,
-			);
-			path = Persistence;
 			sourceTree = "<group>";
 		};
 		099EC37F265546FA00CA5F86 /* OakOTPUITests */ = {
@@ -337,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				09CFCEC62650246F001954C5 /* Modifiers */,
-				095A2BB725D5BABB0030C585 /* Persistence */,
 				FAB8CB2425C8FE96001DE486 /* Util */,
 				FAB8CAFC25C8F823001DE486 /* Misc */,
 				FA87C02E25C890B5009C7FF7 /* Extensions */,
@@ -380,9 +371,9 @@
 		FA42C6A825C64904000D597E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */,
 				FA71ABCB2D31B10000B0D83C /* SetupFeature.swift */,
 				FAAB0F1E2D3187DD00283DCB /* AppFeature.swift */,
-				FADAE48D25C9E9FD005BC18E /* SetupView.swift */,
 				092A678525CCB01C00E8118E /* NewEditAccount */,
 				FA03413B25C9D8E6004752F3 /* ScanCode */,
 				FAB8CB1325C8FBBB001DE486 /* Authentication */,
@@ -446,6 +437,7 @@
 		FAB8CAFC25C8F823001DE486 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				FAA401512D332B3E0069AB48 /* EquatableError.swift */,
 				09B8F11C28D27E81007A8DFE /* Oak.entitlements */,
 				FA42C67B25C63C9D000D597E /* Preview Content */,
 				FA42C68325C63C9D000D597E /* Info.plist */,
@@ -477,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAB0F192D30D84D00283DCB /* ICloudSettings.swift */,
-				FAAB0F002D30AE8400283DCB /* ModelContainer.swift */,
+				FAAB0F002D30AE8400283DCB /* Database.swift */,
 				FA42C79625C7219A000D597E /* Settings.swift */,
 				FAB8CB2525C8FE9F001DE486 /* Haptics.swift */,
 				FAB8CB2D25C8FF93001DE486 /* Biometrics.swift */,
@@ -585,9 +577,9 @@
 				092A678125CC781400E8118E /* Double+Extensions.swift in Sources */,
 				09BA752B25D0555E00891033 /* HOTPCodeViewModel.swift in Sources */,
 				FAB8CB2625C8FE9F001DE486 /* Haptics.swift in Sources */,
-				092F944625D5C46700FB537A /* PersistentStore.swift in Sources */,
 				FA71ABCC2D31B10400B0D83C /* SetupFeature.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
+				FAA401502D3308DC0069AB48 /* AccountsFeature.swift in Sources */,
 				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
@@ -605,13 +597,14 @@
 				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
 				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
+				FAA401522D332B440069AB48 /* EquatableError.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
 				09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */,
 				FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */,
 				FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */,
 				FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */,
 				09B8F0FD28D254B2007A8DFE /* LAContext+Extensions.swift in Sources */,
-				FAAB0F012D30AE8700283DCB /* ModelContainer.swift in Sources */,
+				FAAB0F012D30AE8700283DCB /* Database.swift in Sources */,
 				FA42C79725C7219A000D597E /* Settings.swift in Sources */,
 				FAB8CB2E25C8FF93001DE486 /* Biometrics.swift in Sources */,
 				09CFA36D25CF461C003BE427 /* CodeViewModel.swift in Sources */,
@@ -621,7 +614,6 @@
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,
-				FADAE48E25C9E9FD005BC18E /* SetupView.swift in Sources */,
 				FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */,
 				09F00B4528D389AD000C0D6B /* BuildConfiguration.swift in Sources */,
 			);

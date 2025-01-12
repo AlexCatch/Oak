@@ -13,7 +13,7 @@ struct ICloudToggableRow: View {
     var title: String
     var key: SettingsKey
     
-    @Dependency(\.modelManager) var modelManager: ModelManager
+//    @Dependency(\.database) var database: Database
     @Dependency(\.iCloudSettings) var ICloudSettings: ICloudSettings
     
     let schema = Schema([
@@ -26,8 +26,8 @@ struct ICloudToggableRow: View {
     }
     
     var body: some View {
-        ToggableRow(title: title, key: key.rawValue, initialValue: ICloudSettings.bool(forKey: key) ?? false) { toggled in
-            modelManager.setupContainer(sync: toggled)
+        ToggableRow(title: title, key: key.rawValue, initialValue: ICloudSettings.bool(key) ?? false) { toggled in
+//            database.setupContainer(sync: toggled)
         }
     }
 }

@@ -12,7 +12,7 @@ import CodeScanner
 
 class ScanQRCodeViewModel: ObservableObject {
     @Injected private var otpService: OTPService
-    @Injected private var accountsService: AccountService
+//    @Injected private var accountsService: AccountService
     
     @Published var scanError: String?
     
@@ -29,7 +29,7 @@ class ScanQRCodeViewModel: ObservableObject {
         do {
             let uri = try results.get()
             let parsedUri = try otpService.parseSetupURI(uri)
-            try accountsService.save(parsedURI: parsedUri)
+//            try accountsService.save(parsedURI: parsedUri)
             dismiss()
         } catch {
             scanError = "Failed to parse QR code - double check you're scanning a valid code"
