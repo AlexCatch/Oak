@@ -7,10 +7,25 @@
 
 import Foundation
 import Dependencies
+import ComposableArchitecture
 import SwiftData
+
+struct CreateAccountData {
+    var name = ""
+    var issuer = ""
+    var secret = ""
+    var base32Encoded = true
+    var type: CodeType = .totp
+    var algorithm: Algorithm = .sha1
+    var digits: Int = 6
+    var period: Int
+    var counter: Int
+}
 
 struct AccountService {
     var fetchAll: @Sendable () async throws -> [Account]
+    var createAccount: @Sendable (_ data: CreateAccountData) async throws -> Account
+    var forID: @Sendable (_ id: PersistentIdentifier) async -> Account?
 }
 
 extension AccountService: DependencyKey {
@@ -20,7 +35,17 @@ extension AccountService: DependencyKey {
             let context = await ModelContext(database.modelContainer)
             let descriptor = FetchDescriptor<Account>(sortBy: [SortDescriptor(\.order, order: .forward)])
             return try context.fetch(descriptor)
+        } createAccount: { data in
+            let context = await ModelContext(database.modelContainer)
+            let account = Account(algorithmRaw: data.algorithm.rawValue, counter: data.counter, createdAt: Date(), digits: data.digits, issuer: data.issuer, name: data.name, period: data.period, secret: data.secret, typeRaw: data.type.rawValue, usesBase32: data.base32Encoded)
+            context.insert(account)
+            try context.save()
+            return account
+        } forID: { id in
+            let context = await ModelContext(database.modelContainer)
+            return context.model(for: id) as? Account
         }
+
     }
 }
 

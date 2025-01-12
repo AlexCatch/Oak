@@ -9,7 +9,7 @@ import SwiftUI
 
 typealias EditAccountCallback = (_ account: Account) -> Void
 
-struct AccountRow: View {
+struct AccountRoww: View {
 //    @StateObject var viewModel: AccountRowViewModel
 //    
 //    let displayCode: Bool
@@ -48,9 +48,9 @@ struct AccountRow: View {
     }
 }
 
-struct AccountRow_Previews: PreviewProvider {
-    static var previews: some View {
-        return Text("hello")
-//        AccountRow(viewModel: AccountRowViewModel(account: Account.Create(issuer: "Amazon", username: "john@doe.co.uk", secret: "demo", algorithm: .sha1, type: .totp, digits: 6, period: 30, counter: 0)), editAccountCallback: {account in })
-    }
-}
+//struct AccountRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        return Text("hello")
+////        AccountRow(viewModel: AccountRowViewModel(account: Account.Create(issuer: "Amazon", username: "john@doe.co.uk", secret: "demo", algorithm: .sha1, type: .totp, digits: 6, period: 30, counter: 0)), editAccountCallback: {account in })
+//    }
+//}

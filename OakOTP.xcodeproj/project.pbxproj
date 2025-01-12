@@ -52,6 +52,8 @@
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
 		FAA401502D3308DC0069AB48 /* AccountsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */; };
 		FAA401522D332B440069AB48 /* EquatableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401512D332B3E0069AB48 /* EquatableError.swift */; };
+		FAA401552D3365DA0069AB48 /* AccountRowFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401542D3365D50069AB48 /* AccountRowFeature.swift */; };
+		FAA401572D337F0B0069AB48 /* AccountFormFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401562D337F060069AB48 /* AccountFormFeature.swift */; };
 		FAAB0E402D30705100283DCB /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E3F2D30705100283DCB /* Dependencies */; };
 		FAAB0E422D30705100283DCB /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E412D30705100283DCB /* DependenciesMacros */; };
 		FAAB0EED2D307F6100283DCB /* DependenciesAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */; };
@@ -140,6 +142,8 @@
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsFeature.swift; sourceTree = "<group>"; };
 		FAA401512D332B3E0069AB48 /* EquatableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableError.swift; sourceTree = "<group>"; };
+		FAA401542D3365D50069AB48 /* AccountRowFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowFeature.swift; sourceTree = "<group>"; };
+		FAA401562D337F060069AB48 /* AccountFormFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormFeature.swift; sourceTree = "<group>"; };
 		FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
 		FAAB0F002D30AE8400283DCB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAAB0F022D30B41300283DCB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -252,6 +256,7 @@
 		09CFA33E25CF4504003BE427 /* AccountRow */ = {
 			isa = PBXGroup;
 			children = (
+				FAA401542D3365D50069AB48 /* AccountRowFeature.swift */,
 				09CFA35E25CF45D6003BE427 /* HOTPCodeView */,
 				09CFA35D25CF45C0003BE427 /* TOTPCodeView */,
 				FA42C6B125C64919000D597E /* AccountRow.swift */,
@@ -371,7 +376,7 @@
 		FA42C6A825C64904000D597E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */,
+				FAA401562D337F060069AB48 /* AccountFormFeature.swift */,
 				FA71ABCB2D31B10000B0D83C /* SetupFeature.swift */,
 				FAAB0F1E2D3187DD00283DCB /* AppFeature.swift */,
 				092A678525CCB01C00E8118E /* NewEditAccount */,
@@ -450,6 +455,7 @@
 		FAB8CB0625C8F856001DE486 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4014F2D3308D90069AB48 /* AccountsFeature.swift */,
 				FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */,
 				FA42C67725C63C9C000D597E /* AccountsView.swift */,
 			);
@@ -588,6 +594,7 @@
 				09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
+				FAA401552D3365DA0069AB48 /* AccountRowFeature.swift in Sources */,
 				09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */,
 				09CFA36025CF45E9003BE427 /* TOTPCodeView.swift in Sources */,
 				09CFCEC82650247B001954C5 /* IsHiddenModifier.swift in Sources */,
@@ -611,6 +618,7 @@
 				09CFA36825CF45F1003BE427 /* TOTPCodeViewModel.swift in Sources */,
 				FA87BFF725C78436009C7FF7 /* AccountsViewModel.swift in Sources */,
 				FAB8CB1525C8FBCA001DE486 /* AuthenticationView.swift in Sources */,
+				FAA401572D337F0B0069AB48 /* AccountFormFeature.swift in Sources */,
 				FA42C67625C63C9C000D597E /* OakApp.swift in Sources */,
 				FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */,
 				FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */,

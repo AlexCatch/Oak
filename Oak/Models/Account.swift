@@ -11,7 +11,7 @@ import SwiftOTP
 import SwiftData
 
 @Model
-class Account {
+class Account: Equatable, Identifiable {
     var algorithmRaw: String?
     var counter: Int = 0
     var createdAt: Date = Date()
@@ -24,7 +24,19 @@ class Account {
     var typeRaw: String?
     var usesBase32: Bool = true
     
-    init() {}
+    init(algorithmRaw: String, counter: Int = 0, createdAt: Date = Date(), digits: Int = 6, issuer: String, name: String, order: Int = 0, period: Int = 30, secret: String, typeRaw: String, usesBase32: Bool = true) {
+        self.algorithmRaw = algorithmRaw
+        self.counter = counter
+        self.createdAt = createdAt
+        self.digits = digits
+        self.issuer = issuer
+        self.name = name
+        self.order = order
+        self.period = period
+        self.secret = secret
+        self.typeRaw = typeRaw
+        self.usesBase32 = usesBase32
+    }
     
     var algorithm: Algorithm {
         set {
@@ -63,4 +75,8 @@ class Account {
         
         return secret.data(using: .utf8)
     }
+}
+
+extension Account {
+    nonisolated(unsafe) static let mock = Account(algorithmRaw: Algorithm.sha256.rawValue, counter: 0, createdAt: Date(), digits: 6, issuer: "Oak", name: "Google", order: 0, period: 30, secret: "hello", typeRaw: CodeType.totp.rawValue, usesBase32: true)
 }

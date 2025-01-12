@@ -38,7 +38,7 @@ struct SetupFeature {
     @Dependency(\.iCloudSettings) private var iCloudSettings
     @Dependency(\.database) private var database
     
-    var body: some Reducer<State, Action> {
+    var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce { state, action in
             switch action {
