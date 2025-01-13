@@ -63,7 +63,7 @@ struct AccountFormFeature {
                     counter = state.counter
                 ] send in
                     let accountData = CreateAccountData(name: name, issuer: issuer, secret: secret, base32Encoded: base32Encoded, type: type, algorithm: algorithm, digits: digits, period: period, counter: counter)
-                    let account = try await accountService.createAccount(accountData)
+                    let account = try await accountService.create(accountData)
                     await send(.delegate(.accountUpserted(account)))
                     await dismiss()
                 }

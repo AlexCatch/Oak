@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		092A677C25CC605A00E8118E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A677B25CC605A00E8118E /* Window.swift */; };
 		092A678125CC781400E8118E /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678025CC781400E8118E /* Double+Extensions.swift */; };
-		092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A678625CCB29200E8118E /* NewEditAccountView.swift */; };
 		094EF7BA26500EA90027F9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EF7B926500EA90027F9F4 /* AppDelegate.swift */; };
 		0953E6B426E9477E00B19DC6 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0953E6B326E9477E00B19DC6 /* Introspect */; };
-		097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */; };
 		09AAE5B525CD8C18002054AA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAE5B425CD8C18002054AA /* String+Extensions.swift */; };
 		09B8F0FD28D254B2007A8DFE /* LAContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8F0FC28D254B2007A8DFE /* LAContext+Extensions.swift */; };
 		09BA752625D0555600891033 /* HOTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BA752525D0555600891033 /* HOTPCodeView.swift */; };
@@ -26,7 +24,6 @@
 		09F00B4528D389AD000C0D6B /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F00B4428D389AC000C0D6B /* BuildConfiguration.swift */; };
 		FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */; };
 		FA03411725C9C640004752F3 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = FA03411625C9C640004752F3 /* Resolver */; };
-		FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */; };
 		FA0B7ACD25C8BD7800D8A48B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */; };
 		FA404CC525CA091C009C215F /* UpdatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CC425CA091C009C215F /* UpdatePasswordView.swift */; };
 		FA404CCD25CA0926009C215F /* UpdatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */; };
@@ -46,7 +43,6 @@
 		FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */; };
 		FA87C00525C87EFD009C7FF7 /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00425C87EFD009C7FF7 /* SwiftOTP */; };
 		FA87C00B25C88446009C7FF7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = FA87C00A25C88446009C7FF7 /* CodeScanner */; };
-		FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */; };
 		FA87C02425C888C0009C7FF7 /* OTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02325C888C0009C7FF7 /* OTPService.swift */; };
 		FA87C03025C890C1009C7FF7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */; };
 		FA87C03E25C899F5009C7FF7 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87C03D25C899F5009C7FF7 /* AccountService.swift */; };
@@ -54,6 +50,7 @@
 		FAA401522D332B440069AB48 /* EquatableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401512D332B3E0069AB48 /* EquatableError.swift */; };
 		FAA401552D3365DA0069AB48 /* AccountRowFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401542D3365D50069AB48 /* AccountRowFeature.swift */; };
 		FAA401572D337F0B0069AB48 /* AccountFormFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401562D337F060069AB48 /* AccountFormFeature.swift */; };
+		FAA401CE2D349A8F0069AB48 /* ScanQRCodeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA401CD2D349A890069AB48 /* ScanQRCodeFeature.swift */; };
 		FAAB0E402D30705100283DCB /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E3F2D30705100283DCB /* Dependencies */; };
 		FAAB0E422D30705100283DCB /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0E412D30705100283DCB /* DependenciesMacros */; };
 		FAAB0EED2D307F6100283DCB /* DependenciesAdditions in Frameworks */ = {isa = PBXBuildFile; productRef = FAAB0EEC2D307F6100283DCB /* DependenciesAdditions */; };
@@ -69,14 +66,25 @@
 		FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAE49725C9ED9A005BC18E /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FAA401792D3497CC0069AB48 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		092A677B25CC605A00E8118E /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		092A678025CC781400E8118E /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
-		092A678625CCB29200E8118E /* NewEditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountView.swift; sourceTree = "<group>"; };
 		09441E312651CCC4002B1619 /* SetupViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewUITests.swift; sourceTree = "<group>"; };
 		094EF7B926500EA90027F9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0953B95A25D87BBC008DD9BE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditAccountViewModel.swift; sourceTree = "<group>"; };
 		099EC382265546FA00CA5F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09AAE5B425CD8C18002054AA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		09AED5F4265702F9008B18B0 /* ChangePasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUITests.swift; sourceTree = "<group>"; };
@@ -115,7 +123,6 @@
 		09CFCECB26504197001954C5 /* ICloudToggableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudToggableRow.swift; sourceTree = "<group>"; };
 		09F00B4428D389AC000C0D6B /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
 		FA03410F25C9BF7F004752F3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewModel.swift; sourceTree = "<group>"; };
 		FA0B7ACC25C8BD7800D8A48B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FA404CC425CA091C009C215F /* UpdatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordView.swift; sourceTree = "<group>"; };
 		FA404CCC25CA0926009C215F /* UpdatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewModel.swift; sourceTree = "<group>"; };
@@ -136,7 +143,6 @@
 		FA71ABCB2D31B10000B0D83C /* SetupFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupFeature.swift; sourceTree = "<group>"; };
 		FA87BFF625C78436009C7FF7 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
 		FA87BFFB25C78656009C7FF7 /* AccountRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowViewModel.swift; sourceTree = "<group>"; };
-		FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeView.swift; sourceTree = "<group>"; };
 		FA87C02325C888C0009C7FF7 /* OTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPService.swift; sourceTree = "<group>"; };
 		FA87C02F25C890C1009C7FF7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		FA87C03D25C899F5009C7FF7 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 		FAA401512D332B3E0069AB48 /* EquatableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableError.swift; sourceTree = "<group>"; };
 		FAA401542D3365D50069AB48 /* AccountRowFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowFeature.swift; sourceTree = "<group>"; };
 		FAA401562D337F060069AB48 /* AccountFormFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFormFeature.swift; sourceTree = "<group>"; };
+		FAA401CB2D3499D00069AB48 /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/SwiftData.framework; sourceTree = DEVELOPER_DIR; };
+		FAA401CD2D349A890069AB48 /* ScanQRCodeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeFeature.swift; sourceTree = "<group>"; };
 		FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
 		FAAB0F002D30AE8400283DCB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		FAAB0F022D30B41300283DCB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -179,18 +187,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092A678525CCB01C00E8118E /* NewEditAccount */ = {
-			isa = PBXGroup;
-			children = (
-				092A678625CCB29200E8118E /* NewEditAccountView.swift */,
-				097CFFCF25CCD3E600C2B1C6 /* NewEditAccountViewModel.swift */,
-			);
-			path = NewEditAccount;
-			sourceTree = "<group>";
-		};
 		0953B95925D87BBC008DD9BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA401CB2D3499D00069AB48 /* SwiftData.framework */,
 				FAAB0F042D30B45000283DCB /* Testing.framework */,
 				FAAB0F022D30B41300283DCB /* XCTest.framework */,
 				FAAB0EFC2D30A97E00283DCB /* SwiftData.framework */,
@@ -295,8 +295,7 @@
 		FA03413B25C9D8E6004752F3 /* ScanCode */ = {
 			isa = PBXGroup;
 			children = (
-				FA87C01025C88727009C7FF7 /* ScanQRCodeView.swift */,
-				FA03413C25C9D90A004752F3 /* ScanQRCodeViewModel.swift */,
+				FAA401CD2D349A890069AB48 /* ScanQRCodeFeature.swift */,
 			);
 			path = ScanCode;
 			sourceTree = "<group>";
@@ -379,7 +378,6 @@
 				FAA401562D337F060069AB48 /* AccountFormFeature.swift */,
 				FA71ABCB2D31B10000B0D83C /* SetupFeature.swift */,
 				FAAB0F1E2D3187DD00283DCB /* AppFeature.swift */,
-				092A678525CCB01C00E8118E /* NewEditAccount */,
 				FA03413B25C9D8E6004752F3 /* ScanCode */,
 				FAB8CB1325C8FBBB001DE486 /* Authentication */,
 				FAB8CB0625C8F856001DE486 /* Accounts */,
@@ -495,6 +493,7 @@
 				FA42C66E25C63C9C000D597E /* Sources */,
 				FA42C66F25C63C9C000D597E /* Frameworks */,
 				FA42C67025C63C9C000D597E /* Resources */,
+				FAA401792D3497CC0069AB48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -524,7 +523,7 @@
 		FA42C66A25C63C9C000D597E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					FA42C67125C63C9C000D597E = {
@@ -586,11 +585,10 @@
 				FA71ABCC2D31B10400B0D83C /* SetupFeature.swift in Sources */,
 				FA42C6B225C64919000D597E /* AccountRow.swift in Sources */,
 				FAA401502D3308DC0069AB48 /* AccountsFeature.swift in Sources */,
-				097CFFD025CCD3E600C2B1C6 /* NewEditAccountViewModel.swift in Sources */,
 				FA42C6CF25C65B8B000D597E /* ToggableRow.swift in Sources */,
+				FAA401CE2D349A8F0069AB48 /* ScanQRCodeFeature.swift in Sources */,
 				FA42C67825C63C9C000D597E /* AccountsView.swift in Sources */,
 				FAAB0F1A2D30D84D00283DCB /* ICloudSettings.swift in Sources */,
-				FA87C01125C88727009C7FF7 /* ScanQRCodeView.swift in Sources */,
 				09CFCECC26504197001954C5 /* ICloudToggableRow.swift in Sources */,
 				FA87BFFC25C78657009C7FF7 /* AccountRowViewModel.swift in Sources */,
 				FA42C72425C6EC74000D597E /* Account.swift in Sources */,
@@ -601,8 +599,6 @@
 				FA03411025C9BF7F004752F3 /* AuthenticationViewModel.swift in Sources */,
 				FA42C6C725C658A3000D597E /* SettingsView.swift in Sources */,
 				092A677C25CC605A00E8118E /* Window.swift in Sources */,
-				092A678725CCB29200E8118E /* NewEditAccountView.swift in Sources */,
-				FA03413D25C9D90A004752F3 /* ScanQRCodeViewModel.swift in Sources */,
 				FADAE49825C9ED9A005BC18E /* KeychainService.swift in Sources */,
 				FAA401522D332B440069AB48 /* EquatableError.swift in Sources */,
 				FA42C6B725C64A79000D597E /* CircularProgressView.swift in Sources */,
@@ -879,7 +875,7 @@
 			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.7;
+				minimumVersion = 2.5.2;
 			};
 		};
 		FAAB0E3E2D30705100283DCB /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {

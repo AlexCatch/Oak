@@ -41,10 +41,12 @@ struct AccountsFeature {
     @Reducer
     enum Destination {
         case accountForm(AccountFormFeature)
+        case scanQRCode(ScanQRCodeFeature)
         case addAccountConfirmationDialog(ConfirmationDialogState<AccountsFeature.Action.AddAccountConfirmationDialog>)
         case deleteAccountConfirmationAlert(AlertState<AccountsFeature.Action.DeleteAccountConfirmationAlert>)
     }
     
+    @Dependency(\.otpService) var otpService
     @Dependency(\.accountService) var accountService
     
     var body: some ReducerOf<Self> {
@@ -83,9 +85,19 @@ struct AccountsFeature {
                 state.destination = .accountForm(AccountFormFeature.State())
                 return .none
             case .destination(.presented(.addAccountConfirmationDialog(.scanQRcode))):
+                state.destination = .scanQRCode(ScanQRCodeFeature.State())
                 return .none
             case .destination(.presented(.accountForm(.delegate(.accountUpserted)))):
                 return .run { send in await send(.fetchAccounts) }
+            case .destination(.presented(.scanQRCode(.delegate(.scanCompletion(let parsedURI))))):
+                return .run { send in
+                    do {
+                        _ = try await accountService.createFromURI(parsedURI)
+                        await send(.fetchAccounts)
+                    } catch {
+                        await send(.error(EquatableError(error)))
+                    }
+                }
             case .accounts:
                 return .none
             case .destination:
@@ -131,6 +143,11 @@ struct AccountsView: View {
                 item: $store.scope(state: \.destination?.accountForm, action: \.destination.accountForm)
             ) { store in
                 AccountFormView(store: store)
+            }
+            .sheet(
+                item: $store.scope(state: \.destination?.scanQRCode, action: \.destination.scanQRCode)
+            ) { store in
+                ScanQRCodeView(store: store)
             }
             .onAppear {
                 print("did appear")

@@ -24,7 +24,7 @@ class Account: Equatable, Identifiable {
     var typeRaw: String?
     var usesBase32: Bool = true
     
-    init(algorithmRaw: String, counter: Int = 0, createdAt: Date = Date(), digits: Int = 6, issuer: String, name: String, order: Int = 0, period: Int = 30, secret: String, typeRaw: String, usesBase32: Bool = true) {
+    init(algorithmRaw: String, counter: Int = 0, createdAt: Date = Date(), digits: Int = 6, issuer: String, name: String?, order: Int = 0, period: Int = 30, secret: String, typeRaw: String, usesBase32: Bool = true) {
         self.algorithmRaw = algorithmRaw
         self.counter = counter
         self.createdAt = createdAt

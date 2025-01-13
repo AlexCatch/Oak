@@ -24,7 +24,8 @@ struct CreateAccountData {
 
 struct AccountService {
     var fetchAll: @Sendable () async throws -> [Account]
-    var createAccount: @Sendable (_ data: CreateAccountData) async throws -> Account
+    var create: @Sendable (_ data: CreateAccountData) async throws -> Account
+    var createFromURI: @Sendable (_ uri: ParsedURI) async throws -> Account
     var forID: @Sendable (_ id: PersistentIdentifier) async -> Account?
 }
 
@@ -35,9 +36,26 @@ extension AccountService: DependencyKey {
             let context = await ModelContext(database.modelContainer)
             let descriptor = FetchDescriptor<Account>(sortBy: [SortDescriptor(\.order, order: .forward)])
             return try context.fetch(descriptor)
-        } createAccount: { data in
+        } create: { data in
             let context = await ModelContext(database.modelContainer)
             let account = Account(algorithmRaw: data.algorithm.rawValue, counter: data.counter, createdAt: Date(), digits: data.digits, issuer: data.issuer, name: data.name, period: data.period, secret: data.secret, typeRaw: data.type.rawValue, usesBase32: data.base32Encoded)
+            context.insert(account)
+            try context.save()
+            return account
+        } createFromURI: { uri in
+            let context = await ModelContext(database.modelContainer)
+            let account = Account(algorithmRaw: uri.algorithm.rawValue, issuer: uri.issuer, name: uri.username, secret: uri.secret, typeRaw: uri.type.rawValue)
+            if let digits = Int(uri.digits) {
+                account.digits = digits
+            }
+            
+            if let period = uri.period, let periodNum = Int(period) {
+                account.period = periodNum
+            }
+            
+            if let counter = uri.counter, let counterNum = Int(counter) {
+                account.counter = counterNum
+            }
             context.insert(account)
             try context.save()
             return account
