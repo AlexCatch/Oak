@@ -20,7 +20,7 @@ class Account: Equatable, Identifiable {
     var name: String?
     var order: Int = 0
     var period: Int = 30
-    @Attribute(.allowsCloudEncryption) var secret: String?
+    var secret: String?
     var typeRaw: String?
     var usesBase32: Bool = true
     
